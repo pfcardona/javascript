@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafíos de programación JS Linkeid</title>
+    
+</head>
+<body>
+    <!-- link donde esta los ejercicios https://www.linkedin.com/learning/desafio-de-programacion-javascript-basico/busqueda-de-productos?autoplay=true&resume=false&u=124249513 -->
+    <!-- https://developers.google.com/blockly  -->
+    <script>
+    // 1) Determinar si ambos arreglos son similares:
+
+        function sonSimilares(arregloA, arregloB) {
+            // diferencias entre == === !== 
+            if (arregloA.length !== arregloB.length) {
+            return false;
+            }
+
+            for (let indice = 0, total = arregloA.length; indice <= total; indice++) {
+            if (arregloA[indice] !== arregloB[indice]) {
+            return false;
+            }
+        }
+            return true;
+        }
+        /* 
+            console.log(sonSimilares([1, 2], [1, 2, 3])); // false
+            console.log(sonSimilares([1, 2, 3], [1, 2, 3])); // true
+            console.log(sonSimilares([1, 2, 3], ['1','2','3'])); // false
+            console.log(sonSimilares([1, 2, 3], [1,2,4])); // false
+        */
+
+
+/* ------------------------------------------ */
+
+        /*  
+            Generar un número aleatorio dentro de un rago de dos números:     
+            Math.flor ->redondea los numeros y quita los decimales
+        */
+        function numeroAleatorio(numeroA, numeroB) {
+            return Math.floor(Math.random() * (numeroA - numeroB) + numeroB);
+        }
+
+        // console.log(numeroAleatorio(5,10));
+        // console.log(numeroAleatorio(-25,-22));
+        // console.log(numeroAleatorio(100,0));
+        // console.log(numeroAleatorio(-2,2));
+
+
+/* ------------------------------------------ */
+
+
+    // Crear array de productos que cada uno incluya 
+    // información sobre id, nombreProducto, marca, fechaExpiracion:   
+    const listaProductos = [
+        {
+            id: 1,
+            nompreProducto: 'mantequilla',
+            marca: 'DairyGold',
+            fechaExpiracion: '2022-04-20'
+        },
+        {
+            id: 2,
+            nompreProducto: 'leche',
+            marca: 'Avonmore',
+            fechaExpiracion: '2022-04-13'
+        },
+        {
+            id: 3,
+            nompreProducto: 'jamón',
+            marca: 'Denny',
+            fechaExpiracion: '2022-04-18'
+        },
+        {
+            id: 4,
+            nompreProducto: 'pan',
+            marca: 'Brennans',
+            fechaExpiracion: '2022-03-29'
+        },
+        {
+            id: 5,
+            nompreProducto: 'huevos',
+            marca: 'GoldenIrish',
+            fechaExpiracion: '2022-04-18'
+        },
+    ]
+
+    // Crear dos funciones para buscar productos acorde a los parámetros:
+
+        function buscarProductosPorId(id) {
+        // el método filter recibe una funcion que se encarga de buscar o comparar cada uno de los elementos 
+        // dentro deun arreglo acorde a los criteros que quiera
+            return listaProductos.filter((producto)=> producto.id === id);
+        }
+
+        // console.log(buscarProductosPorId(2));
+
+        function buscarProductosPorFecha(fechaA, fechaB) {
+            fechaA = new Date(fechaA);
+            fechaB = new Date(fechaB);
+            return listaProductos.filter((producto)=>{
+                const fechaExpiracion = new Date(producto.fechaExpiracion);
+                return fechaExpiracion <= fechaA && fechaExpiracion >= fechaB;
+            });
+        }
+
+        // console.log(buscarProductosPorFecha('2022-04-30', '2022-04-15'));
+    
+    // fila ordenada
+    
+        const arreglo = [15];
+
+        setInterval(agregarElemento, 2000, () => Math.floor(Math.random() * 100));
+
+        function agregarElemento(numeroAleatorio) {
+        
+        const prioridad = numeroAleatorio();
+        
+        // Agregar el elemento prioridad al arreglo manteniendo 
+        // el orden ascendente
+
+        arreglo.push(prioridad);
+        // agregar comparativo
+        arreglo.sort((a, b)=> a - b);
+
+        console.log(arreglo);
+    }
+
+    </script>
+</body>
+</html>

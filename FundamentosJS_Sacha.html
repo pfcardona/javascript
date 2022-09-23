@@ -10,6 +10,8 @@
 
     <h5>JavaScript</h5>
 <script>
+   /* Clase 2 */
+
     /* var nombre = 'Sacha', apellido = 'Lifszyc'
     var edad = 28
 
@@ -20,7 +22,7 @@
 
 var peso = 75
  */
-/* Clase 2 */
+        /* Clase 3 */
 /* 
 var edad = 27
 
@@ -64,14 +66,36 @@ imprimirEdad(25, 'Carlos') */
 /* Clase 5  - alcance de las funciones
 */
 
-var nombre = 'casao'
+/* var nombre = 'casao'
 
 function imprimirNombreEnMayusculas(nombre) {
     nombre = nombre.toUpperCase()
     console.log(nombre)
 }
+ */
+/* imprimirNombreEnMayusculas(nombre) */
 
-imprimirNombreEnMayusculas(nombre)
+/* Clase 6 - objetos*/
+var sacha = {
+  nombre: 'Sacha',
+  apellido: 'Lifszyc',
+  edad: 28
+}
+
+var dario = {
+  nombre: 'Darío',
+  apellido: 'Susnisky',
+  edad: 27
+}
+
+function imprimirNombreEnMayusculas({ apellido }) {
+  console.log(apellido.toUpperCase())
+}
+
+imprimirNombreEnMayusculas(sacha)
+imprimirNombreEnMayusculas(dario)
+imprimirNombreEnMayusculas({ nombre: 'Pepito' })
+imprimirNombreEnMayusculas({ apellido: 'Gomez' })
 
 </script>
     

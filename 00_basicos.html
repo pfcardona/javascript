@@ -8,17 +8,17 @@
 </head>
 
 <body>
-  <h1>Fundamentos JavaScript</h1>
+  <h5>Fundamentos JavaScript</h5>
   <script>
     /* **********     Curso JavaScript: 3. Variables: var 🥊VS🥊 let - #jonmircha     ********** */
 
-     var hola = "Hola Mundo";
-    let hello = "Hello World";
-    console.log(hola);
-    console.log(hello);
-    console.log(window);
-    console.log(window.hola);
-    console.log(window.hello);
+    //  var hola = "Hola Mundo";
+    // let hello = "Hello World";
+    // console.log(hola);
+    // console.log(hello);
+    // console.log(window);
+    // console.log(window.hola);
+    // console.log(window.hello);
     //Ambito de bloque
     //Esto es un bloque - comentario de una lines
     /*
@@ -47,10 +47,7 @@
     console.log("Variable Música después del Bloque", musica2); */
 
 
-
-
-
-    /* **********     Curso JavaScript: 4. Constantes (const) - #jonmircha     ********** */
+         /* **********     Curso JavaScript: 4. Constantes (const) - #jonmircha     ********** */
 
     /*  let a;
      const PI = 3.1416;
@@ -65,9 +62,7 @@
        nombre: "Jon",
        edad: 35
      }
-
      const colores = ["blanco", "negro", "azul"];
-
      console.log(objeto);
      console.log(colores);
 
@@ -76,9 +71,6 @@
 
      console.log(objeto);
      console.log(colores); */
-
-
-
 
 
     /* **********     Curso JavaScript: 5. Cadenas de Texto (Strings) - #jonmircha     ********** */
@@ -107,10 +99,6 @@
 
      */
 
-
-
-
-
     /* **********     Curso JavaScript: 6. Template Strings - #jonmircha     ********** */
 
     /* let nombre = "Jon";
@@ -120,7 +108,7 @@
     //let saludo = "Hola mi nombre es " + nombre + " " + apellido + ".";
     //console.log(saludo);
 
-    //Interpolción de variables
+    //Interpolación de variables
     //Template String
     /* let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`;
     console.log(saludo2);
@@ -128,7 +116,6 @@
     let ul = "<ul>< li > Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul > ";
 
     console.log(ul);
-
     let ul2 = `
       <ul>
         <li>Primavera</li>
@@ -150,10 +137,6 @@
     console.log(ul3);
  */
 
-
-
-
-
     /* **********     Curso JavaScript: 7. Números (Numbers) - #jonmircha     ********** */
 
     /* let a = 2;
@@ -174,9 +157,6 @@
     console.log(c + Number.parseFloat(d)); */
 
 
-
-
-
     /* **********     Curso JavaScript: 8. Booleans - #jonmircha     ********** */
 
     /* let verdadero = true;
@@ -190,10 +170,6 @@
     console.log(Boolean(-7));
     console.log(Boolean(""));
     console.log(Boolean(" ")); */
-
-
-
-
 
     /* **********     Curso JavaScript: 9. undefined, null & NaN - #jonmircha     ********** */
 
@@ -209,17 +185,17 @@
     /* let noEsUnNumero = "hola" * 3.7;
     console.log(noEsUnNumero); */
 
-
-
-
     /* **********     Curso JavaScript: 10. Funciones - #jonmircha     ********** */
 
     /*
-    Una función es un bloque de código, autocontenido, que se puede definir una vez y ejecutar en cualquier momento. Opcionalmente, una función puede aceptar parámetros y devolver un valor.
+    Una función es un bloque de código, autocontenido, que se puede definir una vez y ejecutar en cualquier momento. 
+    Opcionalmente, una función puede aceptar parámetros y devolver un valor.
 
     Las funciones en JavaScript son objetos, un tipo especial de objetos:
 
     Se dice que las funciones son ciudadanos de primera clase porque pueden asignarse a un valor, y pueden pasarse como argumentos y usarse como un valor de retorno.
+    
+    Los parentesis
     */
 
     //Declaración de función
@@ -229,91 +205,100 @@
        console.log("Tres");
      } */
 
-    //Invocación de función
+    //Invocación de función 
+    // Los parentesis indican en un lenguaje de programación que una función se va a ejecutar
+    // Return es el resultado de la tarea que hizo la función
+    // cuando el compilador del navegador encuentra la palabra reservada "return" ignora todas las lineas de codigo que estan abajo
+    
     /* estoEsUnaFuncion();
     estoEsUnaFuncion();
     estoEsUnaFuncion();
     estoEsUnaFuncion(); */
 
-    /* function unaFuncionQueDevuelveValor() {
-      console.log("Uno");
-      return 19;
-      console.log("Dos");
-      console.log("Tres");
-      return "La función ha retornado una Cadena de texto";
-    } */
+    /*  
+        function unaFuncionQueDevuelveValor() {
+        console.log("Uno");
+        return 19;
+        console.log("Dos");
+        console.log("Tres");
+        return "La función ha retornado una Cadena de texto";
+      } 
 
-    //let valorDeFuncion = unaFuncionQueDevuelveValor();
+      let valorDeFuncion = unaFuncionQueDevuelveValor();
 
-    //console.log(valorDeFuncion);
-
-    /*  function saludar(nombre = "Desconocido", edad = 0) {
+      console.log(valorDeFuncion); 
+    */
+      // puedo asignar un valor por defecto a los parámetros de una función
+      function saludar(nombre ="Desconocido", edad = 0) {
        console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
-     } */
+     } 
 
     //saludar("kEnAi", 7);
     //saludar();
 
-    //Funciones declaradas VS funciones expresadas
+    //Funciones declaradas VS funciones expresadas = es la recomendada y son buenas practicas de programación en especial por los frameworks 
 
     //funcionDeclarada();
 
     /* function funcionDeclarada() {
-      console.log("Esto es un función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada");
+      console.log("Esto es un función declarada, 
+                   puede invocarse en cualquier parte de nuestro código, 
+                   incluso antes de que la función sea declarada");
     } */
 
     //funcionDeclarada();
 
     //funcionExpresada();
 
-    //función anónima
+    //función anónima -> no tiene nombre y aparte se la estamos asignando como valor a una variable 
     /* const funcionExpresada = function () {
-      console.log("Esto es una función expresada, es decir, una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá 'Cannot access 'funcionExpresada' before initialization'")
+      console.log("Esto es una función expresada, es decir, una función 
+                   que se le ha asignado como valor a una variable, si invocamos 
+                   esta función antes de su definición JS nos dirá 
+                  'Cannot access 'funcionExpresada' before initialization'")
     } */
 
     //funcionExpresada();
 
 
-
-
-
     /* **********     Curso JavaScript: 11. Arreglos (Arrays) - #jonmircha     ********** */
 
-    /*     const a = [];
-        const b = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
-        console.log(a);
-        console.log(b);
-        console.log(b.length);
-        console.log(b[2]);
-        console.log(b[0]);
-        console.log(b[3]);
-        console.log(b[3][2]);
-        console.log(b[3][3][0]);
+         const a = [];
+         const b = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
+        //  console.log(a);
+        //  console.log(b);
+        //  console.log(b.length);
+        //  console.log(b[2]);
+        //  console.log(b[0]);
+    // es como el ajedrez o el juego de batalla naval, toca darle las coordenadas   
+        //  console.log(b[3]);
+        //  console.log(b[3][2]);
+        //  console.log(b[3][3][0]);
 
-        const c = Array.of("X", "Y", "Z", 9, 8, 7);
-        console.log(c);
+        //  const c = Array.of("X", "Y", "Z", 9, 8, 7);
+        //  console.log(c);
 
-        const d = Array(100).fill(false);
-        console.log(d);
+        //  const d = Array(100).fill(false);
+        //  console.log(d);
 
-        const e = new Array();
-        console.log(e);
+        //  const e = new Array();
+        //  console.log(e);
 
-        const f = new Array(1, 2, 3, true, false);
-        console.log(f);
+         // const f = new Array(1, 2, 3, true, false);
+        //  console.log(f);
 
-        const colores = ["Rojo", "Verde", "Azul"];
-        console.log(colores);
+         const colores = ["Rojo", "Verde", "Azul"];
+         console.log(colores);
 
-        colores.push("Negro");
-        console.log(colores);
+         colores.push("Negro");
+         console.log(colores);
 
-        colores.pop();
-        console.log(colores);
+         colores.pop();
+         console.log(colores);
 
-        colores.forEach(function (el, index) {
-          console.log(`<li id="${index}">${el}</li>`);
-        }); */
+         colores.forEach(function (el, index) {
+         console.log(`<li id="${index}">${el}</li>`);
+         }); 
 
 
 
@@ -368,11 +353,7 @@
         console.log(Object.values(jon));
         console.log(jon.hasOwnProperty("nombre"));
         console.log(jon.hasOwnProperty("nacimiento"));
-     */
-
-
-
-
+    */
 
     /* **********     Curso JavaScript: 13. Tipos de Operadores - #jonmircha     ********** */
 
