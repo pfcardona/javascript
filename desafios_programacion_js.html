@@ -11,7 +11,7 @@
     <!-- link donde esta los ejercicios https://www.linkedin.com/learning/desafio-de-programacion-javascript-basico/busqueda-de-productos?autoplay=true&resume=false&u=124249513 -->
     <!-- https://developers.google.com/blockly  -->
     <script>
-    // 1) Determinar si ambos arreglos son similares:
+    //  1)   Determinar si ambos arreglos son similares:
 
         function sonSimilares(arregloA, arregloB) {
             // diferencias entre == === !== 
@@ -36,10 +36,8 @@
 
 /* ------------------------------------------ */
 
-        /*  
-            Generar un número aleatorio dentro de un rago de dos números:     
-            Math.flor ->redondea los numeros y quita los decimales
-        */
+    /*  2.  Generar un número aleatorio dentro de un rago de dos números:     
+            Math.flor ->redondea los numeros y quita los decimales   */
         function numeroAleatorio(numeroA, numeroB) {
             return Math.floor(Math.random() * (numeroA - numeroB) + numeroB);
         }
@@ -53,9 +51,10 @@
 /* ------------------------------------------ */
 
 
-    // Crear array de productos que cada uno incluya 
-    // información sobre id, nombreProducto, marca, fechaExpiracion:   
-    const listaProductos = [
+    //  3. Crear array de productos que cada uno incluya 
+    //  información sobre id, nombreProducto, marca, fechaExpiracion:   
+
+        const listaProductos = [
         {
             id: 1,
             nompreProducto: 'mantequilla',
@@ -88,7 +87,7 @@
         },
     ]
 
-    // Crear dos funciones para buscar productos acorde a los parámetros:
+        // Crear dos funciones para buscar productos acorde a los parámetros:
 
         function buscarProductosPorId(id) {
         // el método filter recibe una funcion que se encarga de buscar o comparar cada uno de los elementos 
@@ -109,9 +108,9 @@
 
         // console.log(buscarProductosPorFecha('2022-04-30', '2022-04-15'));
     
-    // fila ordenada
+    //  4. Fila ordenada
     
-        const arreglo = [15];
+        const arreglo = [];
 
         setInterval(agregarElemento, 2000, () => Math.floor(Math.random() * 100));
 
@@ -126,9 +125,8 @@
         // agregar comparativo
         arreglo.sort((a, b)=> a - b);
 
-        console.log(arreglo);
+        // console.log(arreglo);
     }
-
     </script>
 </body>
 </html>
