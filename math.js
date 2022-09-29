@@ -10,6 +10,9 @@ console.log({
   areaCuadrado,
 });
 
+ /* _________________________________________________ */
+
+
 function calcularCuadrado(lado) {
   return {
     perimetro: lado * 4,

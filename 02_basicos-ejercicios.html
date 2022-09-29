@@ -154,7 +154,7 @@
 
             palabra = palabra.toLowerCase();
             // partimos la palabra sin especificar un separador para que luego los convierta a un arreglo , aprovechamos el metodo reverse de los arreglos
-            // para invertilos y luego lo volvemos a unir con el método JOIN sin pasarle parámetro para que lo compvierta a cadena de texto
+            // para invertirlos y luego lo volvemos a unir con el método JOIN sin pasarle parámetro para que lo convierta a cadena de texto
             let alReves = palabra.split("").reverse().join("")  ;
             return (palabra === alReves)
             ?console.info(`Si es palindromo, palabra original ${palabra}, palabra al revés ${alReves}`)
@@ -168,7 +168,7 @@
         /* ------------------------------------------------------------------------------------- */
 
 
-            /* 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, 
+        /* 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, 
             pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5 */
             const eliminarCaracteres = (texto = "", patron = "") =>
             (!texto)
@@ -186,9 +186,8 @@
         /* ------------------------------------------------------------------------------------- */
 
 
-            /* 9) Programa una función que obtenga un número aleatorio entre 501 y 600 */
+        /* 9) Programa una función que obtenga un número aleatorio entre 501 y 600 */
 
-        
             let max  = 600;
             let min = 501;
             function aleatorio(min, max){
@@ -197,12 +196,14 @@
                     console.log(aleatorio)
                 },3000)         
             }
-
             // aleatorio(min, max); 
+
+
+            /* --- otra solución  ---- */
 
             // const aleatorio = () => console.info(Math.round(Math.random()*100)+500);
 
-        //  aleatorio(); 
+            //  aleatorio(); 
 
 
 
@@ -210,10 +211,11 @@
 
 
 
-            /* 10) Programa una función que reciba un número y evalúe si es CAPÍCUA o no (que se lee 
+        /*  10) Programa una función que reciba un número y evalúe si es CAPÍCUA o no (que se lee 
                 igual en un sentido que en otro), 
                 pe. miFuncion(2002) devolverá true 
             */
+
             const capicua = (numero = 0) => {
             if(!numero) return console.warn("No ingresate un número");
             if (typeof numero !== "number") return console.error (`el valor "$(numero)" ingresado, No es un número`);
@@ -224,7 +226,8 @@
             return ( numero === alReves)
                 ?console.info(`Si es Capícua, Número original ${numero}, palabra al revés ${alReves}`)
                 :console.info(`No es Capícua, Número original ${numero}, palabra al revés ${alReves}`)
-            }        
+            } 
+            // Otra forma       
             /* 
                 const capicua=(numero=0)=>
                 (!numero)
@@ -246,11 +249,9 @@
 
 
 
-        /* ------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
 
-        
-            /*  
-                11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, 
+            /*  11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, 
                 se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. 
                 miFuncion(5) devolverá 120  -> 5! => 5 * 4 * 3 * 3 * 1 = 120
             */
@@ -267,16 +268,18 @@
 
                 if(Math.sign(numero) === -1) return console.error("el numero no puede ser negativo")
         
-                let factorial=1;                                 
-            /* primera forma */            
+                let factorial=1;
+
+            /*  primera forma */            
               /* 
                 for(i=1;i<=numero;i++){
                 factorial=factorial*i
                 }
                 return console.log(factorial)
                 }  
-                    */       
-            /* segunda forma */               
+              */   
+
+            /*  segunda forma */               
                 for (let i = numero; i > 1 ; i--){
                 // factorial = factorial * i;  
                     factorial *= i;
@@ -300,169 +303,258 @@
                 console.log(`El factorial de ${x} es ${factorial(x)}`);
                 }
             */
-            factorial();
-            factorial("hola");
-            factorial(1,2,3);
-            factorial(0);
-            factorial(-5);
-            factorial(5);
-            factorial(4);
-        
+
+                // factorial();
+                // factorial("hola");
+                // factorial(1,2,3);
+                // factorial(0);
+                // factorial(-5);
+                // factorial(5);
+                // factorial(4);
+
+/* ------------------------------------------------------------------------------------- */                
 
             /* 
-                 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 
-                 1)  o no, pe. miFuncion(7) devolverá true 
+            12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1
+                o no, pe. miFuncion(7) devolverá true 
             */
 
-            //  Si el número es primo, la función retornará un valor booleano de true. 
-            // Y si el número no es primo, el valor retornado será false. 
-            // Recordemos que un número primo es un número mayor a 1 que tiene únicamente dos divisores positivos distintos, el mismo y el número 1.
-            // Cabe recalcar que el número 1, por convenio, no se considera un número primo, 
-            // por lo que si el valor que se pasa a la función es igual o menor a 1, la función debe retornar false
-            const numeroPrimo =(numero = undefined)=>{
-            if(numero===undefined) return console.log("No ingresaste un número!") 
-            if(typeof numero!=="number") return console.error(`El valor "${numero}" ingresado, No es un número`);
-            if(numero===0) return console.log("El número no puede ser 0") ;
-            if(numero===1) return console.log("El número no puede ser 1") ;
-            if(Math.sign(numero) === -1) return console.error("el numero no puede ser negativo")
-            
-            let divisible=false;
-            for(let i=2;i < numero; i++) {
-                if((numero % i) === 0) {
-                divisible=true;
-                break;
+                //  Si el número es primo, la función retornará un valor booleano de true. 
+                // Y si el número no es primo, el valor retornado será false. 
+                // Recordemos que un número primo es un número mayor a 1 que tiene únicamente dos divisores positivos distintos, el mismo y el número 1.
+                // Cabe recalcar que el número 1, por convenio, no se considera un número primo, 
+                // por lo que si el valor que se pasa a la función es igual o menor a 1, la función debe retornar false
+
+                const numeroPrimo =(numero = undefined)=>{
+                if(numero===undefined) return console.log("No ingresaste un número!"); 
+                if(typeof numero!=="number") return console.error(`El valor "${numero}" ingresado, No es un número`);
+                if(numero===0) return console.log("El número no puede ser 0") ;
+                if(numero===1) return console.log("El número no puede ser 1") ;
+                if(Math.sign(numero) === -1) return console.error("el numero no puede ser negativo")
+                
+                let divisible=false;
+                for(let i=2;i < numero; i++) {
+                    if((numero % i) === 0) {
+                    divisible=true;
+                    break;
+                    }
                 }
-            }
-            return(divisible)
-            ? console.log(`El número ${numero}, NO es primo`)
-            : console.log(`El número ${numero}, Si es primo`)
+                return(divisible)
+                ? console.log(`El número ${numero}, NO es primo`)
+                : console.log(`El número ${numero}, Si es primo`)
+                }
+                // numeroPrimo();
+                // numeroPrimo("sdfgdf")
+                // numeroPrimo(320);
+                // numeroPrimo();
+                // numeroPrimo(0);
+                // numeroPrimo(1);
+                // numeroPrimo(200);
+                // numeroPrimo(-45);
+                // numeroPrimo(7);
 
-        }
-            /* numeroPrimo();
-            numeroPrimo("sdfgdf")
-            numeroPrimo(320);
-            numeroPrimo();
-            numeroPrimo(0);
-            numeroPrimo(1);
-            numeroPrimo(200);
-            numeroPrimo(-45);
-            numeroPrimo(7);  */
-
-        // otra forma de resolverlo
+            // otra forma de resolverlo
             
-        function primo(numero) {
+                function primo(numero) {
 
-        console.log("Has pasado el numero: " + numero);
-        console.log("Inicio bucle desde 2 hasta " + (numero - 1));
+                console.log("Has pasado el numero: " + numero);
+                console.log("Inicio bucle desde 2 hasta " + (numero - 1));
 
-        for (var i = 2; i < numero; i++) {
-        console.log("Modulo entre " + numero + " y " + i + " = " + (numero % i));
-        if (numero % i === 0) {
-            console.log(i + " es un multiplo de " + numero);
-            console.log(numero + " no es un numero primo porque " + i + " es un multiplo");
-            return false;
-        }
-        }
-        if (numero === 1) {
-        console.log("Me has pasado el numero 1, recuerda que ${numero} NO es un numero primo");
-        } else {
-        console.log(`Como el numero ingresado no tuvo mas múltiplos entonces determinamos que ${numero} SI es un numero PRIMO.`);
-        }
+                for (var i = 2; i < numero; i++) {
+                console.log("Modulo entre " + numero + " y " + i + " = " + (numero % i));
+                    if (numero % i === 0) {
+                        console.log(i + " es un multiplo de " + numero);
+                        console.log(numero + " no es un numero primo porque " + i + " es un multiplo");
+                    return false;
+                    }
+                }
+                if (numero === 1) {
+                console.log("Me has pasado el numero 1, recuerda que ${numero} NO es un numero primo");
+                } else {
+                console.log(`Como el numero ingresado no tuvo mas múltiplos entonces determinamos que ${numero} SI es un numero PRIMO.`);
+                }
 
-        console.log("-------------------------------------");
-        }
-        // primo(2);
-        // primo(4);
-        // primo(5);
-        // primo(10);
-
-
-            /* 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar */
-
-            const numeroParImpar = (numero = undefined) => {
-            if(numero===undefined) return console.log("No ingresaste un número!") 
-            if(typeof numero!=="number") return console.error(`El valor "${numero}" ingresado, No es un número`);
-
-            return(numero % 2 === 0)
-            ? console.log(`El número ${numero}, es Par`)
-            : console.log(`El número ${numero}, es Impar`)
+                console.log("-------------------------------------");
             }
+
+                // primo(2);
+                // primo(4);
+                // primo(5);
+                // primo(10);
+
+
+/* ------------------------------------------------------------------------------------- */                                
+
+
+            /* 13) Programa una función que determine si un número es par o impar, 
+                   pe. miFuncion(29) devolverá Impar */
+
+                const numeroParImpar = (numero = undefined) => {
+                    if(numero===undefined) return console.log("No ingresaste un número!"); 
+                    if(typeof numero!=="number") return console.error(`El valor "${numero}" ingresado, No es un número`);
+
+                    return(numero % 2 === 0)
+                    ? console.log(`El número ${numero}, es Par`)
+                    : console.log(`El número ${numero}, es Impar`)
+                }
 
             // numeroParImpar();
             // numeroParImpar("23");
-            // numeroParImpar(19);
-            // numeroParImpar(20);
+            // numeroParImpar(-19);
+            // numeroParImpar(29);
 
-            /* 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F */
-            const convertirGrados = (grados = undefinedm, unidad = undefined) => {
-            if(grados === undefined) return console.warn("No ingresaste grados a convertir");
-            if(typeof grados !== "number") return console.error(`El valor "${grados}" ingresado, No es un número`);
-            if(typeof unidad !== "string") return console.error(`El valor "${unidad}" ingresado, No es una cadena de texto`);
+
+
+/* ------------------------------------------------------------------------------------- */                
+
+
+
+            /* 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, 
+            pe. miFuncion(0,"C") devolverá 32°F */
             
-            if(unidad.length !== 1 || !/(C|F)/.test(unidad)) return console.warn("valor de unidad no reconocido");
+                const convertirGrados = (grados = undefined, unidad = undefined) => {
+            
+                    if(grados === undefined) return console.warn("No ingresaste grados a convertir");
+                    if(typeof grados !== "number") return console.error(`El valor "${grados}" ingresado, No es un número`);
+                    if(typeof unidad !== "string") return console.error(`El valor "${unidad}" ingresado, No es una cadena de texto`);
+                
+                    if(unidad.length !== 1 || !/(C|F)/.test(unidad)) return console.warn("valor de unidad no reconocido");
+                    
+                    // Fórmula (0 °C × 9/5) + 32 = 32 °F
+                    if(unidad === "C") {
+                    return console.info(`${grados}°C = ${Math.round((grados*(9/5))+ 32)}°F`);
+                    // (grados °F − 32) × 5/9 = 0 °C
+                    }   else if (unidad === "F")
+                        return console.info(`${grados}°F = ${Math.round((grados-32)*(5/9))}°C `)                        
+                }
 
-            if(unidad === "C") {
-                return console.info(`${grados}°C = ${Math.round((grados*(9/5))+ 32)}°F`);
-            }else if (unidad === "F")
-            return console.info(`${grados}°F = ${Math.round((grados-32)*(5/9))}°C `)            
-            }
+                // convertirGrados(100,"C");
+                //  convertirGrados();
+                //  convertirGrados("C");
+                //  convertirGrados(12);
+                //  convertirGrados("12","");
+                //  convertirGrados(100,"F");
+                //  convertirGrados(2,"E");
+                //  convertirGrados(2,"C");
+                //  convertirGrados(32,"F");
+                //  convertirGrados(0,"C");
 
-            // convertirGrados(100,"C");
-            // convertirGrados(100,"F");
 
+/* ------------------------------------------------------------------------------------- */                                
         
             /* 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10 */
-            const convertirBinarioDecimal = (numero = undefined, base = undefined) => {
+                
+                const convertirBinarioDecimal = (numero = undefined, base = undefined) => {
+                
                 if(numero === undefined) return console.warn("No ingresaste grados a convertir");
                 
                 if(typeof numero !== "number") return console.error(`El valor "${numero}" ingresado, No es un número`);
                 
                 if(base === undefined) return console.warn("No ingresaste base  a convertir");
                 
-                if(typeof base !== "number") return console.error(`El valor "${base}" ingresado, No es una cadena de texto`);
+                if(typeof base !== "number") return console.error(`El valor "${base}"ingresado, No es un número`);
 
                 if(base === 2 ){
                     return console.info(`${numero} base ${base} = ${parseInt(numero,base)} base 10`);
                 } else if (base === 10) {
                     return console.info(`${numero} base ${base} = ${(numero.toString(base))} base 2`);
+                } else {
+                    return console.error("El tipo de base a convertir NO es válido");
                 }
             }
-        /*  convertirBinarioDecimal();
-            convertirBinarioDecimal("2");
-            convertirBinarioDecimal(100);
-            convertirBinarioDecimal(100,"2");
-            convertirBinarioDecimal(100,2);
-            convertirBinarioDecimal(1110010,2);
-            convertirBinarioDecimal(4,10);
-        */
-            /* 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800 */
-                    const descuento = (costo = undefined, porcentaje = undefined) => {
-                if (costo === undefined) return console.log(`No ingreso costo`);
-                if (porcentaje === undefined) return console.log(`No ingreso % de descuento`);
-                if (typeof costo !== "number")
-                    return console.log(`En costo no puede ingresar texto`);
-                if (typeof porcentaje !== "number")
-                    return console.log(`En % de descuento no puede ingresar texto`);
-                if(Math.sign(costo) === -1) return console.error("el numero no puede ser negativo");
-                if(Math.sign(porcentaje) === -1) return console.error("el numero no puede ser negativo");
-                if (costo <= 1)
-                    return console.log(`El costo a pagar debe ser mayor que cero`);
+            // convertirBinarioDecimal();
+            // convertirBinarioDecimal("2");
+            // convertirBinarioDecimal(100);
+            // convertirBinarioDecimal(100,"2");
+            // convertirBinarioDecimal(100,2);
+            // convertirBinarioDecimal(1110010,2);
+            // convertirBinarioDecimal(4,10);
+            // convertirBinarioDecimal(114,10);
+            // convertirBinarioDecimal(114,3);
 
-                let monto = costo - (costo * porcentaje / 100);
-                    console.log(
-                    `El descuento es de ${monto} aplicando un ${porcentaje}% de descuento a ${costo}`
-                    );
-                };
-            // descuento(1000, 20);
+            
+/* ------------------------------------------------------------------------------------- */                
+
+
+
+            /* 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800 */
+                
+                const aplicarDescuento =(monto = undefined, descuento = 0 ) => {
+                    
+                    if (monto === undefined) return console.log(`No ingresaste el monto`);
+                    if (typeof monto !== "number") return console.warn(`No ingresaste el monto`);
+                    if(Math.sign(monto) === -1) return console.error("el monto no puede ser negativo");
+                    
+                    if(Math.sign(descuento) === -1) return console.error("el descuento no puede ser negativo");
+                    
+                    return console.info(`El monto es $${monto}  y el descuento es de ${descuento}% y el monto final  con descuento es de  $${monto - ((monto * descuento) / 100)} `)
+                    
+                }
+                // aplicarDescuento();
+                // aplicarDescuento("200");
+                // aplicarDescuento(0);
+                // aplicarDescuento(-1000);
+                // aplicarDescuento(1000,"20");
+                // aplicarDescuento(1000,-20);
+                // aplicarDescuento(1000);
+                // aplicarDescuento(1000,25);
+
+
+                /* const descuento = (costo = undefined, porcentaje = undefined) => {
+                
+                    if (costo === undefined) return console.log(`No ingreso costo`);
+                    if (porcentaje === undefined) return console.log(`No ingreso % de descuento`);
+                    if (typeof costo !== "number") return console.log(`En costo no puede ingresar texto`);
+                    if (typeof porcentaje !== "number") return console.log(`En % de descuento no puede ingresar texto`);
+                    if(Math.sign(costo) === -1) return console.error("el numero no puede ser negativo");
+                    if(Math.sign(porcentaje) === -1) return console.error("el numero no puede ser negativo");
+                    if (costo <= 1) return console.log(`El costo a pagar debe ser mayor que cero`);
+
+                    let monto = costo - (costo * porcentaje / 100);
+                        console.log(`El descuento es de ${monto} aplicando un ${porcentaje}% de descuento a ${costo}`);
+                }; */
+                
+                // descuento(1000, 20);
+
+
+/* ------------------------------------------------------------------------------------- */                
+
 
 
             /* 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020) */
 
 
 
+
+/* ------------------------------------------------------------------------------------- */                
+
+
+
             /* 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5 */
 
+               /*  const contarLetras = (cadena = "") => {
+                    if (!cadena) return console.warn("NO ingresaste una cadena de texto");
+                    if (typeof cadena !== "string") return console.error(`El valor "${cadena}" ingresado, NO es una cadena de texto`);
 
+                    let vocales = ''
+
+                } */
+
+                const contarCaracter=(cadena="")=>
+                    (!cadena)
+                    ?console.warn("Ingrese una cadena")
+                    :(typeof(cadena)!="string")
+                    ?console.warn("Ingrese una cadena válida")
+                    :console.info(`Vocales : ${cadena.match(new RegExp(/[aeiou]/,"gi")).length}, 
+                    Consonantes : ${cadena.match(new RegExp(/[b-df-hj-np-tv-zñáéíóú]/,"gi")).length}`);
+
+                    // contarCaracter("Hola Mundo12ñéáÑ");
+                    // contarCaracter("pablo");
+
+
+
+
+/* ------------------------------------------------------------------------------------- */  
 
             /* 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero */
 

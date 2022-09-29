@@ -10,8 +10,38 @@
 <body>
     <!-- link donde esta los ejercicios https://www.linkedin.com/learning/desafio-de-programacion-javascript-basico/busqueda-de-productos?autoplay=true&resume=false&u=124249513 -->
     <!-- https://developers.google.com/blockly  -->
+    
     <script>
-    //  1)   Determinar si ambos arreglos son similares:
+    // 1. Determina si una función es primo o no
+    
+        function esPrimo (numero) {
+            if(numero <= 1) {
+                return false;
+            }
+            for(let i = 2 ; i < numero ; i++) {
+                // vamos a validar si el numero es divisible entre i
+                // vamos utilizar  mod (%) para sbustraer el residuo de la division del numero entre i
+                // si el residuo es cero quiere decir que no es primo
+                if(numero % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+
+        }
+
+        // console.log(esPrimo(2)); // true
+        // console.log(esPrimo(7)); // true
+        // console.log(esPrimo(10)); // false
+        // console.log(esPrimo(15)); // false
+        // console.log(esPrimo(29)); // true
+
+
+/*  ------------------------------------------------- */        
+
+
+
+    //  2.   Determinar si ambos arreglos son similares:
 
         function sonSimilares(arregloA, arregloB) {
             // diferencias entre == === !== 
@@ -34,9 +64,10 @@
         */
 
 
-/* ------------------------------------------ */
+/* -------------------------------------------------------------- */
 
-    /*  2.  Generar un número aleatorio dentro de un rago de dos números:     
+
+    /*  3.  Generar un número aleatorio dentro de un rago de dos números:     
             Math.flor ->redondea los numeros y quita los decimales   */
         function numeroAleatorio(numeroA, numeroB) {
             return Math.floor(Math.random() * (numeroA - numeroB) + numeroB);
@@ -51,7 +82,7 @@
 /* ------------------------------------------ */
 
 
-    //  3. Crear array de productos que cada uno incluya 
+    //  4. Crear array de productos que cada uno incluya 
     //  información sobre id, nombreProducto, marca, fechaExpiracion:   
 
         const listaProductos = [
@@ -87,7 +118,7 @@
         },
     ]
 
-        // Crear dos funciones para buscar productos acorde a los parámetros:
+    //  5. Crear dos funciones para buscar productos acorde a los parámetros:
 
         function buscarProductosPorId(id) {
         // el método filter recibe una funcion que se encarga de buscar o comparar cada uno de los elementos 
@@ -107,8 +138,14 @@
         }
 
         // console.log(buscarProductosPorFecha('2022-04-30', '2022-04-15'));
-    
-    //  4. Fila ordenada
+
+        
+
+/* ------------------------------------------------------------------------------------- */
+
+
+
+    //  6. Fila ordenada
     
         const arreglo = [];
 
