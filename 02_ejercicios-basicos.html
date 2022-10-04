@@ -38,7 +38,8 @@
 /* ------------------------------------------------------------------------------------- */
 
 
-    /* 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFunción("Hola Mundo", 4) devolverá "Hola" */
+    /*  2)  Programa una función que te devuelva el texto recortado según el número de caracteres indicados, 
+            pe. miFunción("Hola Mundo", 4) devolverá "Hola" */
 
     const recortarTexto = (cadena ="",longitud = undefined) =>
     (!cadena)
@@ -66,15 +67,16 @@
         ?console.warn("No ingresaste el caracter separador")
         :console.info(cadena.split(separador))
 
-    // cadenaAArreglo();
-    // cadenaAArreglo("hola que tal"," ");
-    // cadenaAArreglo("hola,que,tal,Pablo", ",");
-    // cadenaAArreglo("","-"); 
+        // cadenaAArreglo();
+        // cadenaAArreglo("hola que tal"," ");
+        // cadenaAArreglo("hola,que,tal,Pablo", ",");
+        // cadenaAArreglo("","-"); 
 
 /* ------------------------------------------------------------------------------------- */
 
 
-    /* 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo */
+    /*  4)  Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) 
+            devolverá Hola Mundo Hola Mundo Hola Mundo */
     
     const repetirTexto = (texto = "", veces = undefined) => {
         
@@ -123,28 +125,28 @@
     */
 
     const textoEnCadena = (cadena ="", texto ="") => {
-    if(!cadena)return console.warn("No ingresaste el texto Largo");
-    if(!texto)return console.warn("No ingresaste la palabra a evaluar");
+        if(!cadena)return console.warn("No ingresaste el texto Largo");
+        if(!texto)return console.warn("No ingresaste la palabra a evaluar");
 
-    let i = 0;
-    contador = 0; // cuantas veces se repite una palabra
-    // indexOF no encuentra el texto que quiero buscar, devuelve un -1, 
-    // si lo encuentra envia posicion donde esta la expresión a buscar
-    // array.indexOf(searchElement[, fromIndex])
-    // while evalua nuestra expresión el indexof
-    while(i !== -1) {
-        i = cadena.indexOf(texto,i);
-        if(i !== -1) { // si i encontro coincidencia
-        i++;
-        contador++; //va contando el numero de veces que aparecio el texto!
-        }    
+        let i = 0;
+        contador = 0; // cuantas veces se repite una palabra
+        // indexOF si no encuentra el texto que quiero buscar, devuelve un -1, 
+        // si lo encuentra envia posicion donde esta la expresión a buscar
+        // array.indexOf(searchElement[, fromIndex])
+        // while evalua nuestra expresión el indexof
+        while(i !== -1) {
+            i = cadena.indexOf(texto,i);
+            if(i !== -1) { // si i encontro coincidencia
+            i++;
+            contador++; //va contando el numero de veces que aparecio el texto!
+            }    
+        }
+        return console.info(`la palabra ${texto} se repite ${contador} veces`);
     }
-    return console.info(`la palabra ${texto} se repite ${contador} veces`);
-    }
-/*      textoEnCadena();
-        textoEnCadena("","mundo");
-        textoEnCadena("mundo");
-        textoEnCadena("hola mundo adios mundo mundo mundo mundo", "mundo",); */
+        // textoEnCadena();
+        // textoEnCadena("","mundo");
+        // textoEnCadena("mundo");
+        // textoEnCadena("hola mundo adios mundo mundo mundo mundo", "mundo",);
 
 
 /* ------------------------------------------------------------------------------------- */
@@ -155,7 +157,7 @@
         pe. mifuncion("Salas") devolverá true */
     //javascript es camelcase sensitive distingue entre minuscula y mayus culas
     const palindromo =(palabra) => {
-    if(!palabra) return console.warn("no ingresaste una palabra o frase dada");
+        if(!palabra) return console.warn("no ingresaste una palabra o frase dada");
 
     palabra = palabra.toLowerCase();
     // partimos la palabra sin especificar un separador para que luego los convierta a un arreglo , aprovechamos el metodo reverse de los arreglos
@@ -173,14 +175,14 @@
 /* ------------------------------------------------------------------------------------- */
 
 
-/* 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, 
+/*  8) Programa una función que elimine cierto patrón de caracteres de un texto dado, 
     pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5 */
     const eliminarCaracteres = (texto = "", patron = "") =>
-    (!texto)
-    ? console.warn("No ingresaste un texto")
-    :(!patron)
-        ?console.warn("No ingresaste un patron de caracteres")
-        :console.info(texto.replace(new RegExp(patron, "ig"),""));
+        (!texto)
+        ? console.warn("No ingresaste un texto")
+        :(!patron)
+            ?console.warn("No ingresaste un patron de caracteres")
+            :console.info(texto.replace(new RegExp(patron, "ig"),""));
     /* 
             eliminarCaracteres("xyz,xyz,xyz,xyz");
             eliminarCaracteres("xyz1,xyz2,xyz3,xyz4", "xyz");
@@ -219,7 +221,7 @@
         pe. miFuncion(2002) devolverá true 
     */
 
-    const capicua = (numero = 0) => {
+        const capicua = (numero = 0) => {
     if(!numero) return console.warn("No ingresate un número");
     if (typeof numero !== "number") return console.error (`el valor "$(numero)" ingresado, No es un número`);
 
@@ -261,15 +263,15 @@
                     
         const factorial =(numero = undefined)=>{
 
-        if(numero === undefined) return console.warn("No ingresaste un número");
+            if(numero === undefined) return console.warn("No ingresaste un número");
 
-        if(typeof numero!=="number") return console.error("El valor introducido no es un número");
-        
-        if(!numero) return console.warn("No has introducido el valor del cual quieres calcular el factorial");
-        
-        if(numero===0) return console.log("El número no puede ser 0")
+            if(typeof numero!=="number") return console.error("El valor introducido no es un número");
+            
+            if(!numero) return console.warn("No has introducido el valor del cual quieres calcular el factorial");
+            
+            if(numero===0) return console.log("El número no puede ser 0")
 
-        if(Math.sign(numero) === -1) return console.error("el numero no puede ser negativo")
+            if(Math.sign(numero) === -1) return console.error("el numero no puede ser negativo")
 
         let factorial=1;
 
@@ -329,55 +331,55 @@
         // por lo que si el valor que se pasa a la función es igual o menor a 1, la función debe retornar false
 
         const numeroPrimo =(numero = undefined)=>{
-        if(numero===undefined) return console.log("No ingresaste un número!"); 
-        if(typeof numero!=="number") return console.error(`El valor "${numero}" ingresado, No es un número`);
-        if(numero===0) return console.log("El número no puede ser 0") ;
-        if(numero===1) return console.log("El número no puede ser 1") ;
-        if(Math.sign(numero) === -1) return console.error("el numero no puede ser negativo")
+            if(numero===undefined) return console.log("No ingresaste un número!"); 
+            if(typeof numero!=="number") return console.error(`El valor "${numero}" ingresado, No es un número`);
+            if(numero===0) return console.log("El número no puede ser 0") ;
+            if(numero===1) return console.log("El número no puede ser 1") ;
+            if(Math.sign(numero) === -1) return console.error("el numero no puede ser negativo")
         
-        let divisible=false;
-        for(let i=2;i < numero; i++) {
-            if((numero % i) === 0) {
-            divisible=true;
-            break;
+            let divisible=false;
+            for(let i=2;i < numero; i++) {
+                if((numero % i) === 0) {
+                divisible=true;
+                break;
+                }
             }
+            return(divisible)
+            ? console.log(`El número ${numero}, NO es primo`)
+            : console.log(`El número ${numero}, Si es primo`)
         }
-        return(divisible)
-        ? console.log(`El número ${numero}, NO es primo`)
-        : console.log(`El número ${numero}, Si es primo`)
-        }
-        // numeroPrimo();
-        // numeroPrimo("sdfgdf")
-        // numeroPrimo(320);
-        // numeroPrimo();
-        // numeroPrimo(0);
-        // numeroPrimo(1);
-        // numeroPrimo(200);
-        // numeroPrimo(-45);
-        // numeroPrimo(7);
+            // numeroPrimo();
+            // numeroPrimo("sdfgdf")
+            // numeroPrimo(320);
+            // numeroPrimo();
+            // numeroPrimo(0);
+            // numeroPrimo(1);
+            // numeroPrimo(200);
+            // numeroPrimo(-45);
+            // numeroPrimo(7);
 
     // otra forma de resolverlo
     
         function primo(numero) {
 
-        console.log("Has pasado el numero: " + numero);
-        console.log("Inicio bucle desde 2 hasta " + (numero - 1));
+            console.log("Has pasado el numero: " + numero);
+            console.log("Inicio bucle desde 2 hasta " + (numero - 1));
 
-        for (var i = 2; i < numero; i++) {
-        console.log("Modulo entre " + numero + " y " + i + " = " + (numero % i));
-            if (numero % i === 0) {
-                console.log(i + " es un multiplo de " + numero);
-                console.log(numero + " no es un numero primo porque " + i + " es un multiplo");
-            return false;
+            for (var i = 2; i < numero; i++) {
+            console.log("Modulo entre " + numero + " y " + i + " = " + (numero % i));
+                if (numero % i === 0) {
+                    console.log(i + " es un multiplo de " + numero);
+                    console.log(numero + " no es un numero primo porque " + i + " es un multiplo");
+                return false;
+                }
             }
-        }
-        if (numero === 1) {
-        console.log("Me has pasado el numero 1, recuerda que ${numero} NO es un numero primo");
-        } else {
-        console.log(`Como el numero ingresado no tuvo mas múltiplos entonces determinamos que ${numero} SI es un numero PRIMO.`);
-        }
+            if (numero === 1) {
+            console.log("Me has pasado el numero 1, recuerda que ${numero} NO es un numero primo");
+            } else {
+            console.log(`Como el numero ingresado no tuvo mas múltiplos entonces determinamos que ${numero} SI es un numero PRIMO.`);
+            }
 
-        console.log("-------------------------------------");
+            console.log("-------------------------------------");
     }
 
         // primo(2);
@@ -401,10 +403,10 @@
             : console.log(`El número ${numero}, es Impar`)
         }
 
-        // numeroParImpar();
-        // numeroParImpar("23");
-        // numeroParImpar(-19);
-        // numeroParImpar(29);
+            // numeroParImpar();
+            // numeroParImpar("23");
+            // numeroParImpar(-19);
+            // numeroParImpar(29);
 
 
 /* ------------------------------------------------------------------------------------- */                
@@ -712,20 +714,106 @@
             el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, 
             pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }*/
 
-    const  
+    const  ordenarArreglo  =( arr = undefined) => {
+        
+        if(arr === undefined) return console.warn("No ingresaste un arreglo de números ");
+        if(!(arr instanceof Array)) return console.error(`El valor "${arr}" ingresado, NO es un arreglo`);
+        if(arr.length === 0) return console.error("El arreglo esta vacío");
+
+        for(let num of arr) {
+            if(typeof num !== "number") return console.error(`El valor "${num}" ingresado, No es un número`);
+        }
+        // nos pide devolver un objeto
+        return console.info({
+            //arr:arr, simplificar complete propety
+            arr,
+            // metodo map , me genera otro arreglo, por cada elemento me devuelve ese elemento para generar otro nuevo elemento
+            // metodo sort nos ordena el arreglo
+            asc: arr.map(el => el).sort(),
+            desc: arr.map(el => el).sort().reverse()
+        })
+    }
+        // ordenarArreglo();
+        // ordenarArreglo("hola");
+        // ordenarArreglo([]);
+        // ordenarArreglo([1,2,"2"]);
+        // ordenarArreglo([7,5,7,8,6]);
 
 
 /* ------------------------------------------------------------------------------------- */  
 
 
-    /* 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true]  */
+    /*  25) Programa una función que dado un arreglo de elementos, elimine los duplicados, 
+            pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true]  */
 
+    const quitarDuplicados = (arr = undefined) => {
+        if(arr === undefined) return console.warn("No ingresaste un arreglo de números ");
+        if(!(arr instanceof Array)) return console.error(`El valor "${arr}" ingresado, NO es un arreglo`);
+        if(arr.length === 0) return console.error("El arreglo esta vacío");
+        if(arr.length === 1) return console.warn("El arreglo debe tener al menos 2 elementos");
 
+        /* return console.info({
+            original:arr,
+            // método filter => (method) Array<any>.filter((value: any, index: number, array: any[])
+            // elemento en cuestion 2. posicion 3. self = al mismo arreglo
+            // INDEXOF  buscar elementos  es comparar el valor contra la posición que estoy evaluando
+            // vamos a ir comparando si hay algun elemento duplicado
+            // filter genera otro arreglo, esta comparando el arreglo que esta recibiendo con el 
+            // arreglo origina contra los valores que va formando  el propio arreglo generado por filter
+            
+            sinDuplicados:arr.filter((value,index,self) => self.indexOf(value)== index)
+        }); */
+
+    // Otra solución
+
+        return console.info({
+            original:arr,
+            sinDuplicados: [...new Set(arr)]
+        })
+    }
+
+        // quitarDuplicados();
+        // quitarDuplicados({});
+        // quitarDuplicados([]);
+        // quitarDuplicados([2]);
+        // quitarDuplicados(["x", 10, "x", 2, "10", 10, true, true])
 
 /* ------------------------------------------------------------------------------------- */  
 
 
-    /* 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5 */
+    /* 26)  Programa una función que dado un arreglo de números obtenga el promedio, 
+            pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5 */
+
+        const promedio = (arr = undefined) => {
+            if(arr === undefined) return console.warn("No ingresaste un arreglo de números ");
+            if(!(arr instanceof Array)) return console.error(`El valor "${arr}" ingresado, NO es un arreglo`);
+            if(arr.length === 0) return console.error("El arreglo esta vacío");
+            
+            for(let num of arr) {
+            if(typeof num !== "number") return console.error(`El valor "${num}" ingresado, No es un número`);
+            }
+            // reduce recibe una función 
+            return console.info (
+                // 
+                arr.reduce((total,num,index,arr) =>{
+                    total += num;
+                    if(index === arr.length - 1) {
+                        return `El promedio de ${arr.join("+")} es ${total / arr.length}`;
+                    } else {
+                        return total;
+                    }
+                })
+            )    
+        }
+        
+            promedio()
+            promedio({});
+            promedio([])
+            promedio([2, true]);
+            promedio([9,8,7,6,5,4,3,2,1,0])
+            
+
+            
         
 
 /* ------------------------------------------------------------------------------------- */  
