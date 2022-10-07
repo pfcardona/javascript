@@ -8,7 +8,7 @@
 
     <body>
         <h5>JavaScript</h5>
-        <script>
+    <script>
 
 /* ------------------------------------------------------------------------------------- */
 
@@ -159,13 +159,13 @@
     const palindromo =(palabra) => {
         if(!palabra) return console.warn("no ingresaste una palabra o frase dada");
 
-    palabra = palabra.toLowerCase();
+        palabra = palabra.toLowerCase();
     // partimos la palabra sin especificar un separador para que luego los convierta a un arreglo , aprovechamos el metodo reverse de los arreglos
     // para invertirlos y luego lo volvemos a unir con el método JOIN sin pasarle parámetro para que lo convierta a cadena de texto
-    let alReves = palabra.split("").reverse().join("")  ;
-    return (palabra === alReves)
-    ?console.info(`Si es palindromo, palabra original ${palabra}, palabra al revés ${alReves}`)
-    :console.info(`No es palindromo, palabra original ${palabra}, palabra al revés ${alReves}`)
+        let alReves = palabra.split("").reverse().join("")  ;
+        return (palabra === alReves)
+            ?console.info(`Si es palindromo, palabra original ${palabra}, palabra al revés ${alReves}`)
+            :console.info(`No es palindromo, palabra original ${palabra}, palabra al revés ${alReves}`)
     } 
     // palindromo("daad");
     // palindromo("hola mundo") // no es palindromo
@@ -320,7 +320,8 @@
 /* ------------------------------------------------------------------------------------- */                
 
     /* 
-    12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1
+    12) Programa una función que determine si un número es primo 
+        (aquel que solo es divisible por sí mismo y 1
         o no, pe. miFuncion(7) devolverá true 
     */
 
@@ -335,7 +336,7 @@
             if(typeof numero!=="number") return console.error(`El valor "${numero}" ingresado, No es un número`);
             if(numero===0) return console.log("El número no puede ser 0") ;
             if(numero===1) return console.log("El número no puede ser 1") ;
-            if(Math.sign(numero) === -1) return console.error("el numero no puede ser negativo")
+            if(Math.sign(numero) === -1) return console.error("el número no puede ser negativo")
         
             let divisible=false;
             for(let i=2;i < numero; i++) {
@@ -345,8 +346,8 @@
                 }
             }
             return(divisible)
-            ? console.log(`El número ${numero}, NO es primo`)
-            : console.log(`El número ${numero}, Si es primo`)
+            ? console.log(`El número ${numero}, NO es Primo`)
+            : console.log(`El número ${numero}, Si es Primo`)
         }
             // numeroPrimo();
             // numeroPrimo("sdfgdf")
@@ -378,10 +379,8 @@
             } else {
             console.log(`Como el numero ingresado no tuvo mas múltiplos entonces determinamos que ${numero} SI es un numero PRIMO.`);
             }
-
             console.log("-------------------------------------");
     }
-
         // primo(2);
         // primo(4);
         // primo(5);
@@ -830,7 +829,7 @@
         - Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
         - Crea un método que devuelva toda la ficha técnica de la película.
         - Apartir de un arreglo con la información de 3 películas genera 3 instancias de la clase de forma automatizada 
-            e imprime la ficha técnica de cada película.
+          e imprime la ficha técnica de cada película.
 
         * Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, 
             Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.

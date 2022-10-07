@@ -12,121 +12,177 @@
        // http://multimedia.uoc.edu/blogs/pw/es/2013/09/17/exercicis-de-javascript-iniciacio/
 
 
-        // Ejercicios de JavaScript – iniciación (soluciones)
+       // Ejercicios de JavaScript – iniciación (soluciones)
 
-        // 1.- Escribe un programa de una sola línea que haga que aparezca en la pantalla un alert que diga “Hello World”.
-                /* let nombre = ""
-                nombre = prompt("¿Cual es tu nombre?")
-                alert ("Bienvenido" + nombre) */
-
-
- /* _________________________________________________ */
-
-
-
-        // 2.- Escribe un programa de una sola línea que escriba en la pantalla un texto que diga “Hello World” (document.write).
-        
-        // document.write("Hello World");
+       // 1.- Escribe un programa de una sola línea que haga que aparezca en la pantalla un alert que diga “Hello World”.
+              /* let nombre = ""
+              nombre = prompt("¿Cual es tu nombre?")
+              alert ("Bienvenido" + nombre) */
 
 
  /* _________________________________________________ */
 
 
 
-        // 3.- Escribe un programa de una sola línea que escriba en la pantalla el resultado de sumar 3 + 5.
+       // 2.- Escribe un programa de una sola línea que escriba en la pantalla un texto que diga “Hello World” (document.write).
         
-        // document.write(3+5);
-        
- /* _________________________________________________ */
+       // document.write("Hello World");
 
-
-        //  4.- Escribe un programa de dos líneas que pida el nombre del usuario con un prompt y escriba un texto que diga “Hola nombreUsuario”
-        
-        //  var nombre = prompt("Escribe tu nombre");
-        
-        //  document.write("Hola "+nombre);
 
  /* _________________________________________________ */
 
 
-        /* 5.- Escribe un programa de tres líneas que pida un número, pida otro número y 
+
+       // 3.- Escribe un programa de una sola línea que escriba en la pantalla el resultado de sumar 3 + 5.
+        
+       // document.write(3+5);
+        
+ /* _________________________________________________ */
+
+
+       //  4.- Escribe un programa de dos líneas que pida el nombre del usuario con un prompt y escriba un texto que diga “Hola nombreUsuario”
+        
+       //  var nombre = prompt("Escribe tu nombre");
+        
+       //  document.write("Hola "+nombre);
+
+ /* _________________________________________________ */
+
+
+       /*    5. Escribe un programa de tres líneas que pida un número, pida otro número y 
               escriba el resultado de sumar estos dos números.
 
-        var n1 = prompt("Escribe un número");
-        var n2 = prompt("Escribe otro número");
-        document.write("La suma es: "+ ( parseInt(n1)+ parseInt(n2) ) ); */
+              var n1 = prompt("Escribe un número");
+              var n2 = prompt("Escribe otro número");
+              document.write("La suma es: "+ ( parseInt(n1)+ parseInt(n2) ) ); */
 
  /* _________________________________________________ */
 
 
-        /* 6.- Escribe un programa que pida dos números y escriba en la pantalla cual es el mayor.
+       /*    6. Escribe un programa que pida dos números y escriba en la pantalla cual es el mayor.
 
-        var n1 = prompt("Escribe un número");
-        var n2 = prompt("Escribe otro número");
-        if (n1 > n2) {
-        document.write(n1);
-        } else {
-        document.write(n2);
-        } */
-
- /* _________________________________________________ */
-
-
-        /* 7.- Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.
-
-        var n1 = prompt("Escribe un número");
-        var n2 = prompt("Escribe otro número");
-        var n3 = prompt("Escribe otro número");
-        if (n1 > n2 && n1 > n3) {
-        document.write(n1);
-        } else if (n2 > n3) {
-        document.write(n2);
-        } else {
-        document.write(n3);
-        } */
+              var n1 = prompt("Escribe un número");
+              var n2 = prompt("Escribe otro número");
+              if (n1 > n2) {
+              document.write(n1);
+              } else {
+              document.write(n2);
+              } */
 
  /* _________________________________________________ */
 
 
-        /* 8.- Escribe un programa que pida un número y diga si es divisible por 2
+       /*     7. Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.
 
-        var n1 = prompt("Escribe un número");
-        if (n1 % 2 === 0) {
-        document.write("Es divisible por 2");
-        } else {
-        document.write("No es divisible por 2");
-        } */
+       var n1 = prompt("Escribe un número");
+       var n2 = prompt("Escribe otro número");
+       var n3 = prompt("Escribe otro número");
+       if (n1 > n2 && n1 > n3) {
+       document.write(n1);
+       } else if (n2 > n3) {
+       document.write(n2);
+       } else {
+       document.write(n3);
+       } */
+
+ /* _________________________________________________ */
+
+
+       /*7a.  Hallar cociente y residuo */
+       
+       // Variables
+       
+       // let numero1, numero2, cociente, residuo;
+       // Entrada de datos
+       // numero1= Number(prompt("Escribe un número")) ;
+       // numero2= Number(prompt("Escribe otro número"));
+       
+       // Proceso
+       // cociente = numero1 /numero2;
+       // residuo = numero1 % numero2;
+
+       // Salida de datos
+
+       // document.write('Cociente:' + cociente + '<br>');
+       // document.write('Residuo:', residuo);
+
+/* _________________________________________________ */
+
+
+       //     7b.  Dado el valor de venta de un producto, hallar el IVA (19%) y el precio de venta 
+       
+       // Variables
+       
+       let vv = 0, iva = 0,pv = 0;
+
+       // Entrada de datos
+       // vv= parseFloat(prompt("Escribe el valor de la venta")) ;
+       
+       
+       // Proceso
+       iva = vv * 0.19;
+       pv = vv + iva;
+
+       // Opción 1 Salida de datos + antigua
+
+       /* document.write('Valor de venta es:' + vv + '<br>');
+       document.write('El IVA es:' + iva + '<br>');
+       document.write('El precio de Venta es:', pv); */
+
+       // Salida de datos opcion 2 + actualizada +todo en una sola linea
+
+       // document.write(`Valor de Venta: ${vv}<br>
+       //              IVA: ${iva} <br>
+       //              Precio de venta: ${pv}`);
+
+       
+
+ /* _________________________________________________ */
+
+
+       /*     8. Escribe un programa que pida un número y diga si es divisible por 2 
+
+              var n1 = prompt("Escribe un número");
+              if (n1 % 2 === 0) {
+              document.write("Es divisible por 2");
+              } else {
+              document.write("No es divisible por 2");
+              } 
+
+       */
 
 
  /* _________________________________________________ */
 
 
-        /* 9.Escribe un programa que pida una frase y escriba cuantas veces aparece la letra a
+       /*     9.     ¿Escribe un programa que pida una frase y escriba cuantas veces aparece la letra a
 
-        HTML <div id="resultado"></div>
+       HTML <div id="resultado"></div>
 
-        function cuantasVecesAparece(cadena, caracter){
-            var indices = [];
-            for(var i = 0; i < cadena.length; i++) {
-            if (cadena[i].toLowerCase() === caracter) indices.push(i);
-            }
-            return indices.length;
-        }
+       function cuantasVecesAparece(cadena, caracter){
+       var indices = [];
+       
+       for(var i = 0; i < cadena.length; i++) {
+       if (cadena[i].toLowerCase() === caracter) 
+       indices.push(i);
+       }
+       return indices.length;
+       }
 
-        var coincidencias = cuantasVecesAparece("Cuantas 'A' aparecen en esta cadena.", "a");
+       var coincidencias = cuantasVecesAparece("Cuantas 'A' aparecen en esta cadena.", "a");
 
-        document.getElementById("resultado").innerHTML = coincidencias;
+       document.getElementById("resultado").innerHTML = coincidencias;
 
-        // opcion 2
+       // opcion 2
 
-        var cadena = prompt ("escriba una frase.");
+       var cadena = prompt ("escriba una frase.");
 
-        var indices = [];
-        for(var i = 0; i < cadena.length; i++) {
-            if (cadena[i].toLowerCase() === "a") indices.push(i);
-        }
+       var indices = [];
+       for(var i = 0; i < cadena.length; i++) {
+       if (cadena[i].toLowerCase() === "a") indices.push(i);
+       }
 
-        document.getElementById("resultado").innerHTML = indices.length; */
+       document.getElementById("resultado").innerHTML = indices.length; */
 
 
 
@@ -134,58 +190,60 @@
 
 
 
-        /* 
-        10.- Escribe un programa que pida una frase y escriba las vocales que aparecen
+       /* 
+       10.- Escribe un programa que pida una frase y escriba las vocales que aparecen
 
-        var text = prompt("Escribe una frase");
-        var nText = text.length;
-        var i;
-        for (i = 0; i < nText; i++) {
-        if (text.substr(i,1) === "a" || text.substr(i,1) === "e" || text.substr(i,1) === "i" || text.substr(i,1) === "o" || text.substr(i,1) === "u") {
-        document.write(text.substr(i,1);
-        }
+       var text = prompt("Escribe una frase");
+       var nText = text.length;
+       var i;
+       for (i = 0; i < nText; i++) {
+       if (text.substr(i,1) === "a" || text.substr(i,1) === "e" 
+       || text.substr(i,1) === "i" || text.substr(i,1) === "o" 
+       || text.substr(i,1) === "u") {
+       
+              document.write(text.substr(i,1);
+       }
       }
         */
 
  /* _________________________________________________ */
 
-/* 
-        13.- Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o 7 (sólo hay que comprobar si lo es por uno de los cuatro)
-       
-        var n1 = prompt("Escribe un número");
-        if (n1 % 2 === 0 || n1 % 3 === 0 || n1 % 5 === 0 || n1 % 7 === 0) {
-        document.write("Es divisible por 2, 3, 5 o 7");
-        } else {
-        document.write("No es divisible ni por 2, ni por 3, ni por 5, ni por 7");
-        } 
+/*     13.- Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o 7 
+       (sólo hay que comprobar si lo es por uno de los cuatro)
+
+       var n1 = prompt("Escribe un número");
+       if (n1 % 2 === 0 || n1 % 3 === 0 || n1 % 5 === 0 || n1 % 7 === 0) {
+       document.write("Es divisible por 2, 3, 5 o 7");
+       } else {
+       document.write("No es divisible ni por 2, ni por 3, ni por 5, ni por 7");
+       } 
 */
 
 
 /* _________________________________________________ */
 
 
-        /* 
-          14.- Añadir al ejercicio anterior que nos diga por cual de los cuatro es divisible (hay que decir todos por los que es divisible)
-        */  
-        
-        var n1 = prompt("Escribe un número"); 
+       /* 14.- Añadir al ejercicio anterior que nos diga por cual de los cuatro es divisible (hay que decir todos por los que es divisible)
+       */  
+       
+      /*  var n1 = prompt("Escribe un número"); 
 
-        if (n1 % 2 === 0 || n1 % 3 === 0 || n1 % 5 === 0 || n1 % 7 === 0) {
-        if (n1 % 2 === 0) {
-        document.write("Es divisible por 2. ");
-        }
-        if (n1 % 3 === 0) {
-        document.write("Es divisible por 3. ");
-        }
-        if (n1 % 5 === 0) {
-        document.write("Es divisible por 5. ");
-        }
-        if (n1 % 7 === 0) {
-        document.write("Es divisible por 7. ");
-        }
-        } else {
-        document.write("No es divisible ni por 2, ni por 3, ni por 5, ni por 7");
-        }
+       if (n1 % 2 === 0 || n1 % 3 === 0 || n1 % 5 === 0 || n1 % 7 === 0) {
+       if (n1 % 2 === 0) {
+       document.write("Es divisible por 2. ");
+       }
+       if (n1 % 3 === 0) {
+       document.write("Es divisible por 3. ");
+       }
+       if (n1 % 5 === 0) {
+       document.write("Es divisible por 5. ");
+       }
+       if (n1 % 7 === 0) {
+       document.write("Es divisible por 7. ");
+       }
+       } else {
+       document.write("No es divisible ni por 2, ni por 3, ni por 5, ni por 7");
+       } */
 
         /* var text = prompt("Escribe un número");
         if (text % 3 === 0)
@@ -204,37 +262,35 @@
 
 
 
-        /*  
-        15.- Escribir un programa que escriba en pantalla los divisores de un número dado
-        var n1 = prompt("Escribe un número");
-        var i;
-        for (i=2;i < n1/2; i++) {
-        if (n1 % i === 0) {
-        document.write(i,", ");
-        }
-        } 
-        */
+       /*  15.- Escribir un programa que escriba en pantalla los divisores de un número dado
+       var n1 = prompt("Escribe un número");
+       var i;
+       for (i=2;i < n1/2; i++) {
+       if (n1 % i === 0) {
+       document.write(i,", ");
+       }
+       } 
+       */
 
 
 /* _________________________________________________ */
-        /* 
-        16.- Escribir un programa que escriba en pantalla los divisores comunes de dos números dados
-                
-        var n1 = prompt("Escribe un número");
-                var n2 = prompt("Escribe otro número");
-                var menor;
-                var i;
-                if (n1 < n2) {
-                menor = n1;
-                } else {
-                menor = n2;
-                }
-                for (i=2; i < menor / 2; i++) {
-                if (n1 % i === 0 && n2 % i === 0) {
-                document.write(i,", ");
-                }
-                } 
-        */
+       /* 16.- Escribir un programa que escriba en pantalla los divisores comunes de dos números dados
+              
+       var n1 = prompt("Escribe un número");
+              var n2 = prompt("Escribe otro número");
+              var menor;
+              var i;
+              if (n1 < n2) {
+              menor = n1;
+              } else {
+              menor = n2;
+              }
+              for (i=2; i < menor / 2; i++) {
+              if (n1 % i === 0 && n2 % i === 0) {
+              document.write(i,", ");
+              }
+              } 
+       */
 
  /* _________________________________________________ */
 
@@ -272,6 +328,208 @@
               document.write("El número no es primo");
               } 
         */
+
+       /*  18. Palíndromo
+
+              Crear un sistema que detecte si una palabra es palíndroma o no 
+              Para solucionar este problema el usuario tiene que ingresar por pantalla una palabra y el sistema verificas si es palíndromo o no.
+              Una palabra palíndroma se lee de igual formo como de la derecha y de la izquierda.
+       */     
+              const palindromo =(palabra) => {
+                     // Ana oso luz azul
+                     palabra = palabra.replace(' ','');
+                     palabra = palabra.toLowerCase();
+                     // convertimos a una lista y luego a una cadena de caracter
+                     palabraAlReves = palabra.split('').reverse().join('');
+
+                     if( palabra === palabraAlReves) {
+                            return true;
+                     }else {
+                            return false;
+                     }
+                     
+              }
+              // console.log(palindromo('carro'));
+              // console.log(palindromo('Luz azul'));
+             /*  let palabra = prompt("Ingresa una Palabra");
+              let esPalindromo = palindromo(palabra);
+              if (esPalindromo ) {
+                     console.log("Es palindromo")
+                     document.write(`La palabra "${palabra}" es Palindromo`)
+              }else {
+                     console.log("No es palíndromo")
+                     document.write("La palabra "+ " " + palabra +  " " + "No es Palíndromo")
+              } */
+
+/*-------------------------------------------------------------------- */
+
+
+
+       /*  Practica 02: Primalidad
+            Crear un sistema que detecte si un numero es primo o no 
+            Para solucionar este problema se requiere que el usuario ingres un numero por teclado 
+            y el sistema detecte si es primo o no.
+            Un numero primo es aquel que se puede dividir solo dos veces por 1 y por sí misma.  */
+
+            
+
+            const esPrimo = (numero) => {
+                contador = 0;
+                let numeros = [];
+
+                for(let i=0; i<= numero; i++ ) {
+                    numeros.push(i);
+                }
+                for (let n of numeros){
+                    if(n === 1 || n === numero){
+                        continue;
+                    }
+                    
+                    if(numero % n === 0){
+                        contador ++;
+                    }
+                }
+                return contador === 0;
+            }
+
+            let numero = Number(prompt("Ingrese un número"));
+            if(esPrimo(numero)) {
+                document.write('Es primo');
+            }else{                
+                document.write('No Es primo');
+            }
+            // console.log(esPrimo(5))
+            // console.log(esPrimo(7))
+            // console.log(esPrimo(9))
+              
+
+
+/*-------------------------------------------------------------------- */
+
+       /*19.  Descuento de Restaurante Parte 1 
+              Enunciado: un restaurante ofrece un descuento del 10% para consumo de hasta  $100
+              y un descuento del 20 % para consumos mayores, para ambos casos se aplica un impuesto del 19%. 
+              a.Determinar el monto del descuento, 
+              b.El impuesto 
+              c.El importe a pagar.
+
+              Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el 
+              sistema verifica y calcula el monto del descuento, el impuesto y el importe a pagar.
+
+              - Monto del descuento
+              - Impuesto
+              - Importe a pagar       
+       */
+/* 
+       // Entrada de datos 
+              let consumo = Number(prompt('Ingrese el consumo'))
+              let descuento, datoDescuento
+       // Proceso
+              if(consumo <= 100) {
+              // Descuento de 10 %
+              datoDescuento = '10%';
+              
+              descuento = consumo * 0.10;
+              
+       }else if (consumo > 100) {
+              // Descuento de 10 %
+              datoDescuento = '20%';
+              descuento = consumo * 0.20;
+       }
+       let montoDescuento = consumo - descuento;
+       let impuesto = montoDescuento * 0.19;
+       let totalPagar = montoDescuento + impuesto;
+       // Ouput
+
+       document.write(`<pre>
+              Consumo       : ${consumo}
+              Descuento     : ${datoDescuento}
+              Monto con Descuento  : ${montoDescuento}
+              IVA           : ${impuesto}
+              Total a pagar : ${totalPagar}
+              </pre>`) */
+
+       /*  Practica 02: Descuentos de un restaurante Parte 02
+
+              Enunciado: debido a los excelentes resultados, el restaurante decide ampliar sus ofertas de acuerdo a 
+              la siguiente escala de consumo, ver la tabla. Determinar el monto del descuento, el importe del impuesto 
+              y el importe a pagar.
+              Consumo (S/.)       Descuento (%)
+              Hasta 100                 10
+              Mayor a 100             20
+              Mayor a 200             30
+              Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el sistema 
+              verifica y calcula el monto del descuento, el impuesto y el importe a pagar.
+
+       */
+       /*        // Entrada de datos 
+              let consumo = Number(prompt('Ingrese el consumo'))
+              let descuento, datoDescuento
+       // Proceso
+              if(consumo <= 100) {
+              // Descuento de 10 %
+              datoDescuento = '10%';
+              
+              descuento = consumo * 0.10;
+              
+       }else if (consumo > 100 && consumo <=200) {
+              // Descuento de 10 %
+              datoDescuento = '20%';
+              descuento = consumo * 0.20;
+       }else if (consumo > 200) {
+              // descuento de 30 %
+              datoDescuento = '30%';
+              descuento = consumo * 0.30;
+       }
+
+       let montoDescuento = consumo - descuento;
+       let impuesto = montoDescuento * 0.19;
+       let totalPagar = montoDescuento + impuesto;
+       // Ouput
+
+       document.write(`<pre>
+              Consumo       : ${consumo}
+              Descuento     : ${descuento}      | ${datoDescuento}
+              Monto con Descuento  : ${montoDescuento}
+              IVA           : ${impuesto}       | 19%
+              Total a pagar : ${totalPagar}
+              </pre>`) */
+
+       /* Practica 03: Guardar resultados de pares e impares
+
+       Crea 3 arrays 
+       a.un array que tendrá números de 1 a 9. 
+       b.El primer array se llamará pares 
+       c.y el segundo impar, ambos estarán vacíos. 
+       
+       Después multiplica cada uno de los números de array con números por un número aleatorio entre 1 y 100, 
+       si el resultado es par guarda ese número en el array de pares y si es impar en el array  de impares. Muestra 
+       por consola: -la multiplicación que se produce junto con su resultado con el formato 2 x 3 = 6 y el array de pares e impares   
+       */
+       let numeros = [1,2,3,4,5,6,7,8,9];
+       let pares = [];
+       let impares = [];
+       let numeroRandom = 0;
+
+       for(let n of numeros) {
+              let numeroRandom =parseInt(Math.random()*100);
+              let resultado = n * numeroRandom; 
+       
+              if(resultado % 2 === 0){
+                     //console.log(`${n} X ${numeroRandom} = ${resultado} Es Par` );
+                     pares.push(resultado) 
+              }else {
+                     //console.log(`${n} X ${numeroRandom} = ${resultado} Es Impar`);
+                     impares.push(resultado)
+              }
+       }
+       // console.log('ARRAY DE PARES: ', pares);
+       // console.log('ARRAY DE IMPARES: ', impares)
+
+
+
+       
+       
     </script>
     
 </body>
