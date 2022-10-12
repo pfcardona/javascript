@@ -147,7 +147,8 @@
 
 
     //  6. Fila ordenada
-    
+    // https://www.freecodecamp.org/espanol/news/ordenar-arreglos-en-javascript-como-usar-el-metodo-sort/
+
         const arreglo = [];
 
         setInterval(agregarElemento, 2000, () => Math.floor(Math.random() * 100));
@@ -162,7 +163,12 @@
 
             arreglo.push(prioridad);
             // agregar función de comparación
+            // function(a, b) {return a - b}
+            /* El método sort() puede ordenar valores negativos, cero y positivos en el orden correcto. Cuando compara dos valores, los envía a nuestra función de comparación y luego ordena los valores de acuerdo al resultado devuelto.
 
+            Si el resultado es negativo, a se ordena antes que b.
+            Si el resultado es positivo, b se ordena antes de a.
+            Si el resultado es 0, nada cambia. */
 
             arreglo.sort((a, b)=> a - b);
 
@@ -175,7 +181,7 @@
         // La constante casas contiene la información de casas
         
     // objetos de casas
-    const casas = [
+      const casas = [ 
         {
             id: 1,
             habitaciones: 4,
@@ -324,7 +330,7 @@
             precio: 20000
         }
     ]
-    
+     
     // creacion de un objeto para agregar los precios de las casas 
     const acumulado = {}
     
@@ -337,7 +343,8 @@
         acumulado[casa.localidad].acumuladoPrecio += casa.precio;
         acumulado[casa.localidad].contador += 1;
     }
-    console.log(acumulado);
+    //console.log(acumulado);
+
     // calcular el precio promedio
     // tengo que recorrer acumulado e ir dividiendo el precio acumulado por el número de casas
     // Object.keys -> me va a devolver un arreglo que va a contener la lista de key de un objeto
@@ -346,11 +353,71 @@
     
     const localidades = Object.keys(acumulado);
 
-    for(const localidad of localidades)
+    for(const localidad of localidades) {
+        //  console.log('El precio promedio de las casas para ' + localidad + ' es de ' + Math.floor(acumulado[localidad].acumuladoPrecio / acumulado[localidad].contador))
+    }
 
-        console.log('El precio promedio de las casas para ' + localidad + ' es de ' + Math.floor(acumulado[localidad].acumuladoPrecio / acumulado[localidad].contador))
 
     // total san Jose 103333
+
+
+/* ------------------------------------------------------------------------------------- */
+
+
+
+    // 8.   Orden Alfabético
+
+    const nombres = [
+
+        "June Greene",
+        "Magdalena Hardy",
+        "Merle Gonzales",
+        "Whitaker Anderson",
+        "Lucille Landry",
+        "Annmarie Burns",
+        "Erica Morrison",
+        "Twila Dotson",
+        "Cash Ratliff",
+        "Maria Pierce",
+        "Slater Mayo",
+        "Gonzales Velazquez",
+        "Hogan Tran",
+        "Holland Harvey",
+        "Carr Porter",
+        "Marquez Bruce",
+        "Rojas Wall",
+        "Florine Lang",
+        "Quinn Blanchard",
+        "Charles Hughes",
+        "Melba Moon",
+        "Gilliam Marsh",
+        "Lea Salazar",
+        "Jackie Hogan",
+        "Jacobson Riggs",
+        "Mckee Mcclure",
+        "Joanna Hampton",
+        "Alexander Stokes",
+        "Lola Witt",
+        "Doyle Lee",
+    ];
+
+    // Ordenar los nombres alfabeticamente.
+    // se crea una constante donde tendra el resultado del ordenamiento de los nombres
+    // la funcion sort recibie como  parametro una funcion
+    // la cual recibe dos parámetros "a" y "b"
+    // estos parámetros son los valores que se van a comparar para poder ordenar el arreglo
+    const ordenados = nombres.sort((a, b)=> {
+        
+        // string
+        const nombreA = a.split(' ')[0]; // dividir por el espacio en blanco que se encuentra entre el nombre y apellido,
+                                         // split retorna un arreglo entonces voy substraer el valor del arreglo en el indice "0"
+                                         // 
+        const nombreB = b.split(' ')[0];  
+
+        return nombreA < nombreB? -1 : nombreA > nombreB? 1 : 0;
+    });
+
+    console.log(ordenados);
 
 
     </script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> objetos</h1>
+    
+    <script>
+        
+    /* // Un objeto es una colección de propiedades, y una propiedad es una asociación de key (nombre, o clave) y valores.
+
+    var objecto = {}; // Object Literal Syntax 
+
+    var miAuto = {
+        marca: "Toyota",  // key - value 
+        modelo: "Corolla",
+        annio: 2020,
+        detallesDelAuto: function() {   // Metodo de un objeto (una función dentro de un objeto)
+        return `Auto ${this.modelo} ${this.annio}`;
+        }
+    };
+
+    miAuto.annio 
+    miAuto.modelo 
+
+    miAuto.detallesDelAuto(); 
+
+
+    // Función constructora 
+
+    function auto(marca, modelo, annio) {  // Creas una función con los parametros que va a recibir, 
+        this.marca = marca;   // Utilizamos el "this" para asignar valores a las propiedades del objeto 
+        this.modelo = modelo;
+        this.annio = annio;
+    }
+
+    var newAuto = new auto("Tesla", "Model 3", 2020);
+    var newAuto2 = new auto("Mazda", "Model 2", 2011); */
+
+    function auto (MARCA, MODELO, ANNIO){
+        this.marca = MARCA;
+        this.modelo = MODELO;
+        this.annio = ANNIO;
+    }
+    var autos = [];
+    for(let i = 0 ; i < 3 ; i++){
+        var marca = prompt("Ingresa la marca del auto");
+        var modelo = prompt("Ingresa el modelo del auto");
+        var annio = prompt("Ingresa el año del auto");
+        autos.push(new auto (marca, modelo, annio));
+    }
+
+    for(let i = 0 ; i < autos.length ; i++){
+        console.log(autos[i]);
+    }
+
+    </script>
+</body>
+</html>
