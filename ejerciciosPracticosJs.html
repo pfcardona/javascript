@@ -373,7 +373,7 @@
 
             
 
-            const esPrimo = (numero) => {
+            /* const esPrimo = (numero) => {
                 contador = 0;
                 let numeros = [];
 
@@ -397,7 +397,7 @@
                 document.write('Es primo');
             }else{                
                 document.write('No Es primo');
-            }
+            } */
             // console.log(esPrimo(5))
             // console.log(esPrimo(7))
             // console.log(esPrimo(9))
@@ -405,7 +405,7 @@
 
 
 /*-------------------------------------------------------------------- */
-
+       // curso udemy - ejercicios https://www.udemy.com/course/curso-completo-javascript/
        /*19.  Descuento de Restaurante Parte 1 
               Enunciado: un restaurante ofrece un descuento del 10% para consumo de hasta  $100
               y un descuento del 20 % para consumos mayores, para ambos casos se aplica un impuesto del 19%. 
@@ -455,7 +455,7 @@
               la siguiente escala de consumo, ver la tabla. Determinar el monto del descuento, el importe del impuesto 
               y el importe a pagar.
               Consumo (S/.)       Descuento (%)
-              Hasta 100                 10
+              Hasta 100               10
               Mayor a 100             20
               Mayor a 200             30
               Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el sistema 
@@ -468,7 +468,7 @@
        // Proceso
               if(consumo <= 100) {
               // Descuento de 10 %
-              datoDescuento = '10%';
+                 datoDescuento = '10%';
               
               descuento = consumo * 0.10;
               
@@ -498,9 +498,9 @@
        /* Practica 03: Guardar resultados de pares e impares
 
        Crea 3 arrays 
-       a.un array que tendrá números de 1 a 9. 
-       b.El primer array se llamará pares 
-       c.y el segundo impar, ambos estarán vacíos. 
+              a.un array que tendrá números de 1 a 9. 
+              b.El primer array se llamará pares 
+              c.y el segundo impar, ambos estarán vacíos. 
        
        Después multiplica cada uno de los números de array con números por un número aleatorio entre 1 y 100, 
        si el resultado es par guarda ese número en el array de pares y si es impar en el array  de impares. Muestra 
@@ -528,8 +528,22 @@
 
 
 
+       /* Escribir un programa que muestre en pantalla los números del 1 al 100, sustituyendo los múltiplos de 3 por la palabra 
+       “fizz”, los múltiplos de 5 por “buzz” y los múltiplos de ambos, es decir, los múltiplos de 3 y 5 (o de 15), por la palabra “fizzbuzz”. */
        
+       function compararNúmeros(){
        
+              for(let númeroAComparar = 1; númeroAComparar <= 100; númeroAComparar++){
+                     if(númeroAComparar % 3 == 0 && númeroAComparar % 5 == 0){
+                            console.log(`${númeroAComparar} FizzBuzz`)
+                     } else if(númeroAComparar % 3 == 0){
+                            console.log(`${númeroAComparar} Fizz`)
+                     } else if(númeroAComparar % 5 == 0){
+                            console.log(`${númeroAComparar} Buzz`)
+                     } else {console.log(`${númeroAComparar} No aplica `)}
+              }
+       }
+       compararNúmeros()
     </script>
     
 </body>
