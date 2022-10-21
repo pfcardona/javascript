@@ -9,7 +9,8 @@
     
 </head>
 <body>
-    <!-- link donde esta los ejercicios https://www.linkedin.com/learning/desafio-de-programacion-javascript-basico/busqueda-de-productos?autoplay=true&resume=false&u=124249513 -->
+    <!-- link del curso en linkehttps://www.linkedin.com/learning/desafio-de-programacion-javascript-basico/busqueda-de-productos?autoplay=true&resume=false&u=124249513 -->
+    <!-- Repositorio donde esta los ejercicios https://github.com/LinkedInLearning/desafio-programacion-JavaScript-esencial-2430507 -->
     <!-- https://developers.google.com/blockly  -->
     
     <script>
@@ -39,7 +40,6 @@
 
 
 /*  ------------------------------------------------- */        
-
 
 
     //  2.   Determinar si ambos arreglos son similares:
@@ -119,7 +119,7 @@
         },
     ]
 
-    //  5. Crear dos funciones para buscar productos acorde a los parámetros:
+    //  Crear dos funciones para buscar productos acorde a los parámetros:
 
         function buscarProductosPorId(id) {
         // el método filter recibe una funcion que se encarga de buscar o comparar cada uno de los elementos 
@@ -180,8 +180,8 @@
         // Calcular el precio promedio de las casas por localidad
         // La constante casas contiene la información de casas
         
-    // objetos de casas
-      const casas = [ 
+        // objetos de casas
+        const casas = [ 
         {
             id: 1,
             habitaciones: 4,
@@ -331,31 +331,32 @@
         }
     ]
      
-    // creacion de un objeto para agregar los precios de las casas 
-    const acumulado = {}
+        // creacion de un objeto para agregar los precios de las casas 
+        const acumulado = {}
     
-    // Que vamos a hacer => sumar los precios de las casas por localidad y al mismo tiempo contar cuantas casas yo tengo por localidad
-    // creo un for of para un recorrido del arreglo de las casas
-    for (const casa of casas) {
+        // Que vamos a hacer => sumar los precios de las casas por localidad y al mismo tiempo contar cuantas casas yo tengo por localidad
+        // creo un for of para un recorrido del arreglo de las casas
+    
+        for (const casa of casas) {
         if(!acumulado[casa.localidad]) {
             acumulado[casa.localidad] = { acumuladoPrecio:0, contador: 0};
         }
         acumulado[casa.localidad].acumuladoPrecio += casa.precio;
         acumulado[casa.localidad].contador += 1;
     }
-    //console.log(acumulado);
+        //console.log(acumulado);
 
-    // calcular el precio promedio
+        // calcular el precio promedio
     // tengo que recorrer acumulado e ir dividiendo el precio acumulado por el número de casas
     // Object.keys -> me va a devolver un arreglo que va a contener la lista de key de un objeto
     // creamos un const llamada localidades va ser la lista de localidades
     //object.keys  devuelve un arreglo  que va contener la lista de key de un objeto es decir la localidad(Alajuela, cartago, Heredia, san jose)
     
-    const localidades = Object.keys(acumulado);
+        const localidades = Object.keys(acumulado);
 
-    for(const localidad of localidades) {
-        //  console.log('El precio promedio de las casas para ' + localidad + ' es de ' + Math.floor(acumulado[localidad].acumuladoPrecio / acumulado[localidad].contador))
-    }
+        for(const localidad of localidades) {
+            //  console.log('El precio promedio de las casas para ' + localidad + ' es de ' + Math.floor(acumulado[localidad].acumuladoPrecio / acumulado[localidad].contador))
+        }
 
 
     // total san Jose 103333
@@ -367,57 +368,62 @@
 
     // 8.   Orden Alfabético
 
-    const nombres = [
+        const nombres = [
 
-        "June Greene",
-        "Magdalena Hardy",
-        "Merle Gonzales",
-        "Whitaker Anderson",
-        "Lucille Landry",
-        "Annmarie Burns",
-        "Erica Morrison",
-        "Twila Dotson",
-        "Cash Ratliff",
-        "Maria Pierce",
-        "Slater Mayo",
-        "Gonzales Velazquez",
-        "Hogan Tran",
-        "Holland Harvey",
-        "Carr Porter",
-        "Marquez Bruce",
-        "Rojas Wall",
-        "Florine Lang",
-        "Quinn Blanchard",
-        "Charles Hughes",
-        "Melba Moon",
-        "Gilliam Marsh",
-        "Lea Salazar",
-        "Jackie Hogan",
-        "Jacobson Riggs",
-        "Mckee Mcclure",
-        "Joanna Hampton",
-        "Alexander Stokes",
-        "Lola Witt",
-        "Doyle Lee",
-    ];
+            "June Greene",
+            "Magdalena Hardy",
+            "Merle Gonzales",
+            "Whitaker Anderson",
+            "Lucille Landry",
+            "Annmarie Burns",
+            "Erica Morrison",
+            "Twila Dotson",
+            "Cash Ratliff",
+            "Maria Pierce",
+            "Slater Mayo",
+            "Gonzales Velazquez",
+            "Hogan Tran",
+            "Holland Harvey",
+            "Carr Porter",
+            "Marquez Bruce",
+            "Rojas Wall",
+            "Florine Lang",
+            "Quinn Blanchard",
+            "Charles Hughes",
+            "Melba Moon",
+            "Gilliam Marsh",
+            "Lea Salazar",
+            "Jackie Hogan",
+            "Jacobson Riggs",
+            "Mckee Mcclure",
+            "Joanna Hampton",
+            "Alexander Stokes",
+            "Lola Witt",
+            "Doyle Lee",
+        ];
 
-    // Ordenar los nombres alfabeticamente.
-    // se crea una constante donde tendra el resultado del ordenamiento de los nombres
-    // la funcion sort recibie como  parametro una funcion
-    // la cual recibe dos parámetros "a" y "b"
-    // estos parámetros son los valores que se van a comparar para poder ordenar el arreglo
-    const ordenados = nombres.sort((a, b)=> {
-        
-        // string
-        const nombreA = a.split(' ')[0]; // dividir por el espacio en blanco que se encuentra entre el nombre y apellido,
-                                         // split retorna un arreglo entonces voy substraer el valor del arreglo en el indice "0"
-                                         // 
-        const nombreB = b.split(' ')[0];  
+        // Ordenar los nombres alfabeticamente.
+        // se crea una constante donde tendra el resultado del ordenamiento de los nombres
+        // la funcion sort recibie como  parametro una funcion
+        // la cual recibe dos parámetros "a" y "b"
+        // estos parámetros son los valores que se van a comparar para poder ordenar el arreglo
+        const ordenados = nombres.sort((a, b)=> {
+            
+            // string
+            const nombreA = a.split(' ')[0]; // dividir por el espacio en blanco que se encuentra entre el nombre y apellido,
+                                            // split retorna un arreglo entonces voy substraer el valor del arreglo en el indice "0"
+                                            // 
+            const nombreB = b.split(' ')[0];  
 
-        return nombreA < nombreB? -1 : nombreA > nombreB? 1 : 0;
-    });
+            return nombreA < nombreB? -1 : nombreA > nombreB? 1 : 0;
+        });
 
-    console.log(ordenados);
+        console.log(ordenados);
+
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+   
 
 
     </script>
