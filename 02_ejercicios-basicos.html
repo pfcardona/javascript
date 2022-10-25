@@ -486,8 +486,8 @@
             if(Math.sign(monto) === -1) return console.error("el monto no puede ser negativo");
             
             if(Math.sign(descuento) === -1) return console.error("el descuento no puede ser negativo");
-            
-            return console.info(`El monto es $${monto}  y el descuento es de ${descuento}% y el monto final  con descuento es de  $${monto - ((monto * descuento) / 100)} `)
+            let  montofinal = monto - ((monto * descuento) / 100)
+            return console.info(`El monto es $${monto}  y el descuento es de ${descuento}% y el monto final  con descuento es de  $${montofinal} `)
             
         }
 
@@ -499,25 +499,8 @@
         // aplicarDescuento(1000,-20);
         // aplicarDescuento(1000);
         // aplicarDescuento(1000,25);
-
-
-        /* const descuento = (costo = undefined, porcentaje = undefined) => {
+         aplicarDescuento(1000, 20);
         
-            if (costo === undefined) return console.log(`No ingreso costo`);
-            if (porcentaje === undefined) return console.log(`No ingreso % de descuento`);
-            if (typeof costo !== "number") return console.log(`En costo no puede ingresar texto`);
-            if (typeof porcentaje !== "number") return console.log(`En % de descuento no puede ingresar texto`);
-            if(Math.sign(costo) === -1) return console.error("el numero no puede ser negativo");
-            if(Math.sign(porcentaje) === -1) return console.error("el numero no puede ser negativo");
-            if (costo <= 1) return console.log(`El costo a pagar debe ser mayor que cero`);
-
-            let monto = costo - (costo * porcentaje / 100);
-                console.log(`El descuento es de ${monto} aplicando un ${porcentaje}% de descuento a ${costo}`);
-        }; */
-        
-        // descuento(1000, 20);
-
-
 /* ------------------------------------------------------------------------------------- */                
 
 
@@ -816,15 +799,17 @@
 
     /*  27) Programa una clase llamada Pelicula.
             La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, 
-            titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
+            titulo, director, año de estreno, país o países de origen, géneros y calificación en 
+            IMBD (IMDb is the world's most popular and authoritative source for movie, TV and celebrity content.).
 
-            - Todos los datos del objeto son obligatorios.
-            - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
-            - Valida que el título no rebase los 100 caracteres.
-            - Valida que el director no rebase los 50 caracteres.
-            - Valida que el año de estreno sea un número entero de 4 dígitos.
-            - Valida que el país o paises sea introducidos en forma de arreglo.
+                - Todos los datos del objeto son obligatorios.
+                - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
+                - Valida que el título no rebase los 100 caracteres.
+                - Valida que el director no rebase los 50 caracteres.
+                - Valida que el año de estreno sea un número entero de 4 dígitos.
+                - Valida que el país o paises sea introducidos en forma de arreglo.
             - Valida que los géneros sean introducidos en forma de arreglo.
+            
             - Valida que los géneros introducidos esten dentro de los géneros aceptados*.
             - Crea un método estático que devuelva los géneros aceptados*.
             - Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
@@ -836,7 +821,79 @@
                 Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
             */
 
+            class Pelicula {
+                constructor({id, titulo, director, estreno, pais, generos, calificacion}) {
+                    this.id = id;
+                    this.titulo = titulo;
+                    this.director = director;
+                    this.estreno = estreno;
+                    this.pais = pais;
+                    this.generos = generos;
+                    this.calificacion = calificacion;
 
+                    this.validarIMDB(id);
+                    this.validarTitulo(titulo);
+                    this.validarDirector(director);
+                    this.validarEstreno(estreno);
+                    this.validarPais(pais);
+                    this.lista
+
+                }
+                validarCadena(propiedad,valor) {
+                    if(!valor) return console.warn(`${propiedad}"${valor}" esta vacio`);
+                    if(typeof valor !== "string") 
+                    return console.error(`${propiedad}"${valor}" ingresado, No es una cadena de texto`);
+
+                    return true;
+                }
+
+                validarLongitudCadena(propiedad, valor, longitud) {
+                    if(valor.length > longitud) return console.error(`${propiedad} "${valor}" excede el número 
+                        de caracteres permitidos(${longitud}).`);
+                }
+
+                validarArreglo(propiedad, valor) {
+                    if(!valor) return console.warn(`${propiedad} "${valor} esta vacío"`);
+                    if(!(valor instanceof Array)) return console.error(`${propiedad} "${valor}"" ingresado, NO es un arreglo`);
+                    if(valor.length === 0) return console.error(`${propiedad} "${valor} no tiene datos`);
+                
+                    for(let cadena of valor) {
+                        if(typeof cadena !== "string") 
+                        return console.error(`El valor ${cadena} ingresado, No es una cadena de texto`);
+                    }
+                    return true;
+                }
+                validarIMDB(id) {
+                    if(this.validarCadena("IMDB id",id))
+                        if(!(/^([a-z]){2}([0-9]){7}$/.test(id))) 
+                            return console.error(`IMDB id "${id}" no es válido, debe tener 9 caracteres, los 
+                            2 primeros letras minúsculas, los 7 restantes números` );                    
+                }
+                validarTitulo(titulo) {
+                    if(this.validarCadena("Título", titulo))
+                        this.validarLongitudCadena("Título",titulo,100)
+                }
+                validarDirector(director) {
+                    if(this.validarCadena("Director",director))
+                        this.validarLongitudCadena("Director",director,50)
+                }
+                validarEstreno(estreno) {
+                    if(this.validarCadena("El Año de estreno",estreno))
+                        if(!(/^([0-9]){4}$/.test(estreno)))
+                        return console.error(`IMDB id "${estreno}" no es válido, debe ser un número de 
+                        4 digitos` );
+                }
+                validarPais(pais) {
+                    this.validarArreglo("País",pais);
+                }
+            }
+            /* const peli = new Pelicula({
+                id:"tt1234567",
+                titulo:"Titulo de la Peli",
+                director:"Director de la Pelicula",
+                estreno:"2020",
+                pais:["Mexico","Francia",8]
+            }); */
         </script>
     </body>
 </html>
