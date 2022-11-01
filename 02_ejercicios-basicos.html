@@ -812,8 +812,7 @@
                 8- Valida que los géneros introducidos esten dentro de los géneros aceptados*.
                 9- Crea un método estático que devuelva los géneros aceptados*.            
                 10- Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
-                11- Crea un método que devuelva toda la ficha técnica de la película.
-                
+                11- Crea un método que devuelva toda la ficha técnica de la película.     
                 12 - Apartir de un arreglo con la información de 3 películas genera 3 instancias de la clase de forma automatizada 
                  e imprime la ficha técnica de cada película.
 
@@ -940,7 +939,6 @@
                 calificacion: 10,
             }); 
             peli.fichaTecnica(); */
-
             const misPelis = [
                 {
                     id:"tt1234562",
@@ -949,29 +947,29 @@
                     estreno:"2010",
                     pais:["EEUU"],
                     generos:["Sport"],
-                    calificacion: 8,   
+                    calificacion: 7.5,   
                 },
                 {
                     id:"tt1234565",
-                    titulo:"Avatar",
-                    director:"Cameron",
-                    estreno:"2010",
+                    titulo:"Inception",
+                    director:"Cristian Nolan",
+                    estreno:"2011",
                     pais:["EEUU"],
                     generos:["Sport"],
-                    calificacion: 8,   
+                    calificacion: 8.5,   
                 },
                 {
                     id:"tt1234562",
-                    titulo:"Avatar",
-                    director:"Cameron",
-                    estreno:"2010",
+                    titulo:"InterStellar",
+                    director:"Cristian Nolan",
+                    estreno:"2012",
                     pais:["EEUU"],
                     generos:["Sport"],
-                    calificacion: 8,   
+                    calificacion: 10,   
                 }
             ];
-
             misPelis.forEach(el => new Pelicula(el).fichaTecnica());
-                </script>
+                
+        </script>
     </body>
 </html>
