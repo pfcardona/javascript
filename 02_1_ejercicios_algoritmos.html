@@ -10,17 +10,59 @@
     <script>
         // Enlace ejercicios practicos  de programación con pseudocódigos y con diagrama de flujo 
         // https://drive.google.com/file/d/1SmhblW_SCrlUAWGcFK0ZMAnM9BMfrNdy/view?usp=sharing
-    /* Los primeros 6 ejercicios */
+        
+        /* Los primeros 6 ejercicios */
 
         /*1.    Preguntar si se desea calcular el área de un cuadrado, un triángulo o un círculo y al final
                 mostrar en pantalla el valor del área de la figura respectiva.
         */
+                /* const Pi = 3.1416
+                let  lado, radio,base, opcion, altura, Area
+                // opcion 1 area del triangulo B* Alt / 2
+                // opcion 2 area del circulo A = PI * r^2
+                // opcion 3 area del cuadrado A = l * l
+                opcion = prompt("ingrese opcion 1 ( area del triangulo), opcion 2(area del circulo), opcion 3 (area del triangulo)")
+                // opcion 3 area del cuadrado A = l * l ")
+                if(opcion == 1) {
+                    base = prompt("Ingrese base")
+                    altura = prompt("Ingrese altura")
+                    area = (base * altura) / 2
+                    console.log("El area del triangulo es:" + " " + area );
+                }else if (opcion == 2) {
+                   r = prompt("Ingrese radio")
+                    area = Pi * (r ** 2)
+                    console.log("El area del circulo es:" + " " + area );
+                }else if (opcion == 3) {
+                   lado = prompt("Ingrese Lado")
+                    area = lado * lado 
+                    console.log("El area del cuadro es:" + " " + area );
+                }
+                else {
+                    console.log("error")
+                }
+ */
 
         /*2.    Dada la calificación de un alumno mostrar en pantalla si es aprobado siempre y cuando
                 tenga el 80% de sus asistencias, en caso de tener menos del 80% de asistencias se
                 mostrará reprobado aún cuando su calificación sea aprobatoria.  */
+                
+                let as, cal, mensaje
+                const porAprobacion = 80
 
-        
+                as = prompt("Dame tu asistencia")
+                cal = prompt("Dame tu calificacion")
+
+                if(as >= porAprobacion ) {
+                    if(cal >= porAprobacion){
+                        console.log("Estas Aprobado");
+                    }else{
+                        console.log("Estas Reprobado");
+                    }
+                }else {                    
+                    console.log("No Aprobado")
+                }
+
+
         /*3.    Leer tres números y decir cuál de ellos es el que tiene el valor intermedio.*/
 
         /*4.    Leer tres números y decir cuál es el de valor mayor y el menor valor.  */
