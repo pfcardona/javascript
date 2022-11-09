@@ -46,7 +46,7 @@
                 tenga el 80% de sus asistencias, en caso de tener menos del 80% de asistencias se
                 mostrará reprobado aún cuando su calificación sea aprobatoria.  */
                 
-                let as, cal, mensaje
+                /* let as, cal, mensaje
                 const porAprobacion = 80
 
                 as = prompt("Dame tu asistencia")
@@ -60,14 +60,83 @@
                     }
                 }else {                    
                     console.log("No Aprobado")
-                }
+                } */
 
 
-        /*3.    Leer tres números y decir cuál de ellos es el que tiene el valor intermedio.*/
+        /*3.   Leer tres números y decir cuál de ellos es el que tiene el valor intermedio.*/
+                /*  let x,y,z 
+                x = prompt("Dame un número")
+                y = prompt("Dame otro número")
+                z = prompt("Dame otro número más")
+
+                if((y>x && y<z) || (y<x && y>z)) {
+                    console.log(`${y} Y es el valor intermedio `)    
+                }else if((x>y && x<z) || (x<y && x>z)) {
+                    console.log(`${x}  X es el valor intermedio `)    
+                }else{
+                    console.log(`${z}  z es el valor intermedio `) 
+                }  */
+                
 
         /*4.    Leer tres números y decir cuál es el de valor mayor y el menor valor.  */
+                
+         /* let x,y,z 
+                x = prompt("Dame un número ")
+                y = prompt("Dame otro número")
+                z = prompt("Dame otro número más")
+
+                if((x>y && x>z)) {
+                    console.log(`El mayor es X ${x}`)
+                }else if (y>x && y>z) {
+                    console.log(`El mayor es Y ${y}`)
+                }else {
+                    console.log(`El mayor es z ${z}`)
+                }
+                
+                if ((x<y && x<z)) {
+                    console.log(`El menor es X ${x}`)
+                }else if ((y<x && y<z)) {
+                    console.log(`El menor es Y ${y}`)
+                }else{
+                    console.log(`El menor es Z ${z}`)
+                }
+             */
 
         /*5.    Leer tres números y decir cuál es el de valor mayor, el de valor intermedio, y el de valor menor. */
+             let x,y,z 
+                
+            
+            x = prompt("Dame un número ")
+                y = prompt("Dame otro número")
+                z = prompt("Dame otro número más")
+
+                // el mayor
+                if((x>y && x>z)) {
+                    console.log(`El mayor es X ${x}`)
+                }else if (y>x && y>z) {
+                    console.log(`El mayor es Y ${y}`)
+                }else {
+                    console.log(`El mayor es z ${z}`)
+                }
+                // intermedio
+                if((y>x && y<z) || (y<x && y>z)) {
+                    console.log(`${y} Y es el valor intermedio `)    
+                }else if((x>y && x<z) || (x<y && x>z)) {
+                    console.log(`${x}  X es el valor intermedio `)    
+                }else{
+                    console.log(`${z}  z es el valor intermedio `) 
+                } 
+                
+
+                // medio
+                if ((x<y && x<z)) {
+                    console.log(`El menor es X ${x}`)
+                }else if ((y<x && y<z)) {
+                    console.log(`El menor es Y ${y}`)
+                }else{
+                    console.log(`El menor es Z ${z}`)
+                }
+ 
 
         /*6.    Leer un número entre el 1 y el 10 e imprimir su equivalente en números romanos.  */
 
