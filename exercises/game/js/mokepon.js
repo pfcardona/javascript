@@ -91,7 +91,7 @@ function combate() {
     }
     
 }
-// le paso unparametro llamado resultado
+// le paso un parámetro llamado resultado
 function crearMensaje(resultado) {
     let sectionMensajes = document.getElementById('mensajes')
 
