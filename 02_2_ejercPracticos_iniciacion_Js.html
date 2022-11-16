@@ -15,8 +15,8 @@
        // Ejercicios de JavaScript – iniciación (soluciones)
 
        // 1.- Escribe un programa de una sola línea que haga que aparezca en la pantalla un alert que diga “Hello World”.
-              /* let nombre = ""
-              nombre = prompt("¿Cual es tu nombre?")
+            /* let nombre = ""
+            nombre = prompt("¿Cual es tu nombre?")
               alert ("Bienvenido" + nombre) */
 
 
@@ -44,85 +44,81 @@
  /* _________________________________________________ */
 
 
-       /*    5. Escribe un programa de tres líneas que pida un número, pida otro número y 
-              escriba el resultado de sumar estos dos números.
+        /*  5. Escribe un programa de tres líneas que pida un número, pida otro número y 
+            escriba el resultado de sumar estos dos números.
 
-              var n1 = prompt("Escribe un número");
-              var n2 = prompt("Escribe otro número");
+            var n1 = prompt("Escribe un número");
+            var n2 = prompt("Escribe otro número");
               document.write("La suma es: "+ ( parseInt(n1)+ parseInt(n2) ) ); */
 
  /* _________________________________________________ */
 
 
-       /*    6. Escribe un programa que pida dos números y escriba en la pantalla cual es el mayor.
+    /*    6. Escribe un programa que pida dos números y escriba en la pantalla cual es el mayor.
 
-              var n1 = prompt("Escribe un número");
-              var n2 = prompt("Escribe otro número");
-              if (n1 > n2) {
-              document.write(n1);
-              } else {
-              document.write(n2);
+            var n1 = prompt("Escribe un número");
+            var n2 = prompt("Escribe otro número");
+            if (n1 > n2) {
+            document.write(n1);
+            } else {
+            document.write(n2);
               } */
 
  /* _________________________________________________ */
 
 
-       /*7.   Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.
+        /*7.   Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.
 
-              var n1 = prompt("Escribe un número");
-              var n2 = prompt("Escribe otro número");
-              var n3 = prompt("Escribe otro número");
-              if (n1 > n2 && n1 > n3) {
-              document.write(n1);
-              } else if (n2 > n3) {
-              document.write(n2);
-              } else {
-              document.write(n3);
-              } */
+            var n1 = prompt("Escribe un número");
+            var n2 = prompt("Escribe otro número");
+            var n3 = prompt("Escribe otro número");
+            if (n1 > n2 && n1 > n3) {
+            document.write(n1);
+            } else if (n2 > n3) {
+            document.write(n2);
+            } else {
+            document.write(n3);
+            } */
 
 /* _________________________________________________ */
 
 
-       /*8.   Escribe un programa que pida un número y diga si es divisible por 2 
+        /*8.   Escribe un programa que pida un número y diga si es divisible por 2 
 
-              var n1 = prompt("Escribe un número");
-              if (n1 % 2 === 0) {
-              document.write("Es divisible por 2");
-              } else {
-              document.write("No es divisible por 2");
-              } 
+            var n1 = prompt("Escribe un número");
+            if (n1 % 2 === 0) {
+            document.write("Es divisible por 2");
+            } else {
+            document.write("No es divisible por 2");
+            } 
 
        */
 
  /* _________________________________________________ */
 
 
-       /*9. ¿Escribe un programa que pida una frase y escriba cuantas veces aparece la letra a
+        /*9. ¿Escribe un programa que pida una frase y escriba cuantas veces aparece la letra a
 
-       HTML <div id="resultado"></div>
+        HTML <div id="resultado"></div>
 
-       function cuantasVecesAparece(cadena, caracter){
-       var indices = [];
-       
-       for(var i = 0; i < cadena.length; i++) {
-       if (cadena[i].toLowerCase() === caracter) 
-       indices.push(i);
-       }
-       return indices.length;
-       }
-
-       var coincidencias = cuantasVecesAparece("Cuantas 'A' aparecen en esta cadena.", "a");
-
-       document.getElementById("resultado").innerHTML = coincidencias;
-
+        function cuantasVecesAparece(cadena, caracter){
+        var indices = [];
+        
+        for(var i = 0; i < cadena.length; i++) {
+        if (cadena[i].toLowerCase() === caracter) 
+        indices.push(i);
+        }
+        return indices.length;
+        }
+        var coincidencias = cuantasVecesAparece("Cuantas 'A' aparecen en esta cadena.", "a");
+        document.getElementById("resultado").innerHTML = coincidencias;
        // opcion 2
+        var cadena = prompt ("escriba una frase.");
 
-       var cadena = prompt ("escriba una frase.");
-
-       var indices = [];
-       for(var i = 0; i < cadena.length; i++) {
-       if (cadena[i].toLowerCase() === "a") indices.push(i);
-       }
+        var indices = [];
+        for(var i = 0; i < cadena.length; i++) {
+        if (cadena[i].toLowerCase() === "a") indices.push(i);
+        }
 
        document.getElementById("resultado").innerHTML = indices.length; */
 
@@ -131,62 +127,62 @@
 //////////////_-----------------------------//////////////////////////
 
 
-       /* 
-       10.- Escribe un programa que pida una frase y escriba las vocales que aparecen
+        /* 
+        10.- Escribe un programa que pida una frase y escriba las vocales que aparecen
 
-       var text = prompt("Escribe una frase");
-       var nText = text.length;
-       var i;
-       for (i = 0; i < nText; i++) {
-       if (text.substr(i,1) === "a" || text.substr(i,1) === "e" 
-       || text.substr(i,1) === "i" || text.substr(i,1) === "o" 
-       || text.substr(i,1) === "u") {
-       
-              document.write(text.substr(i,1);
-       }
-      }
+        var text = prompt("Escribe una frase");
+        var nText = text.length;
+        var i;
+        for (i = 0; i < nText; i++) {
+        if (text.substr(i,1) === "a" || text.substr(i,1) === "e" 
+        || text.substr(i,1) === "i" || text.substr(i,1) === "o" 
+        || text.substr(i,1) === "u") {
+        
+                document.write(text.substr(i,1);
+        }
+        }
         */
 
  /* _________________________________________________ */
- 
 
-/*     13.- Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o 7 
-       (sólo hay que comprobar si lo es por uno de los cuatro)
 
-       var n1 = prompt("Escribe un número");
-       if (n1 % 2 === 0 || n1 % 3 === 0 || n1 % 5 === 0 || n1 % 7 === 0) {
-       document.write("Es divisible por 2, 3, 5 o 7");
-       } else {
-       document.write("No es divisible ni por 2, ni por 3, ni por 5, ni por 7");
-       } 
+/*      13.- Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o 7 
+        (sólo hay que comprobar si lo es por uno de los cuatro)
+
+        var n1 = prompt("Escribe un número");
+        if (n1 % 2 === 0 || n1 % 3 === 0 || n1 % 5 === 0 || n1 % 7 === 0) {
+        document.write("Es divisible por 2, 3, 5 o 7");
+        } else {
+        document.write("No es divisible ni por 2, ni por 3, ni por 5, ni por 7");
+        } 
 */
 
 /* _________________________________________________ */
 
 
-       /* 14.- Añadir al ejercicio anterior que nos diga por cual de los cuatro es divisible (hay que decir todos por los que es divisible)
-       */  
-       
-      /*  var n1 = prompt("Escribe un número"); 
+        /* 14.- Añadir al ejercicio anterior que nos diga por cual de los cuatro es divisible (hay que decir todos por los que es divisible)
+        */  
+        
+        /*  var n1 = prompt("Escribe un número"); 
 
-       if (n1 % 2 === 0 || n1 % 3 === 0 || n1 % 5 === 0 || n1 % 7 === 0) {
-       if (n1 % 2 === 0) {
-       document.write("Es divisible por 2. ");
-       }
-       if (n1 % 3 === 0) {
-       document.write("Es divisible por 3. ");
-       }
-       if (n1 % 5 === 0) {
-       document.write("Es divisible por 5. ");
-       }
-       if (n1 % 7 === 0) {
-       document.write("Es divisible por 7. ");
-       }
-       } else {
-       document.write("No es divisible ni por 2, ni por 3, ni por 5, ni por 7");
-       } */
+        if (n1 % 2 === 0 || n1 % 3 === 0 || n1 % 5 === 0 || n1 % 7 === 0) {
+        if (n1 % 2 === 0) {
+        document.write("Es divisible por 2. ");
+        }
+        if (n1 % 3 === 0) {
+        document.write("Es divisible por 3. ");
+        }
+        if (n1 % 5 === 0) {
+        document.write("Es divisible por 5. ");
+        }
+        if (n1 % 7 === 0) {
+        document.write("Es divisible por 7. ");
+        }
+        } else {
+        document.write("No es divisible ni por 2, ni por 3, ni por 5, ni por 7");
+        } */
 
-       /* var text = prompt("Escribe un número");
+        /* var text = prompt("Escribe un número");
         if (text % 3 === 0)
             
         document.write("es divisible por 3 " );
@@ -200,70 +196,69 @@
 
 /* _________________________________________________ */
 
-       /*  15.- Escribir un programa que escriba en pantalla los divisores de un número dado
-       var n1 = prompt("Escribe un número");
-       var i;
-       for (i=2;i < n1/2; i++) {
-       if (n1 % i === 0) {
-       document.write(i,", ");
-       }
-       } 
+        /*  15.- Escribir un programa que escriba en pantalla los divisores de un número dado
+        var n1 = prompt("Escribe un número");
+        var i;
+        for (i=2;i < n1/2; i++) {
+        if (n1 % i === 0) {
+        document.write(i,", ");
+        }
+        } 
        */
 
 /* _________________________________________________ */
-       /* 16.- Escribir un programa que escriba en pantalla los divisores comunes de dos números dados
-              
-       var n1 = prompt("Escribe un número");
-              var n2 = prompt("Escribe otro número");
-              var menor;
-              var i;
-              if (n1 < n2) {
-              menor = n1;
-              } else {
-              menor = n2;
-              }
-              for (i=2; i < menor / 2; i++) {
-              if (n1 % i === 0 && n2 % i === 0) {
-              document.write(i,", ");
-              }
-              } 
+        /* 16.- Escribir un programa que escriba en pantalla los divisores comunes de dos números dados
+        var n1 = prompt("Escribe un número");
+            var n2 = prompt("Escribe otro número");
+            var menor;
+            var i;
+            if (n1 < n2) {
+            menor = n1;
+            } else {
+            menor = n2;
+            }
+            for (i=2; i < menor / 2; i++) {
+            if (n1 % i === 0 && n2 % i === 0) {
+            document.write(i,", ");
+            }
+            } 
        */
 
  /* _________________________________________________ */
 
 
-       /*  17.- Escribir un programa que nos diga si un número dado es primo 
+        /*  17.- Escribir un programa que nos diga si un número dado es primo 
         (no es divisible por ninguno otro número que no sea él mismo o la unidad) */
         
         // Solución 1
-              /* 
-              var n1 = prompt("Escribe un número");
-              var i;
-              var primer = true;
-              for (i=2; i < n1 / 2; i++) {
-              if (n1 % i === 0) {
-              primer = false;
-              }
-              }
-              if (primer) {
-              document.write("El número es primo");
-              } else {
-              document.write("El número no es primo");
-              } 
+            /* 
+            var n1 = prompt("Escribe un número");
+            var i;
+            var primer = true;
+            for (i=2; i < n1 / 2; i++) {
+            if (n1 % i === 0) {
+            primer = false;
+            }
+            }
+            if (primer) {
+            document.write("El número es primo");
+            } else {
+            document.write("El número no es primo");
+            } 
        */
 
         // Solución 2
         /* 
-              var n1 = prompt("Escribe un número");
-              var i = 2;
-              while (n1 % i !== 0 && i < n1 / 2 ) {
-              i++;
-              }
-              if (n1 % i !== 0) {
-              document.write("El número es primo");
-              } else {
-              document.write("El número no es primo");
-              } 
+            var n1 = prompt("Escribe un número");
+            var i = 2;
+            while (n1 % i !== 0 && i < n1 / 2 ) {
+            i++;
+            }
+            if (n1 % i !== 0) {
+            document.write("El número es primo");
+            } else {
+            document.write("El número no es primo");
+            } 
         */
 
 
@@ -271,45 +266,44 @@
 /*------------------------------------------------------------------------------------------------------- */
 
     // curso udemy - ejercicios https://www.udemy.com/course/curso-completo-javascript/
-           
 
-       /*1 Palíndromo
+        /*1 Palíndromo
 
-              Crear un sistema que detecte si una palabra es palíndroma o no 
-              Para solucionar este problema el usuario tiene que ingresar por pantalla una palabra y el sistema verificas si es palíndromo o no.
-              Una palabra palíndroma se lee de igual formo como de la derecha y de la izquierda.
+            Crear un sistema que detecte si una palabra es palíndroma o no 
+            Para solucionar este problema el usuario tiene que ingresar por pantalla una palabra y el sistema verificas si es palíndromo o no.
+            Una palabra palíndroma se lee de igual formo como de la derecha y de la izquierda.
        */     
-              const palindromo =(palabra) => {
-                     // Ana oso luz azul
-                     palabra = palabra.replace(' ','');
-                     palabra = palabra.toLowerCase();
+            const palindromo =(palabra) => {
+                    // Ana oso luz azul
+                    palabra = palabra.replace(' ','');
+                    palabra = palabra.toLowerCase();
                      // convertimos a una lista y luego a una cadena de caracter
-                     palabraAlReves = palabra.split('').reverse().join('');
+                    palabraAlReves = palabra.split('').reverse().join('');
 
-                     if( palabra === palabraAlReves) {
+                    if( palabra === palabraAlReves) {
                             return true;
-                     }else {
+                    }else {
                             return false;
-                     }
-                     
-              }
+                    }
+
+            }
               // console.log(palindromo('carro'));
               // console.log(palindromo('Luz azul'));
-             /*  let palabra = prompt("Ingresa una Palabra");
-              let esPalindromo = palindromo(palabra);
-              if (esPalindromo ) {
-                     console.log("Es palindromo")
-                     document.write(`La palabra "${palabra}" es Palindromo`)
-              }else {
-                     console.log("No es palíndromo")
-                     document.write("La palabra "+ " " + palabra +  " " + "No es Palíndromo")
+            /*  let palabra = prompt("Ingresa una Palabra");
+            let esPalindromo = palindromo(palabra);
+            if (esPalindromo ) {
+                    console.log("Es palindromo")
+                    document.write(`La palabra "${palabra}" es Palindromo`)
+            }else {
+                    console.log("No es palíndromo")
+                    document.write("La palabra "+ " " + palabra +  " " + "No es Palíndromo")
               } */
 
 
        //Practica 1 - Dado el valor de venta de un producto, hallar el IVA (19%) y el precio de venta 
 
        // Variables 
-       let vv = 0, iva = 0,pv = 0;
+        let vv = 0, iva = 0,pv = 0;
 
         // Entrada de datos
         // vv= parseFloat(prompt("Escribe el valor de la venta")) ;
@@ -331,7 +325,7 @@
         //              IVA: ${iva} <br>
         //              Precio de venta: ${pv}`);
 
-       /*  Practica 02: Primalidad
+        /*  Practica 02: Primalidad
             Crear un sistema que detecte si un numero es primo o no 
             Para solucionar este problema se requiere que el usuario ingres un numero por teclado 
             y el sistema detecte si es primo o no.
@@ -365,9 +359,7 @@
             // console.log(esPrimo(5))
             // console.log(esPrimo(7))
             // console.log(esPrimo(9))
-              
        /*a.  Hallar cociente y residuo */
-       
               // Variables  
                 // let numero1, numero2, cociente, residuo;
                 // Entrada de datos
@@ -382,169 +374,240 @@
                 // document.write('Cociente:' + cociente + '<br>');
                 // document.write('Residuo:', residuo);
 
-       /*     Practica 02:Descuento de Restaurante Parte 1 
-              Enunciado: un restaurante ofrece un descuento del 10% para consumo de hasta  $100
-              y un descuento del 20 % para consumos mayores, para ambos casos se aplica un impuesto del 19%. 
-              a.Determinar el monto del descuento, 
-              b.El impuesto 
-              c.El importe a pagar.
+        /*  Practica 02:Descuento de Restaurante Parte 1 
+            Enunciado: un restaurante ofrece un descuento del 10% para consumo de hasta  $100
+            y un descuento del 20 % para consumos mayores, para ambos casos se aplica un impuesto del 19%. 
+            a.Determinar el monto del descuento, 
+            b.El impuesto 
+            c.El importe a pagar.
 
-              Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el 
-              sistema verifica y calcula el monto del descuento, el impuesto y el importe a pagar.
+            Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el 
+            sistema verifica y calcula el monto del descuento, el impuesto y el importe a pagar.
 
-              - Monto del descuento
-              - Impuesto
-              - Importe a pagar       
+            - Monto del descuento
+            - Impuesto
+            - Importe a pagar       
        */
-       /* 
+    /* 
        // Entrada de datos 
-              let consumo = Number(prompt('Ingrese el consumo'))
-              let descuento, datoDescuento
+            let consumo = Number(prompt('Ingrese el consumo'))
+            let descuento, datoDescuento
        // Proceso
-              if(consumo <= 100) {
+            if(consumo <= 100) {
               // Descuento de 10 %
-              datoDescuento = '10%';
-              
+            datoDescuento = '10%';
               descuento = consumo * 0.10;
-              
-       }else if (consumo > 100) {
-              // Descuento de 10 %
-              datoDescuento = '20%';
-              descuento = consumo * 0.20;
-       }
-       let montoDescuento = consumo - descuento;
-       let impuesto = montoDescuento * 0.19;
-       let totalPagar = montoDescuento + impuesto;
-       // Ouput
+        }else if (consumo > 100) {
+            // Descuento de 10 %
+            datoDescuento = '20%';
+            descuento = consumo * 0.20;
+        }
+        let montoDescuento = consumo - descuento;
+        let impuesto = montoDescuento * 0.19;
+        let totalPagar = montoDescuento + impuesto;
+        // Ouput
 
-       document.write(`<pre>
-              Consumo       : ${consumo}
-              Descuento     : ${datoDescuento}
-              Monto con Descuento  : ${montoDescuento}
-              IVA           : ${impuesto}
-              Total a pagar : ${totalPagar}
+        document.write(`<pre>
+            Consumo       : ${consumo}
+            Descuento     : ${datoDescuento}
+            Monto con Descuento  : ${montoDescuento}
+            IVA           : ${impuesto}
+            Total a pagar : ${totalPagar}
         </pre>`) */
 
-       /*     Practica 03: Descuentos de un restaurante Parte 02
+        /*     Practica 03: Descuentos de un restaurante Parte 02
 
-              Enunciado: debido a los excelentes resultados, el restaurante decide ampliar sus ofertas de acuerdo a 
-              la siguiente escala de consumo, ver la tabla. Determinar el monto del descuento, el importe del impuesto 
-              y el importe a pagar.
-              Consumo (S/.)       Descuento (%)
-              Hasta 100               10
-              Mayor a 100             20
-              Mayor a 200             30
-              Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el sistema 
-              verifica y calcula el monto del descuento, el impuesto y el importe a pagar.
+            Enunciado: debido a los excelentes resultados, el restaurante decide ampliar sus ofertas de acuerdo a 
+            la siguiente escala de consumo, ver la tabla. 
+            Determinar el monto del descuento, el importe del impuesto y el importe a pagar.
+            Consumo (S/.)       Descuento (%)
+            Hasta 100               10
+            Mayor a 100             20
+            Mayor a 200             30
+            Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el sistema 
+            verifica y calcula el monto del descuento, el impuesto y el importe a pagar.
 
        */
        /*     // Entrada de datos 
-              let consumo = Number(prompt('Ingrese el consumo'))
-              let descuento, datoDescuento
+            let consumo = Number(prompt('Ingrese el consumo'))
+            let descuento, datoDescuento
        // Proceso
-              if(consumo <= 100) {
-              // Descuento de 10 %
-                 datoDescuento = '10%';
-              
-              descuento = consumo * 0.10;
-              
-       }else if (consumo > 100 && consumo <=200) {
-              // Descuento de 10 %
-              datoDescuento = '20%';
-              descuento = consumo * 0.20;
-       }else if (consumo > 200) {
-              // descuento de 30 %
-              datoDescuento = '30%';
-              descuento = consumo * 0.30;
-       }
-       let montoDescuento = consumo - descuento;
-       let impuesto = montoDescuento * 0.19;
-       let totalPagar = montoDescuento + impuesto;
+            if(consumo <= 100) {
+            // Descuento de 10 %
+            datoDescuento = '10%';
+            descuento = consumo * 0.10;
+        }else if (consumo > 100 && consumo <=200) {
+            // Descuento de 10 %
+            datoDescuento = '20%';
+            descuento = consumo * 0.20;
+        }else if (consumo > 200) {
+            // descuento de 30 %
+            datoDescuento = '30%';
+            descuento = consumo * 0.30;
+        }
+        let montoDescuento = consumo - descuento;
+        let impuesto = montoDescuento * 0.19;
+        let totalPagar = montoDescuento + impuesto;
        // Ouput
 
-       document.write(`<pre>
-              Consumo       : ${consumo}
-              Descuento     : ${descuento}      | ${datoDescuento}
-              Monto con Descuento  : ${montoDescuento}
-              IVA           : ${impuesto}       | 19%
-              Total a pagar : ${totalPagar}
+        document.write(`<pre>
+            Consumo       : ${consumo}
+            Descuento     : ${descuento}      | ${datoDescuento}
+            Monto con Descuento  : ${montoDescuento}
+            IVA           : ${impuesto}       | 19%
+            Total a pagar : ${totalPagar}
        </pre>`) */
        /* ------------------------------------------------- */
 
-       
-       /* Practica 04: Guardar resultados de pares e impares
+        /* Practica 04: Guardar resultados de pares e impares
 
-              Crea 3 arrays 
-              a.un array que tendrá números de 1 a 9. 
-              b.El primer array se llamará pares 
-              c.y el segundo impar, ambos estarán vacíos. 
-       
-              Después multiplica cada uno de los números de array con números por un número aleatorio entre 1 y 100, 
-              si el resultado es par guarda ese número en el array de pares y si es impar en el array  de impares. Muestra 
-              por consola: -la multiplicación que se produce junto con su resultado con el formato 2 x 3 = 6 y el array de pares e impares   
+            Crea 3 arrays 
+            a.un array que tendrá números de 1 a 9. 
+            b.El primer array se llamará pares 
+            c.y el segundo impar, ambos estarán vacíos. 
+            Después multiplica cada uno de los números de array con números por un número aleatorio entre 1 y 100, 
+            si el resultado es par guarda ese número en el array de pares y si es impar en el array  de impares. Muestra 
+            por consola: -la multiplicación que se produce junto con su resultado con el formato 2 x 3 = 6 y el array de pares e impares   
        */
-              let numeros = [1,2,3,4,5,6,7,8,9];
-              let pares = [];
-              let impares = [];
-              let numeroRandom = 0;
+            let numeros = [1,2,3,4,5,6,7,8,9];
+            let pares = [];
+            let impares = [];
+            let numeroRandom = 0;
 
-              for(let n of numeros) {
-                     let numeroRandom =parseInt(Math.random()*100);
-                     let resultado = n * numeroRandom; 
-              
-                     if(resultado % 2 === 0){
+            for(let n of numeros) {
+                    let numeroRandom =parseInt(Math.random()*100);
+                    let resultado = n * numeroRandom; 
+                    if(resultado % 2 === 0){
                             //console.log(`${n} X ${numeroRandom} = ${resultado} Es Par` );
                             pares.push(resultado) 
-                     }else {
+                    }else {
                             //console.log(`${n} X ${numeroRandom} = ${resultado} Es Impar`);
                             impares.push(resultado)
-                     }
-              }
-              // console.log('ARRAY DE PARES: ', pares);
-              // console.log('ARRAY DE IMPARES: ', impares)
+                    }
+            }
+            // console.log('ARRAY DE PARES: ', pares);
+            // console.log('ARRAY DE IMPARES: ', impares)
 
 
 /*--------------------------------------------------------------------------------------------------- */              
 
-       /* Escribir un programa que muestre en pantalla los números del 1 al 100, sustituyendo los múltiplos de 3 por la palabra 
+        /* Escribir un programa que muestre en pantalla los números del 1 al 100, sustituyendo los múltiplos de 3 por la palabra 
        “fizz”, los múltiplos de 5 por “buzz” y los múltiplos de ambos, es decir, los múltiplos de 3 y 5 (o de 15), por la palabra “fizzbuzz”. */
-       
-       function compararNúmeros(){
-       
-              for(let númeroAComparar = 1; númeroAComparar <= 20; númeroAComparar++){
-                     if(númeroAComparar % 3 == 0 && númeroAComparar % 5 == 0){
-                            console.log(`${númeroAComparar} FizzBuzz`)
-                     } else if(númeroAComparar % 3 == 0){
-                            console.log(`${númeroAComparar} Fizz`)
-                     } else if(númeroAComparar % 5 == 0){
-                            console.log(`${númeroAComparar} Buzz`)
-                     } else {console.log(`${númeroAComparar} No aplica `)}
-              }
-       }
+
+        function compararNúmeros(){
+            for(let númeroAComparar = 1; númeroAComparar <= 20; númeroAComparar++){
+                    if(númeroAComparar % 3 == 0 && númeroAComparar % 5 == 0){
+                        console.log(`${númeroAComparar} FizzBuzz`)
+                    } else if(númeroAComparar % 3 == 0){
+                        console.log(`${númeroAComparar} Fizz`)
+                    } else if(númeroAComparar % 5 == 0){
+                        console.log(`${númeroAComparar} Buzz`)
+                    } else {console.log(`${númeroAComparar} No aplica `)}
+            }
+    }
        // compararNúmeros()
-    
- 
 /*-------------------------------------------------------------------- */
-       
-       /*   Serie Fibonacci */
-       /*   Un número Fibonacci, usualmente con notación f(n), 
+    /*   Serie Fibonacci */
+
+    /*   Un número Fibonacci, usualmente con notación f(n), 
             es la suma de los dos números fibonacci que le preceden. 
             Esta sucesión empieza con f(0) = 0, f(1) = 1, f(2) = f(1) + f(0) 
             hasta f(x) = f(x-1) + f(x-2).*/
        // 0,1,1,2,3,5...
 
-       function fibonacci(limit){
-           const arrFib = [0, 1];
-           for(let i = 2; i <= limit; i++) {
-            // me permite acolmular valores, de la sumatoria de los metodos anteriores
+        function fibonacci(limit){
+        const arrFib = [0, 1];
+        for(let i = 2; i <= limit; i++) {
+            // me permite acomular valores, de la sumatoria de los metodos anteriores
             //metodo nativo de array es push para agregar elementos dentro del array
             arrFib.push(arrFib [i - 1] + arrFib[i - 2]);
-           }
-           return arrFib;
-       }
-       const testFib = fibonacci(20)
-       
-       console.log(testFib);
+        }
+        return arrFib;
+        }
+        const testFib = fibonacci(20)
+        console.log(testFib);
+
+/*-------------------------------------------------------------------- */
+
+    /** 
+     * * Cálculo Estación del Año con Estructuras de Control 
+     * ! (If /Else ) 
+     * ! con Switch       
+     */
+
+    /* let mes = 12;
+
+    let estacion;
+
+    if( mes == 1 || mes == 2 || mes == 12){
+            estacion = "Invierno";
+    }
+    else if( mes == 3 || mes == 4 || mes == 5){
+            estacion = "Primavera";
+    }
+    else if( mes == 6 || mes == 7 || mes == 8 ){
+            estacion = "Verano";
+    }
+    else if( mes == 9 || mes == 10 || mes == 11 ){
+            estacion = "Otoño";
+    }
+    else{
+            estacion = "Valor incorrecto";
+    }
+
+    console.log(estacion); */
+
+    // Cálculo Estación del Año con Switch
+
+    /* let mes = 11;
+    let estacion = 'Estación desconocida';
+
+    switch( mes ){
+            case 1: case 2: case 12:
+                    estacion = 'Invierno';
+                    break;
+            case 3: case 4: case 5:
+                    estacion = 'Primavera';
+                    break;
+            case 6: case 7: case 8:
+                    estacion = 'Verano';
+                    break;
+            case 9: case 10: case 11:
+                    estacion = 'Otoño';
+                    break;
+            default:
+            estacion = 'Valor incorrecto';       
+    }
+    console.log(estacion); 
+    */
+
+    /* Cálculo Hora del día  con sentencia de control (If/ else)
+    6am-11am - Buenos dias
+    12pm-18pm - Buenas Tardes
+    19pm-24pm - Buenas noches
+    0am-6am - Durmiendo
+    */
+
+            /* let horaDia = 23;
+            let mensaje;
+
+            if( horaDia >= 6 && horaDia <= 11 ){
+                    mensaje = "Buenos días";
+            }
+            else if( horaDia >= 12 && horaDia <= 18 ){
+                    mensaje = "Buenas tardes";
+            }
+            else if( horaDia >= 19 && horaDia <= 24){
+                    mensaje = "Buenas noches";
+            }
+            else if( horaDia >= 0 && horaDia < 6){
+                    mensaje = "Durmiendo";
+            }
+            else{
+                    mensaje = "Valor incorrecto";
+            }
+
+            console.log(mensaje); */
 
     </script>
     

@@ -29,11 +29,11 @@
                     area = (base * altura) / 2
                     console.log("El area del triangulo es:" + " " + area );
                 }else if (opcion == 2) {
-                   r = prompt("Ingrese radio")
+                    r = prompt("Ingrese radio")
                     area = Pi * (r ** 2)
                     console.log("El area del circulo es:" + " " + area );
                 }else if (opcion == 3) {
-                   lado = prompt("Ingrese Lado")
+                    lado = prompt("Ingrese Lado")
                     area = lado * lado 
                     console.log("El area del cuadro es:" + " " + area );
                 }
@@ -80,7 +80,7 @@
 
         /*4.    Leer tres números y decir cuál es el de valor mayor y el menor valor.  */
                 
-         /* let x,y,z 
+            /* let x,y,z 
                 x = prompt("Dame un número ")
                 y = prompt("Dame otro número")
                 z = prompt("Dame otro número más")
@@ -99,18 +99,18 @@
                     console.log(`El menor es Y ${y}`)
                 }else{
                     console.log(`El menor es Z ${z}`)
-                }
-             */
+                } */
+        
 
         /*5.    Leer tres números y decir cuál es el de valor mayor, el de valor intermedio, y el de valor menor. */
-             /* let x,y,z 
+        /* let x,y,z 
                 
             
             x = prompt("Dame un número ")
                 y = prompt("Dame otro número")
                 z = prompt("Dame otro número más")
 
-                // el mayor
+               // el mayor
                 if((x>y && x>z)) {
                     console.log(`El mayor es X ${x}`)
                 }else if (y>x && y>z) {
@@ -135,8 +135,6 @@
                 }else{
                     console.log(`El menor es Z ${z}`)
                 } */
- 
-
         /*6.    Leer un número entre el 1 y el 10 e imprimir su equivalente en números romanos.  */
 
                 // let num = prompt("Ingrese un número del 1 al 10")
@@ -213,8 +211,33 @@
         mayor a 40 horas, la tarifa se incrementa en un 50% para las horas extras. Calcular el
         salario del trabajador dadas las horas trabajadas y la tarifa. */
         
+            // variables
+
+            let saldoTotal, horasTrabajadas, horasPagadas, sueldo, horasExtras, salarioTrabajador
+
+            horasTrabajadas = prompt("Cuantas horas trabajas tiene")
+            horasPagadas =prompt("Horas pagadas")
+
+
+            if(horasTrabajadas >=40) {
+            horasExtras = horasTrabajadas * (.50)
+            console.log(`Por tener mas de 40 horas su tarifa se incrementara en un 50% , es decir :  ${horasExtras} horas extras`)
+            
+            salarioTrabajador = parseInt(horasExtras) + parseInt(horasTrabajadas)
+            console.log(`horas trabajadas + las horas extras es  ${salarioTrabajador} horas en total`)
+            sueldo = horasPagadas * salarioTrabajador
+            console.log(`Salario del trabajor total dadas las horas extras  ${sueldo} `);
+            }else{
+                sueldo = horasTrabajadas * horasPagadas
+                console.log (`el sueldo sin las horas extras ${sueldo}`)
+            }
+
+            
+
+
         /*2.    Dado un monto calcular el descuento considerando que por encima de 100 el
         descuento es el 10% y por debajo de 100 el descuento es el 2%.  */
+
 
         /*3.    Leer una calificación de un alumno y determinar si obtuvo A, B, C o reprobó, El 10
         equivale a una A, el 9 a una B, el 8 a una C y las demás es reprobado. */

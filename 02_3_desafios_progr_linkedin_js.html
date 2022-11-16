@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Desafíos de programación JS linkedin</title>
+    
+</head>
+<body>
+    <!-- link del curso en linkehttps://www.linkedin.com/learning/desafio-de-programacion-javascript-basico/busqueda-de-productos?autoplay=true&resume=false&u=124249513 -->
+    <!-- Repositorio donde esta los ejercicios https://github.com/LinkedInLearning/desafio-programacion-JavaScript-esencial-2430507 -->
+    <!-- https://developers.google.com/blockly  -->
+    
+    <script>
+    // 1. Determina si una función es primo o no
+    
+        function esPrimo (numero) {
+            if(numero <= 1) {
+                return false;
+            }
+            for(let i = 2 ; i < numero ; i++) {
+                // vamos a validar si el numero es divisible entre i
+                // vamos utilizar  mod (%) para sbustraer el residuo de la division del numero entre i
+                // si el residuo es cero quiere decir que no es primo
+                if(numero % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+
+        }
+
+        // console.log(esPrimo(2)); // true
+        // console.log(esPrimo(7)); // true
+        // console.log(esPrimo(10)); // false
+        // console.log(esPrimo(15)); // false
+        // console.log(esPrimo(29)); // true
+
+
+/*  ------------------------------------------------- */        
+
+
+    //  2.   Determinar si ambos arreglos son similares:
+
+        function sonSimilares(arregloA, arregloB) {
+            // diferencias entre == === !== 
+            if (arregloA.length !== arregloB.length) {
+            return false;
+            }
+
+            for (let indice = 0, total = arregloA.length; indice <= total; indice++) {
+            if (arregloA[indice] !== arregloB[indice]) {
+            return false;
+            }
+        }
+            return true;
+        }
+        /* 
+            console.log(sonSimilares([1, 2], [1, 2, 3])); // false
+            console.log(sonSimilares([1, 2, 3], [1, 2, 3])); // true
+            console.log(sonSimilares([1, 2, 3], ['1','2','3'])); // false
+            console.log(sonSimilares([1, 2, 3], [1,2,4])); // false
+        */
+
+
+/* -------------------------------------------------------------- */
+
+
+    /*  3.  Generar un número aleatorio dentro de un rago de dos números:     
+            Math.flor ->redondea los numeros y quita los decimales   */
+        function numeroAleatorio(numeroA, numeroB) {
+            return Math.floor(Math.random() * (numeroA - numeroB) + numeroB);
+        }
+
+        // console.log(numeroAleatorio(5,10));
+        // console.log(numeroAleatorio(-25,-22));
+        // console.log(numeroAleatorio(100,0));
+        // console.log(numeroAleatorio(-2,2));
+
+
+/* ------------------------------------------ */
+
+
+    //  4. Crear array de productos que cada uno incluya 
+    //  información sobre id, nombreProducto, marca, fechaExpiracion:   
+
+        const listaProductos = [
+        {
+            id: 1,
+            nompreProducto: 'mantequilla',
+            marca: 'DairyGold',
+            fechaExpiracion: '2022-04-20'
+        },
+        {
+            id: 2,
+            nompreProducto: 'leche',
+            marca: 'Avonmore',
+            fechaExpiracion: '2022-04-13'
+        },
+        {
+            id: 3,
+            nompreProducto: 'jamón',
+            marca: 'Denny',
+            fechaExpiracion: '2022-04-18'
+        },
+        {
+            id: 4,
+            nompreProducto: 'pan',
+            marca: 'Brennans',
+            fechaExpiracion: '2022-03-29'
+        },
+        {
+            id: 5,
+            nompreProducto: 'huevos',
+            marca: 'GoldenIrish',
+            fechaExpiracion: '2022-04-18'
+        },
+    ]
+
+    //  Crear dos funciones para buscar productos acorde a los parámetros:
+
+        function buscarProductosPorId(id) {
+        // el método filter recibe una funcion que se encarga de buscar o comparar cada uno de los elementos 
+        // dentro deun arreglo acorde a los criteros que quiera
+            return listaProductos.filter((producto)=> producto.id === id);
+        }
+
+        // console.log(buscarProductosPorId(2));
+
+        function buscarProductosPorFecha(fechaA, fechaB) {
+            fechaA = new Date(fechaA);
+            fechaB = new Date(fechaB);
+            return listaProductos.filter((producto)=>{
+                const fechaExpiracion = new Date(producto.fechaExpiracion);
+                return fechaExpiracion <= fechaA && fechaExpiracion >= fechaB;
+            });
+        }
+
+        // console.log(buscarProductosPorFecha('2022-04-30', '2022-04-15'));
+
+        
+
+/* ------------------------------------------------------------------------------------- */
+
+
+
+    //  6. Fila ordenada
+    // https://www.freecodecamp.org/espanol/news/ordenar-arreglos-en-javascript-como-usar-el-metodo-sort/
+
+        const arreglo = [];
+
+        setInterval(agregarElemento, 2000, () => Math.floor(Math.random() * 100));
+
+        function agregarElemento(numeroAleatorio) {
+        
+            const prioridad = numeroAleatorio();
+            
+            // Agregar el elemento prioridad al arreglo manteniendo 
+            // el orden ascendente
+
+
+            arreglo.push(prioridad);
+            // agregar función de comparación
+            // function(a, b) {return a - b}
+            /* El método sort() puede ordenar valores negativos, cero y positivos en el orden correcto. Cuando compara dos valores, los envía a nuestra función de comparación y luego ordena los valores de acuerdo al resultado devuelto.
+
+            Si el resultado es negativo, a se ordena antes que b.
+            Si el resultado es positivo, b se ordena antes de a.
+            Si el resultado es 0, nada cambia. */
+
+            arreglo.sort((a, b)=> a - b);
+
+            // console.log(arreglo);
+        }
+
+    //  7. El precio promedio
+
+        // Calcular el precio promedio de las casas por localidad
+        // La constante casas contiene la información de casas
+        
+        // objetos de casas
+        const casas = [ 
+        {
+            id: 1,
+            habitaciones: 4,
+            tamano: 200,
+            localidad: 'San José',
+            precio: 150000
+        },
+        {
+            id: 2,
+            habitaciones: 2,
+            tamano: 75,
+            localidad: 'San José',
+            precio: 80000
+        },
+        {
+            id: 3,
+            habitaciones: 3,
+            tamano: 100,
+            localidad: 'San José',
+            precio: 80000
+        },
+        {
+            id: 4,
+            habitaciones: 3,
+            tamano: 110,
+            localidad: 'Heredia',
+            precio: 85000
+        },
+        {
+            id: 5,
+            habitaciones: 3,
+            tamano: 110,
+            localidad: 'Heredia',
+            precio: 85000
+        },
+        {
+            id: 6,
+            habitaciones: 3,
+            tamano: 110,
+            localidad: 'Heredia',
+            precio: 85000
+        },
+        {
+            id: 7,
+            habitaciones: 2,
+            tamano: 60,
+            localidad: 'Cartago',
+            precio: 40000
+        },
+        {
+            id: 8,
+            habitaciones: 4,
+            tamano: 200,
+            localidad: 'Cartago',
+            precio: 140000
+        },
+        {
+            id: 9,
+            habitaciones: 2,
+            tamano: 60,
+            localidad: 'Cartago',
+            precio: 40000
+        },
+        {
+            id: 10,
+            habitaciones: 4,
+            tamano: 120,
+            localidad: 'Puntarenas',
+            precio: 80000
+        },
+        {
+            id: 11,
+            habitaciones: 3,
+            tamano: 130,
+            localidad: 'Puntarenas',
+            precio: 90000
+        },
+        {
+            id: 12,
+            habitaciones: 2,
+            tamano: 87,
+            localidad: 'Puntarenas',
+            precio: 60000
+        },
+        {
+            id: 13,
+            habitaciones: 3,
+            tamano: 95,
+            localidad: 'Guanacaste',
+            precio: 120000
+        },
+        {
+            id: 14,
+            habitaciones: 2,
+            tamano: 150,
+            localidad: 'Guanacaste',
+            precio: 130000
+        },
+        {
+            id: 15,
+            habitaciones: 1,
+            tamano: 45,
+            localidad: 'Guanacaste',
+            precio: 10000
+        },
+        {
+            id: 16,
+            habitaciones: 3,
+            tamano: 75,
+            localidad: 'Alajuela',
+            precio: 100000
+        },
+        {
+            id: 17,
+            habitaciones: 3,
+            tamano: 95,
+            localidad: 'Alajuela',
+            precio: 120000
+        },
+        {
+            id: 18,
+            habitaciones: 3,
+            tamano: 110,
+            localidad: 'Alajuela',
+            precio: 130000
+        },
+        {
+            id: 19,
+            habitaciones: 2,
+            tamano: 60,
+            localidad: 'Limón',
+            precio: 30000
+        },
+        {
+            id: 20,
+            habitaciones: 3,
+            tamano: 120,
+            localidad: 'Limón',
+            precio: 130000
+        },
+        {
+            id: 21,
+            habitaciones: 1,
+            tamano: 40,
+            localidad: 'Limón',
+            precio: 20000
+        }
+    ]
+    
+        // creacion de un objeto para agregar los precios de las casas 
+        const acumulado = {}
+    
+        // Que vamos a hacer => sumar los precios de las casas por localidad y al mismo tiempo contar cuantas casas yo tengo por localidad
+        // creo un for of para un recorrido del arreglo de las casas
+    
+        for (const casa of casas) {
+        if(!acumulado[casa.localidad]) {
+            acumulado[casa.localidad] = { acumuladoPrecio:0, contador: 0};
+        }
+        acumulado[casa.localidad].acumuladoPrecio += casa.precio;
+        acumulado[casa.localidad].contador += 1;
+    }
+        //console.log(acumulado);
+
+        // calcular el precio promedio
+    // tengo que recorrer acumulado e ir dividiendo el precio acumulado por el número de casas
+    // Object.keys -> me va a devolver un arreglo que va a contener la lista de key de un objeto
+    // creamos un const llamada localidades va ser la lista de localidades
+    //object.keys  devuelve un arreglo  que va contener la lista de key de un objeto es decir la localidad(Alajuela, cartago, Heredia, san jose)
+    
+        const localidades = Object.keys(acumulado);
+
+        for(const localidad of localidades) {
+            //  console.log('El precio promedio de las casas para ' + localidad + ' es de ' + Math.floor(acumulado[localidad].acumuladoPrecio / acumulado[localidad].contador))
+        }
+
+
+    // total san Jose 103333
+
+
+/* ------------------------------------------------------------------------------------- */
+
+
+
+    // 8.   Orden Alfabético
+
+        const nombres = [
+
+            "June Greene",
+            "Magdalena Hardy",
+            "Merle Gonzales",
+            "Whitaker Anderson",
+            "Lucille Landry",
+            "Annmarie Burns",
+            "Erica Morrison",
+            "Twila Dotson",
+            "Cash Ratliff",
+            "Maria Pierce",
+            "Slater Mayo",
+            "Gonzales Velazquez",
+            "Hogan Tran",
+            "Holland Harvey",
+            "Carr Porter",
+            "Marquez Bruce",
+            "Rojas Wall",
+            "Florine Lang",
+            "Quinn Blanchard",
+            "Charles Hughes",
+            "Melba Moon",
+            "Gilliam Marsh",
+            "Lea Salazar",
+            "Jackie Hogan",
+            "Jacobson Riggs",
+            "Mckee Mcclure",
+            "Joanna Hampton",
+            "Alexander Stokes",
+            "Lola Witt",
+            "Doyle Lee",
+        ];
+
+        // Ordenar los nombres alfabeticamente.
+        // se crea una constante donde tendra el resultado del ordenamiento de los nombres
+        // la funcion sort recibie como  parametro una funcion
+        // la cual recibe dos parámetros "a" y "b"
+        // estos parámetros son los valores que se van a comparar para poder ordenar el arreglo
+        const ordenados = nombres.sort((a, b)=> {
+            
+            // string
+            const nombreA = a.split(' ')[0]; // dividir por el espacio en blanco que se encuentra entre el nombre y apellido,
+                                            // split retorna un arreglo entonces voy substraer el valor del arreglo en el indice "0"
+                                            // 
+            const nombreB = b.split(' ')[0];  
+
+            return nombreA < nombreB? -1 : nombreA > nombreB? 1 : 0;
+        });
+
+        // console.log(ordenados);
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+
+    /**  
+     *   Todo: 9.a Escribir una clase para guardar el nombre, la fecha de expiración y el precio de venta de los productos.
+     * * En JavaScript, las clases son plantillas de objetos que almacenan información y métodos que trabajan sobre dicha información. 
+     * * Las clases están construidas sobre prototipos. Es por esta razón que se dice que las clases en JavaScript son simplemente una manera 
+     * * bonita de escribir clases y herencias basados en prototipos, ya que ellas son más claras de entender. 
+     * ? vamos a escribir una clase en JavaScript, la cual almacenará información sobre productos de supermercado como nombre de producto, fecha de vencimiento y precio de compra.             
+     */
+    class Producto{
+        _nombre;
+        _precio;
+        _fechaVencimiento;
+
+        constructor(nombre, precio, fechaVencimiento){
+            this._nombre = nombre;
+            this._precio = precio;
+            this._fechaVencimiento = new Date(fechaVencimiento);
+        }
+    }
+
+    // 9.b Escribir una función que tome una lista de productos y sume el total del costo
+    // de los productos, excluyendo los productos expirados.
+    
+    function carritocompra(productos){
+        const hoy = new Date();
+        const productosValidos = productos.filter((producto)=> producto._fechaVencimiento > hoy);
+        return productosValidos.reduce((acumulador, producto)=> acumulador += producto._precio, 0);
+    }
+
+    const resultado = carritocompra([
+        new Producto('leche', 4, '2022-12-15'),
+        new Producto('pan', 2, '2022-12-14'),
+        new Producto('mantequilla', 3, '2022-11-18'),
+        new Producto('queso', 4, '2022-03-19'),
+    ]);
+
+    console.log(resultado);    
+    </script>
+</body>
+</html>
