@@ -213,30 +213,60 @@
         
             // variables
 
-            let saldoTotal, horasTrabajadas, horasPagadas, sueldo, horasExtras, salarioTrabajador
+            /* let saldoTotal, horasTrabajadas, horasPagadas, sueldo, horasExtras, salarioTrabajador
 
             horasTrabajadas = prompt("Cuantas horas trabajas tiene")
             horasPagadas =prompt("Horas pagadas")
 
 
             if(horasTrabajadas >=40) {
-            horasExtras = horasTrabajadas * (.50)
-            console.log(`Por tener mas de 40 horas su tarifa se incrementara en un 50% , es decir :  ${horasExtras} horas extras`)
+                horasExtras = horasTrabajadas * (.50)
+                    console.log(`Por tener mas de 40 horas su tarifa se incrementara en un 50% , es decir :  ${horasExtras} horas extras`)
             
-            salarioTrabajador = parseInt(horasExtras) + parseInt(horasTrabajadas)
-            console.log(`horas trabajadas + las horas extras es  ${salarioTrabajador} horas en total`)
-            sueldo = horasPagadas * salarioTrabajador
-            console.log(`Salario del trabajor total dadas las horas extras  ${sueldo} `);
+                salarioTrabajador = parseInt(horasExtras) + parseInt(horasTrabajadas)
+                    console.log(`horas trabajadas + las horas extras es  ${salarioTrabajador} horas en total`)
+                sueldo = horasPagadas * salarioTrabajador
+                    console.log(`Salario del trabajor total dadas las horas extras  ${sueldo} `);
             }else{
                 sueldo = horasTrabajadas * horasPagadas
                 console.log (`el sueldo sin las horas extras ${sueldo}`)
-            }
-
+            } */
             
-
 
         /*2.    Dado un monto calcular el descuento considerando que por encima de 100 el
         descuento es el 10% y por debajo de 100 el descuento es el 2%.  */
+
+            let monto, discount, montoTotal, discountTotal
+
+            monto = prompt("Escribir el monto a calcular")
+            if(monto>= 100) {
+                discount = .10
+                discountTotal = (monto * discount)
+                montoTotal = monto - discountTotal
+                console.log( `El descuento es del 10% y quedaria en: ${montoTotal}`)
+            }else {
+                discount = 2
+                
+                montoTotal = ((monto -(monto * discount)/ 100))
+                console.log( `El descuento es del ${discount} % y quedaria en: ${montoTotal}`)
+            } 
+        
+        /* 
+        En una tienda se ofrece un descuento fijo de 15% del monto de la compra de cierto tipo de producto. 
+        Elabore un algoritmo que determine el monto del descuento y el monto a pagar por la compra de cierta cantidad de unidades del producto.
+            https://mangatschool.com/topic/5-descuento-a-precio-de-un-producto-algoritmo-y-javascript/
+        */
+        /* var cantidad,precio,desc,compra,pagar;
+
+            precio = parseFloat(prompt("Ingresar precio"));
+            cantidad = parseFloat(prompt("Ingresar cantidad"));
+
+            compra = precio*cantidad;
+            desc = compra*0.15;
+            pagar = compra-desc;
+
+            document.write("El desceunto es: "+desc);
+            document.write("El total a pagar es: "+pagar); */
 
 
         /*3.    Leer una calificación de un alumno y determinar si obtuvo A, B, C o reprobó, El 10
