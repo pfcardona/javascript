@@ -7,6 +7,7 @@
     <title>Ejercicios prácticos lógica matemática </title>
 </head>
 <body>
+    <h4>exercises</h4>
     <script>
         // Enlace ejercicios practicos  de programación con pseudocódigos y con diagrama de flujo 
         // https://drive.google.com/file/d/1SmhblW_SCrlUAWGcFK0ZMAnM9BMfrNdy/view?usp=sharing
@@ -236,7 +237,7 @@
         /*2.    Dado un monto calcular el descuento considerando que por encima de 100 el
         descuento es el 10% y por debajo de 100 el descuento es el 2%.  */
 
-            let monto, discount, montoTotal, discountTotal
+            /* let monto, discount, montoTotal, discountTotal
 
             monto = prompt("Escribir el monto a calcular")
             if(monto>= 100) {
@@ -249,7 +250,7 @@
                 
                 montoTotal = ((monto -(monto * discount)/ 100))
                 console.log( `El descuento es del ${discount} % y quedaria en: ${montoTotal}`)
-            } 
+            }  */
         
         /* 
         En una tienda se ofrece un descuento fijo de 15% del monto de la compra de cierto tipo de producto. 
@@ -271,20 +272,127 @@
 
         /*3.    Leer una calificación de un alumno y determinar si obtuvo A, B, C o reprobó, El 10
         equivale a una A, el 9 a una B, el 8 a una C y las demás es reprobado. */
+        /* let calificacion
+        calificacion = prompt('Introduce la calificación')
+        switch(calificacion){
+            case '10':
+                console.log('Obtuvo una A')
+                break
+            case '9':
+                console.log('Obtuvo una B')
+                break
+            case '8':
+                console.log('Obtuvo una C')
+                break
+            default: 
+            console.log('Reprobo')    
+        } */
+
 
         /*4.    Leer tres calificaciones de un alumno y determinar su promedio, si el promedio es 10,
         escribir en la pantalla tu promedio es A, si el promedio es B escribir tu promedio es B y si
         el promedio es 8 escribir C, de lo contrario si la calificación es menor a 8 escribir
         reprobado. */
+        /* let cal1, cal2, cal3, promedio
+
+        cal1 = prompt('Ingresa la calificación 1')
+        num1 = parseFloat(cal1)
+        cal2 = prompt('Ingresa la calificación 2')
+        num2 = parseFloat(cal2)
+        cal3 = prompt('Ingresa la calificación 3')
+        num3 = parseFloat(cal3)
+
+        promedio = (parseFloat(num1)+parseFloat(num2)+parseFloat(num3))/3
+        promediot =Math.round(promedio)
+        switch(promediot){
+            case (10):
+                console.log(`el promedio fue ${promediot } y Obtuvo una A`)
+                break
+            case (9):
+                console.log(`el promedio fue ${promediot } Obtuvo una B`)
+                break
+            case (8):
+                console.log(`el promedio fue ${promediot } Obtuvo una C`)
+                break
+            case(7): case(6): case(5): case(4): case(3): case(2): case(1):
+            console.log(`el promedio fue ${promediot } Reprobo`)
+                break
+            default:
+            console.log(`el promedio fue ${promediot } ERROR`)   
+        } 
+         */
 
         /*5.    En un almacén se hace un 20% de descuento a los clientes cuya compra supere los
         $1,000 ¿cuál será la cantidad que pagará una persona por su compra?  */
+
+            /* let monto, discount, montoTotal, discountTotal
+
+            monto = prompt("Escribir el monto a calcular")
+            if(monto>= 1000) {
+                discount = 20
+                discountTotal = (monto * discount)/100
+                montoTotal = monto - discountTotal
+                console.log( `Como  el monto es mayor a ${monto } se aplicará el descuento del ${discount}% y se le hace un descuento de: ${discountTotal} y quedaría en: ${montoTotal}`)
+            }else {  
+                
+                console.log( `No aplica el descuento del 20 % `)
+            }  */
 
         /*6.    Hacer un algoritmo que calcule el total a pagar por la compra de camisas. Si se compran
         tres camisas o más se aplica un descuento del 20% sobre el total de la compra y si son
         menos de tres camisas un descuento del 10%  */
 
+        var cantidad,precio, desc,compra,pagar, discount
 
+        precio = (prompt("Ingresar precio"));
+        cantidad = (prompt("Ingresar cantidad de camisas"));
+        if(cantidad >=  3) {
+            compra = precio*cantidad;
+            discount = 20
+            desc = (compra * discount)/100;
+            pagar = compra-desc;
+            document.write("El descuento es: "+desc);
+            document.write("El total a pagar es: "+pagar); 
+        }else {
+            compra = precio*cantidad;
+            discount = 10
+            desc = (compra * discount)/100;
+            pagar = compra-desc;
+            document.write("Aplica El descuento de "+ discount + " ");
+            document.write("El total a pagar es: "+pagar);             
+        }
+
+
+        // Ejercicio 30: Averiguar si una variable definida es de tipo de dato numérico.
+
+/*         let x = 5.3;
+        let y = Number('1.23');
+        let z = '';
+        let w = new Date();
+
+        if (typeof x === 'number'){
+        console.log('La variable `x` es numérica.');
+        } else {
+        console.log('La variable `x` no es numérica.');
+        }
+
+        if (typeof y === 'number'){
+        console.log('La variable `y` es numérica.');
+        } else {
+        console.log('La variable `y` no es numérica.');
+        }
+
+        if (typeof z === 'number'){
+        console.log('La variable `z` es numérica.');
+        } else {
+        console.log('La variable `z` no es numérica.');
+        }
+
+        if (typeof w === 'number'){
+        console.log('La variable `w` es numérica.');
+        } else {
+        console.log('La variable `w` no es numérica.');
+        } */
     </script>
 </body>
 </html>

@@ -51,10 +51,10 @@
             }
 
             for (let indice = 0, total = arregloA.length; indice <= total; indice++) {
-            if (arregloA[indice] !== arregloB[indice]) {
+                if (arregloA[indice] !== arregloB[indice]) {
             return false;
             }
-        }
+            }
             return true;
         }
         /* 
@@ -69,7 +69,7 @@
 
 
     /*  3.  Generar un número aleatorio dentro de un rago de dos números:     
-            Math.flor ->redondea los numeros y quita los decimales   */
+            Math.floor ->redondea los numeros y quita los decimales   */
         function numeroAleatorio(numeroA, numeroB) {
             return Math.floor(Math.random() * (numeroA - numeroB) + numeroB);
         }
@@ -84,46 +84,46 @@
 
 
     //  4. Crear array de productos que cada uno incluya 
-    //  información sobre id, nombreProducto, marca, fechaExpiracion:   
+    //  información sobre id, nombreProducto, marca, fechaExpiración:   
 
         const listaProductos = [
-        {
-            id: 1,
-            nompreProducto: 'mantequilla',
-            marca: 'DairyGold',
-            fechaExpiracion: '2022-04-20'
-        },
-        {
-            id: 2,
-            nompreProducto: 'leche',
-            marca: 'Avonmore',
-            fechaExpiracion: '2022-04-13'
-        },
-        {
-            id: 3,
-            nompreProducto: 'jamón',
-            marca: 'Denny',
-            fechaExpiracion: '2022-04-18'
-        },
-        {
-            id: 4,
-            nompreProducto: 'pan',
-            marca: 'Brennans',
-            fechaExpiracion: '2022-03-29'
-        },
-        {
-            id: 5,
-            nompreProducto: 'huevos',
-            marca: 'GoldenIrish',
-            fechaExpiracion: '2022-04-18'
-        },
-    ]
+            {
+                id: 1,
+                nompreProducto: 'mantequilla',
+                marca: 'DairyGold',
+                fechaExpiracion: '2022-04-20'
+            },
+            {
+                id: 2,
+                nompreProducto: 'leche',
+                marca: 'Avonmore',
+                fechaExpiracion: '2022-04-13'
+            },
+            {
+                id: 3,
+                nompreProducto: 'jamón',
+                marca: 'Denny',
+                fechaExpiracion: '2022-04-18'
+            },
+            {
+                id: 4,
+                nompreProducto: 'pan',
+                marca: 'Brennans',
+                fechaExpiracion: '2022-03-29'
+            },
+            {
+                id: 5,
+                nompreProducto: 'huevos',
+                marca: 'GoldenIrish',
+                fechaExpiracion: '2022-04-18'
+            },
+        ]
 
     //  Crear dos funciones para buscar productos acorde a los parámetros:
 
         function buscarProductosPorId(id) {
-        // el método filter recibe una funcion que se encarga de buscar o comparar cada uno de los elementos 
-        // dentro deun arreglo acorde a los criteros que quiera
+        //  el método filter recibe una funcion que se encarga de buscar o comparar cada uno de los elementos 
+        // dentro de un arreglo acorde a los criteros que requiera
             return listaProductos.filter((producto)=> producto.id === id);
         }
 
@@ -163,7 +163,9 @@
 
             arreglo.push(prioridad);
             // agregar función de comparación
-            // function(a, b) {return a - b}
+            /* function (a, b) {
+                return a - b
+            } */
             /* El método sort() puede ordenar valores negativos, cero y positivos en el orden correcto. Cuando compara dos valores, los envía a nuestra función de comparación y luego ordena los valores de acuerdo al resultado devuelto.
 
             Si el resultado es negativo, a se ordena antes que b.
@@ -338,36 +340,38 @@
         // creo un for of para un recorrido del arreglo de las casas
     
         for (const casa of casas) {
-        if(!acumulado[casa.localidad]) {
-            acumulado[casa.localidad] = { acumuladoPrecio:0, contador: 0};
+            if(!acumulado[casa.localidad]) {
+                acumulado[casa.localidad] = { acumuladoPrecio:0, contador: 0};
+            }
+            acumulado[casa.localidad].acumuladoPrecio += casa.precio;
+            acumulado[casa.localidad].contador += 1;
         }
-        acumulado[casa.localidad].acumuladoPrecio += casa.precio;
-        acumulado[casa.localidad].contador += 1;
-    }
+
         //console.log(acumulado);
 
         // calcular el precio promedio
-    // tengo que recorrer acumulado e ir dividiendo el precio acumulado por el número de casas
-    // Object.keys -> me va a devolver un arreglo que va a contener la lista de key de un objeto
-    // creamos un const llamada localidades va ser la lista de localidades
-    //object.keys  devuelve un arreglo  que va contener la lista de key de un objeto es decir la localidad(Alajuela, cartago, Heredia, san jose)
+        // tengo que recorrer acumulado e ir dividiendo el precio acumulado por el número de casas
+        // Object.keys -> me va a devolver un arreglo que va a contener la lista de key de un objeto
+        // creamos un const llamada localidades va ser la lista de localidades
+        //object.keys  devuelve un arreglo  que va contener la lista de key de un objeto es decir la localidad(Alajuela, cartago, Heredia, san jose)
     
         const localidades = Object.keys(acumulado);
 
         for(const localidad of localidades) {
-            //  console.log('El precio promedio de las casas para ' + localidad + ' es de ' + Math.floor(acumulado[localidad].acumuladoPrecio / acumulado[localidad].contador))
+        //  console.log('El precio promedio de las casas para ' + localidad + ' es de ' + Math.floor(acumulado[localidad].acumuladoPrecio / acumulado[localidad].contador))
         }
 
 
-    // total san Jose 103333
+        // total san Jose 103333
 
 
 /* ------------------------------------------------------------------------------------- */
 
 
 
-    // 8.   Orden Alfabético
-
+    /**   
+     * todo 8.   Orden Alfabético
+    */
         const nombres = [
 
             "June Greene",
@@ -428,7 +432,7 @@
      * * En JavaScript, las clases son plantillas de objetos que almacenan información y métodos que trabajan sobre dicha información. 
      * * Las clases están construidas sobre prototipos. Es por esta razón que se dice que las clases en JavaScript son simplemente una manera 
      * * bonita de escribir clases y herencias basados en prototipos, ya que ellas son más claras de entender. 
-     * ? vamos a escribir una clase en JavaScript, la cual almacenará información sobre productos de supermercado como nombre de producto, fecha de vencimiento y precio de compra.             
+     * ! vamos a escribir una clase en JavaScript, la cual almacenará información sobre productos de supermercado como nombre de producto, fecha de vencimiento y precio de compra.             
      */
     class Producto{
         _nombre;
