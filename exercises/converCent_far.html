@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D Convertir de Centígrados a Fahrenheit y Viceversa</title>
+</head>
+<body>
+    <h3>Convertidor de Grados</h3>
+    <form>
+        <label for="val1">Ingrese Temperatura en Centígrados:</label>
+        <input type="number" id="val1"> <br><br>
+        <label for="val2">Ingrese Temperatura en Fahrenheit:</label>
+        <input type="number" id="val2"> <br>
+        <input type="button" value="convertir" id="btn">
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        window.addEventListener("load", inicio);
+
+        function inicio (){
+            document.querySelector("#btn").addEventListener("click",mostrarConversion)
+            document.querySelector("#btn").addEventListener("click",mostrarConversion2)
+        }
+        function convertirCelsiusAFahrenheit(temperatura){
+            return (temperatura * 1.8) + 32
+        }
+        // (grados °F − 32) × 5/9 = 0 °C
+        function convertirFahrenheitaCelsius(grados){
+            return (grados - 32)* 5/9
+            console.log(grados);
+        }
+
+        function mostrarConversion() {
+            let laTemperatura = Number(document.querySelector("#val1").value)
+            let temperaturaEnFahrenheit = convertirCelsiusAFahrenheit(laTemperatura)
+            let losGrados = Number(document.querySelector("#val2").value)
+            let gradosEnCentigrados = convertirFahrenheitaCelsius(losGrados)
+            let mensaje
+            if(temperaturaEnFahrenheit){
+                mensaje = "la temperatura en fahrenheit es: "+ temperaturaEnFahrenheit
+            }
+            document.querySelector("#resultado").innerHTML = mensaje
+        }
+
+        function mostrarConversion2() {
+            let losGrados = Number(document.querySelector("#val2").value)
+            let gradosEnCentigrados = convertirFahrenheitaCelsius(losGrados)
+            let mensaje
+            if (gradosEnCentigrados){
+                mensaje = "la temperatura en Centígrados es: "+ gradosEnCentigrados
+            }
+            document.querySelector("#resultado").innerHTML = mensaje
+        }
+    </script>
+
+</body>
+</html>

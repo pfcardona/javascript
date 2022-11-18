@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETO 1</title>
+</head>
+<body>
+    <script>
+        
+        /** 
+         * * Reto 1
+         * todo Practica 1 - Dado el valor de venta de un producto, hallar el IVA (19%) y el precio de venta  
+         ** Ejemplo: la salida de datos seria la siguiente:
+         ** 1. Valor de venta es:10000
+         ** 2. El IVA es: 1900
+         ** 3. El precio de Venta es:11900
+        */
+
+        //Variables 
+        let valorVenta, iva,precioVenta
+
+        //  Entrada de datos
+        valorVenta= parseFloat(prompt("Escribe el valor de la venta"))
+
+
+        // Proceso
+        iva = valorVenta * 0.19
+        precioVenta = valorVenta + iva
+
+        // Salida de datos + antigua
+        document.write('Valor de venta es:' + valorVenta + '<br>')
+        document.write('El IVA es:' + iva + '<br>')
+        document.write('El precio de Venta es:', precioVenta)
+        
+        // // Salida de datos opción 2
+        // document.write(`Valor de Venta: ${vv}<br>
+        //              IVA: ${iva} <br>
+        //              Precio de venta: ${pv}`);
+    </script>
+</body>
+</html>

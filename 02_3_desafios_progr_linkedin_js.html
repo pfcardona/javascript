@@ -9,13 +9,15 @@
     
 </head>
 <body>
-    <!-- link del curso en linkehttps://www.linkedin.com/learning/desafio-de-programacion-javascript-basico/busqueda-de-productos?autoplay=true&resume=false&u=124249513 -->
+    <!-- link del curso en linkeid https://www.linkedin.com/learning/desafio-de-programacion-javascript-basico/busqueda-de-productos?autoplay=true&resume=false&u=124249513 -->
     <!-- Repositorio donde esta los ejercicios https://github.com/LinkedInLearning/desafio-programacion-JavaScript-esencial-2430507 -->
     <!-- https://developers.google.com/blockly  -->
     
     <script>
-    // 1. Determina si una función es primo o no
-    
+    /**
+     * todo 1. Determina si una función es primo o no   
+     * 
+    */
         function esPrimo (numero) {
             if(numero <= 1) {
                 return false;
@@ -29,9 +31,7 @@
                 }
             }
             return true;
-
         }
-
         // console.log(esPrimo(2)); // true
         // console.log(esPrimo(7)); // true
         // console.log(esPrimo(10)); // false
@@ -42,7 +42,10 @@
 /*  ------------------------------------------------- */        
 
 
-    //  2.   Determinar si ambos arreglos son similares:
+    /**  
+     * TODO 2. Determinar si ambos arreglos son similares:
+     * 
+    */ 
 
         function sonSimilares(arregloA, arregloB) {
             // diferencias entre == === !== 
@@ -68,8 +71,10 @@
 /* -------------------------------------------------------------- */
 
 
-    /*  3.  Generar un número aleatorio dentro de un rago de dos números:     
-            Math.floor ->redondea los numeros y quita los decimales   */
+    /**  
+     * TODO 3.  Generar un número aleatorio dentro de un rago de dos números:     
+            Math.floor ->redondea los numeros y quita los decimales   
+    */
         function numeroAleatorio(numeroA, numeroB) {
             return Math.floor(Math.random() * (numeroA - numeroB) + numeroB);
         }
@@ -83,9 +88,10 @@
 /* ------------------------------------------ */
 
 
-    //  4. Crear array de productos que cada uno incluya 
-    //  información sobre id, nombreProducto, marca, fechaExpiración:   
-
+    /**  
+     * TODO 4. Crear array de productos que cada uno incluya 
+     *   información sobre id, nombreProducto, marca, fechaExpiración:   
+    */
         const listaProductos = [
             {
                 id: 1,
@@ -119,7 +125,9 @@
             },
         ]
 
-    //  Crear dos funciones para buscar productos acorde a los parámetros:
+    /**  
+     * ? Crear dos funciones para buscar productos acorde a los parámetros:
+     */
 
         function buscarProductosPorId(id) {
         //  el método filter recibe una funcion que se encarga de buscar o comparar cada uno de los elementos 
@@ -145,8 +153,10 @@
 /* ------------------------------------------------------------------------------------- */
 
 
-
-    //  6. Fila ordenada
+    /**
+     * todo 6. Fila ordenada 
+     * 
+    */
     // https://www.freecodecamp.org/espanol/news/ordenar-arreglos-en-javascript-como-usar-el-metodo-sort/
 
         const arreglo = [];
@@ -177,11 +187,11 @@
             // console.log(arreglo);
         }
 
-    //  7. El precio promedio
-
-        // Calcular el precio promedio de las casas por localidad
-        // La constante casas contiene la información de casas
-        
+    /**  
+     *  todo 7. El precio promedio
+     ** Calcular el precio promedio de las casas por localidad
+     ** La constante casas contiene la información de casas
+    */
         // objetos de casas
         const casas = [ 
         {
@@ -405,12 +415,13 @@
             "Lola Witt",
             "Doyle Lee",
         ];
-
-        // Ordenar los nombres alfabeticamente.
+        /**
+        * todo Ordenar los nombres alfabeticamente.
         // se crea una constante donde tendra el resultado del ordenamiento de los nombres
         // la funcion sort recibie como  parametro una funcion
         // la cual recibe dos parámetros "a" y "b"
         // estos parámetros son los valores que se van a comparar para poder ordenar el arreglo
+        */
         const ordenados = nombres.sort((a, b)=> {
             
             // string
@@ -432,7 +443,7 @@
      * * En JavaScript, las clases son plantillas de objetos que almacenan información y métodos que trabajan sobre dicha información. 
      * * Las clases están construidas sobre prototipos. Es por esta razón que se dice que las clases en JavaScript son simplemente una manera 
      * * bonita de escribir clases y herencias basados en prototipos, ya que ellas son más claras de entender. 
-     * ! vamos a escribir una clase en JavaScript, la cual almacenará información sobre productos de supermercado como nombre de producto, fecha de vencimiento y precio de compra.             
+     * ? vamos a escribir una clase en JavaScript, la cual almacenará información sobre productos de supermercado como nombre de producto, fecha de vencimiento y precio de compra.             
      */
     class Producto{
         _nombre;
