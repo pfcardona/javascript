@@ -36,8 +36,6 @@
         function mostrarConversion() {
             let laTemperatura = Number(document.querySelector("#val1").value)
             let temperaturaEnFahrenheit = convertirCelsiusAFahrenheit(laTemperatura)
-            let losGrados = Number(document.querySelector("#val2").value)
-            let gradosEnCentigrados = convertirFahrenheitaCelsius(losGrados)
             let mensaje
             if(temperaturaEnFahrenheit){
                 mensaje = "la temperatura en fahrenheit es: "+ temperaturaEnFahrenheit
