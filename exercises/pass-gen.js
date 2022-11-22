@@ -12,4 +12,5 @@ function passGenerate(length = 10) {
     return result
 }
 const pass = passGenerate(30)
+console.log(passGenerate());
 console.log(pass);

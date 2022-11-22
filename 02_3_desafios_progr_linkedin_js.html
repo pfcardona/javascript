@@ -67,9 +67,7 @@
             console.log(sonSimilares([1, 2, 3], [1,2,4])); // false
         */
 
-
 /* -------------------------------------------------------------- */
-
 
     /**  
      * TODO 3.  Generar un número aleatorio dentro de un rago de dos números:     
@@ -84,9 +82,7 @@
         // console.log(numeroAleatorio(100,0));
         // console.log(numeroAleatorio(-2,2));
 
-
 /* ------------------------------------------ */
-
 
     /**  
      * TODO 4. Crear array de productos que cada uno incluya 
@@ -126,7 +122,7 @@
         ]
 
     /**  
-     * ? Crear dos funciones para buscar productos acorde a los parámetros:
+     * todo Crear dos funciones para buscar productos acorde a los parámetros:
      */
 
         function buscarProductosPorId(id) {
@@ -157,7 +153,7 @@
      * todo 6. Fila ordenada 
      * 
     */
-    // https://www.freecodecamp.org/espanol/news/ordenar-arreglos-en-javascript-como-usar-el-metodo-sort/
+    //documentación https://www.freecodecamp.org/espanol/news/ordenar-arreglos-en-javascript-como-usar-el-metodo-sort/
 
         const arreglo = [];
 
@@ -377,8 +373,6 @@
 
 /* ------------------------------------------------------------------------------------- */
 
-
-
     /**   
      * todo 8.   Orden Alfabético
     */
@@ -426,8 +420,7 @@
             
             // string
             const nombreA = a.split(' ')[0]; // dividir por el espacio en blanco que se encuentra entre el nombre y apellido,
-                                            // split retorna un arreglo entonces voy substraer el valor del arreglo en el indice "0"
-                                            // 
+                                            // split retorna un arreglo entonces voy substraer el valor del arreglo en el indice "0"                                            
             const nombreB = b.split(' ')[0];  
 
             return nombreA < nombreB? -1 : nombreA > nombreB? 1 : 0;
@@ -439,11 +432,11 @@
 
 
     /**  
-     *   Todo: 9.a Escribir una clase para guardar el nombre, la fecha de expiración y el precio de venta de los productos.
-     * * En JavaScript, las clases son plantillas de objetos que almacenan información y métodos que trabajan sobre dicha información. 
-     * * Las clases están construidas sobre prototipos. Es por esta razón que se dice que las clases en JavaScript son simplemente una manera 
-     * * bonita de escribir clases y herencias basados en prototipos, ya que ellas son más claras de entender. 
-     * ? vamos a escribir una clase en JavaScript, la cual almacenará información sobre productos de supermercado como nombre de producto, fecha de vencimiento y precio de compra.             
+     *  Todo: 9.a Escribir una clase para guardar el nombre, la fecha de expiración y el precio de venta de los productos.
+        * * En JavaScript, las clases son plantillas de objetos que almacenan información y métodos que trabajan sobre dicha información. 
+        * * Las clases están construidas sobre prototipos. Es por esta razón que se dice que las clases en JavaScript son simplemente una manera 
+        * * bonita de escribir clases y herencias basados en prototipos, ya que ellas son más claras de entender. 
+        * ? vamos a escribir una clase en JavaScript, la cual almacenará información sobre productos de supermercado como nombre de producto, fecha de vencimiento y precio de compra.             
      */
     class Producto{
         _nombre;

@@ -9,13 +9,12 @@
     // console.log(arr1);
 
     function bombDetector(arr) {
-        // * crear un nuevo array que va a contener los numeros
-
+        // ** crear un nuevo array que va a contener los numeros
         const newArray = []
-        arr.forEach((num) => {
-            // transforma cada numoer a un string, queda todos los numeros separados en una cifra
-            //02340556244181014051080
+        arr.map((num) => {
+            // toString ->transforma cada numero a un string, y queda todos los números separados en una cifra
             const numToStr = num.toString()
+            console.log(numToStr);
             for( let i= 0; i < numToStr.length; i++){
                 // volvemos a transformar el string en numero  con + (Number)
                 // llamamos un metodo de string NO de number
@@ -40,4 +39,4 @@
     }
     bombDetector(arr1)
 
-    bombDetector(arr2)
+    // bombDetector(arr2)

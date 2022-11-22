@@ -5,6 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D Convertir de Centígrados a Fahrenheit y Viceversa</title>
+
+    <style>
+        body {
+            display: grid;            
+            justify-content: center;
+            background-color: aliceblue;
+            margin: 15px;
+        }
+        h3 {
+            text-align: center;
+        }
+        #btn, #btn1 {
+        margin: 10% 0;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 18px;
+        padding: 12px;
+        text-decoration: none;
+        -webkit-border-radius: 28px;
+        -moz-border-radius: 28px;
+        border-radius: 28px;
+        -webkit-box-shadow: 0px 1px 3px #666666;
+        -moz-box-shadow: 0px 1px 3px #666666;
+        box-shadow: 0px 1px 3px #666666;
+        text-shadow: undefinedpx px 3px #666666;
+        border: solid #d91c71 2px;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#fc3f94), to(#fc0574));
+        background: -moz-linear-gradient(top, #fc3f94, #fc0574);
+        }
+        #btn:hover, #btn1:hover {
+        background: #e62097;
+        }
+
+
+    </style>
 </head>
 <body>
     <h3>Convertidor de Grados</h3>
@@ -13,7 +48,8 @@
         <input type="number" id="val1"> <br><br>
         <label for="val2">Ingrese Temperatura en Fahrenheit:</label>
         <input type="number" id="val2"> <br>
-        <input type="button" value="convertir" id="btn">
+        <input type="button" value="convertir a Fahrenheit" id="btn">
+        <input type="button" value="convertir a Celsius" id="btn1">
     </form>
     <p id="resultado"></p>
 
@@ -22,7 +58,7 @@
 
         function inicio (){
             document.querySelector("#btn").addEventListener("click",mostrarConversion)
-            document.querySelector("#btn").addEventListener("click",mostrarConversion2)
+            document.querySelector("#btn1").addEventListener("click",mostrarConversion2)
         }
         function convertirCelsiusAFahrenheit(temperatura){
             return (temperatura * 1.8) + 32
@@ -30,7 +66,7 @@
         // (grados °F − 32) × 5/9 = 0 °C
         function convertirFahrenheitaCelsius(grados){
             return (grados - 32)* 5/9
-            console.log(grados);
+            console.log(Math.round(grados));
         }
 
         function mostrarConversion() {

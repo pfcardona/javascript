@@ -1,7 +1,7 @@
 
 const valueResult = document.getElementById('result');
 
- /**
+/**
  * área y perímetro del cuadrado
  * ====================================================
 */
@@ -9,7 +9,7 @@ const perimSquare = (side) => side *4;
 const areaSquare = (side) => side * side;
 // console.log(perimSquare(4))
 // console.log(areaSquare(20))
- /**
+/**
  * área y perímetro de triangulo 
  * ====================================================
 */

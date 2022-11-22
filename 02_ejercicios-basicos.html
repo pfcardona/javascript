@@ -12,36 +12,35 @@
 
 /* ------------------------------------------------------------------------------------- */
 
-    /* 1)   Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFunción("Hola Mundo") devolverá 10 */
-    //contar cadenas de texto (.length) 
-    // Función declarativa
-    
-    /* function contarCaracteres(cadena = "") {
-    if(!cadena) {
-        console.warn("No ingresaste ninguna cadena");
-    }else {
-        console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`)
+    /**
+     * todo 1)   Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFunción("Hola Mundo") devolverá 10 */
+        //contar cadenas de texto (.length)         
+    function contarCaracteres(cadena = "") {
+        if(!cadena) {
+            console.warn("No ingresaste ninguna cadena");
+        }else {
+            console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`)
+        }
     }
-    } */
-    // contarCaracteres();
-    // contarCaracteres("Hola Mundo"); 
+        // contarCaracteres();
+        // contarCaracteres("Hola Mundo"); 
 
-    // Función Expresada la guardo en una constante  y utilizo un operador ternario
-    const contarCaracteres = (cadena = "") => 
+    /* const contarCaracteres = (cadena = "") => 
     (!cadena) 
     ?console.warn("No ingresaste ninguna cadena")
     :console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
-
+ */
     // contarCaracteres();
     // contarCaracteres("Hola Mundo"); 
 
 /* ------------------------------------------------------------------------------------- */
 
 
-    /*  2)  Programa una función que te devuelva el texto recortado según el número de caracteres indicados, 
-            pe. miFunción("Hola Mundo", 4) devolverá "Hola" */
+    /**
+     *  todo 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, 
+        *?   pe. miFunción("Hola Mundo", 4) devolverá "Hola" */
 
-    const recortarTexto = (cadena ="",longitud = undefined) =>
+    const recortarTexto = (cadena ="",longitud = undefined) =>  
     (!cadena)
     ?console.warn("No ingresaste ninguna cadena")
     :(longitud === undefined)
@@ -57,8 +56,9 @@
 
 
 
-    /* 3)   Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe.
-            miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] */
+    /**
+     *todo  3)   Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, 
+     *?          pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] */
 
     const cadenaAArreglo = (cadena = "", separador = undefined) =>
     (!cadena)
@@ -67,16 +67,19 @@
         ?console.warn("No ingresaste el caracter separador")
         :console.info(cadena.split(separador))
 
-        // cadenaAArreglo();
-        // cadenaAArreglo("hola que tal"," ");
-        // cadenaAArreglo("hola,que,tal,Pablo", ",");
-        // cadenaAArreglo("","-"); 
+        /* cadenaAArreglo();
+        cadenaAArreglo("javascript es lo mejor"," ");
+        cadenaAArreglo("hola que tal"," ");
+        cadenaAArreglo("hola,que,tal,Pablo", ",");
+        cadenaAArreglo("","-");  */
 
 /* ------------------------------------------------------------------------------------- */
 
 
-    /*  4)  Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) 
-            devolverá Hola Mundo Hola Mundo Hola Mundo */
+    /**  
+     * todo 4)  Programa una función que repita un texto X veces, 
+     * ?        pe. miFuncion('Hola Mundo', 3) 
+     * ?        devolverá Hola Mundo Hola Mundo Hola Mundo */
     
     const repetirTexto = (texto = "", veces = undefined) => {
         
@@ -86,32 +89,33 @@
 
         if(veces === 0)return console.error("el numero de veces no puede ser 0");
 
-        if(Math.sign(veces) === -1)return console.error("El número de veces no puede ser negativo")
+        if(Math.sign(veces) === -1) return console.error("El número de veces no puede ser negativo")
 
         for(let i = 1; i < veces; i++) 
-        console.info(`${texto},${i}`);
+        console.info(`${texto},${i-1}`);
     }
-        // repetirTexto("HOla Mundo", 4);
-        // repetirTexto("HOla Mundo", 0);
-        // repetirTexto("HOla Mundo", -2);
-        // repetirTexto("", 2);
-        // repetirTexto("HOla Mundo"); 
-        //console.log("----------------------------------------")
+        /*  repetirTexto("Hola Mundo", 4);
+        repetirTexto("HOla Mundo", 0);
+        repetirTexto("HOla Mundo", -2);
+        repetirTexto("", 2);
+        repetirTexto("HOla Mundo"); 
+        console.log("----------------------------------------") */
 
 
 /* ------------------------------------------------------------------------------------- */
 
 
-    /*  5)  Programa una función que invierta las palabras de una 
-            cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH" */
+    /** 
+     *  todo 5)  Programa una función que invierta las palabras de una cadena de texto, 
+     *? pe. miFuncion("Hola Mundo") devolverá "odnuM aloH" */
     
     const invertirCadena = (cadena ="") => 
         (!cadena)
         ?console.warn("No ingresaste una cadena de texto")
-        :console.info(cadena.split("").reverse().join(""));
-        // invertirCadena();
-        // invertirCadena("Hola Mundo");
-        // invertirCadena("Pablo Felipe Cardona Lopez"); 
+        :console.info(cadena.split('').reverse("").join(""));
+        invertirCadena();
+        invertirCadena("Hola Mundo");
+        invertirCadena("Pablo Felipe Cardona Lopez"); 
 
 
 /* ------------------------------------------------------------------------------------- */
@@ -820,7 +824,7 @@
                 Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
             */
             // gettets y setters capitulo 25 https://www.youtube.com/watch?v=TEzu31q9MVA&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=26&t=146s
-            class Pelicula {
+            /* class Pelicula {
                 constructor({id, titulo, director, estreno, pais, generos, calificacion}) {
                     this.id = id;
                     this.titulo = titulo;
@@ -938,7 +942,7 @@
                 generos:["Short"],
                 calificacion: 10,
             }); 
-            peli.fichaTecnica(); */
+            peli.fichaTecnica(); 
             const misPelis = [
                 {
                     id:"tt1234562",
@@ -968,7 +972,8 @@
                     calificacion: 10,   
                 }
             ];
-            misPelis.forEach(el => new Pelicula(el).fichaTecnica());
+            misPelis.forEach(el => new Pelicula(el).fichaTecnica()); 
+            */
                 
         </script>
     </body>
