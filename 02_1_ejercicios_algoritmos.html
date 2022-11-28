@@ -14,7 +14,8 @@
         
         /* Los primeros 6 ejercicios */
 
-        /*1.    Preguntar si se desea calcular el área de un cuadrado, un triángulo o un círculo y al final
+        /**
+         * TODO 1.    Preguntar si se desea calcular el área de un cuadrado, un triángulo o un círculo y al final
                 mostrar en pantalla el valor del área de la figura respectiva.
         */
                 /* const Pi = 3.1416
@@ -43,10 +44,10 @@
                 }
  */
 
-        /*2.    Dada la calificación de un alumno mostrar en pantalla si es aprobado siempre y cuando
-                tenga el 80% de sus asistencias, en caso de tener menos del 80% de asistencias se
-                mostrará reprobado aún cuando su calificación sea aprobatoria.  */
-                
+        /** 
+         * todo 2.    Dada la calificación de un alumno mostrar en pantalla si es aprobado siempre y cuando  tenga el 80% de sus asistencias, en caso de tener menos del 80% de asistencias se
+                mostrará reprobado aún cuando su calificación sea aprobatoria.  
+        */                
                 /* let as, cal, mensaje
                 const porAprobacion = 80
 
@@ -64,7 +65,8 @@
                 } */
 
 
-        /*3.   Leer tres números y decir cuál de ellos es el que tiene el valor intermedio.*/
+        /**
+         * todo 3.   Leer tres números y decir cuál de ellos es el que tiene el valor intermedio.*/
                 /*  let x,y,z 
                 x = prompt("Dame un número")
                 y = prompt("Dame otro número")
@@ -78,9 +80,8 @@
                     console.log(`${z}  z es el valor intermedio `) 
                 }  */
                 
-
-        /*4.    Leer tres números y decir cuál es el de valor mayor y el menor valor.  */
-                
+        /**
+         * todo 4.    Leer tres números y decir cuál es el de valor mayor y el menor valor.  */        
             /* let x,y,z 
                 x = prompt("Dame un número ")
                 y = prompt("Dame otro número")
@@ -102,11 +103,11 @@
                     console.log(`El menor es Z ${z}`)
                 } */
         
+        /**
+         *todo  5.    Leer tres números y decir cuál es el de valor mayor, el de valor intermedio, y el de valor menor. 
+        /* 
+        let x,y,z 
 
-        /*5.    Leer tres números y decir cuál es el de valor mayor, el de valor intermedio, y el de valor menor. */
-        /* let x,y,z 
-                
-            
             x = prompt("Dame un número ")
                 y = prompt("Dame otro número")
                 z = prompt("Dame otro número más")
@@ -136,7 +137,9 @@
                 }else{
                     console.log(`El menor es Z ${z}`)
                 } */
-        /*6.    Leer un número entre el 1 y el 10 e imprimir su equivalente en números romanos.  */
+
+        /**
+         * todo 6.    Leer un número entre el 1 y el 10 e imprimir su equivalente en números romanos.  */
 
                 // let num = prompt("Ingrese un número del 1 al 10")
 
@@ -173,7 +176,6 @@
                     break 
                     default: 
                     console.log("No fue un valor entre 1 y 10")
-
                 } */
 
                 /* if(num === "1"){
@@ -208,14 +210,13 @@
     /* Los segundos  6 problemas */   
 
 
-        /*1.     A un trabajador le pagan según sus horas laboradas, si la cantidad de horas trabajadas es
-        mayor a 40 horas, la tarifa se incrementa en un 50% para las horas extras. Calcular el
-        salario del trabajador dadas las horas trabajadas y la tarifa. */
+        /**
+         *todo 1.     A un trabajador le pagan según sus horas laboradas, si la cantidad de horas trabajadas es mayor a 40 horas, la tarifa se incrementa en un 50% para las horas extras. Calcular el 
+         * salario del trabajador dadas las horas trabajadas y la tarifa. 
+         * */
         
             // variables
-
             /* let saldoTotal, horasTrabajadas, horasPagadas, sueldo, horasExtras, salarioTrabajador
-
             horasTrabajadas = prompt("Cuantas horas trabajas tiene")
             horasPagadas =prompt("Horas pagadas")
 
@@ -234,10 +235,11 @@
             } */
             
 
-        /*2.    Dado un monto calcular el descuento considerando que por encima de 100 el
-        descuento es el 10% y por debajo de 100 el descuento es el 2%.  */
+        /**
+         *todo 2.    Dado un monto calcular el descuento considerando que por encima de 100 el descuento es el 10% y por debajo de 100 el descuento es el 2%.  
+         */   
 
-            /* let monto, discount, montoTotal, discountTotal
+            /* let monto, discount, montoTotal
 
             monto = prompt("Escribir el monto a calcular")
             if(monto>= 100) {
@@ -247,14 +249,14 @@
                 console.log( `El descuento es del 10% y quedaria en: ${montoTotal}`)
             }else {
                 discount = 2
-                
-                montoTotal = ((monto -(monto * discount)/ 100))
-                console.log( `El descuento es del ${discount} % y quedaria en: ${montoTotal}`)
-            }  */
+                tdiscount = ((discount * monto)/100)
+                montoTotal = ((monto -((monto * discount)/100)))
+                console.log( `El descuento es del ${discount} % osea ${tdiscount} del ${monto} y quedaria en: ${montoTotal}`)
+            } */
         
-        /* 
-        En una tienda se ofrece un descuento fijo de 15% del monto de la compra de cierto tipo de producto. 
-        Elabore un algoritmo que determine el monto del descuento y el monto a pagar por la compra de cierta cantidad de unidades del producto.
+        /**
+         *todo 3. En una tienda se ofrece un descuento fijo de 15% del monto de la compra de cierto tipo de producto. 
+            Elabore un algoritmo que determine el monto del descuento y el monto a pagar por la compra de cierta cantidad de unidades del producto.
             https://mangatschool.com/topic/5-descuento-a-precio-de-un-producto-algoritmo-y-javascript/
         */
         /* var cantidad,precio,desc,compra,pagar;
@@ -266,11 +268,12 @@
             desc = compra*0.15;
             pagar = compra-desc;
 
-            document.write("El desceunto es: "+desc);
+            document.write("El descuento es: "+desc);
             document.write("El total a pagar es: "+pagar); */
 
 
-        /*3.    Leer una calificación de un alumno y determinar si obtuvo A, B, C o reprobó, El 10
+        /**
+         * todo 3. Leer una calificación de un alumno y determinar si obtuvo A, B, C o reprobó, El 10
         equivale a una A, el 9 a una B, el 8 a una C y las demás es reprobado. */
         /* let calificacion
         calificacion = prompt('Introduce la calificación')
@@ -289,7 +292,8 @@
         } */
 
 
-        /*4.    Leer tres calificaciones de un alumno y determinar su promedio, si el promedio es 10,
+        /** 
+         * todo 4.    Leer tres calificaciones de un alumno y determinar su promedio, si el promedio es 10,
         escribir en la pantalla tu promedio es A, si el promedio es B escribir tu promedio es B y si
         el promedio es 8 escribir C, de lo contrario si la calificación es menor a 8 escribir
         reprobado. */
@@ -322,8 +326,8 @@
         } 
          */
 
-        /*5.    En un almacén se hace un 20% de descuento a los clientes cuya compra supere los
-        $1,000 ¿cuál será la cantidad que pagará una persona por su compra?  */
+        /**
+        *todo 5.    En un almacén se hace un 20% de descuento a los clientes cuya compra supere los $1,000 ¿cuál será la cantidad que pagará una persona por su compra?  */
 
             /* let monto, discount, montoTotal, discountTotal
 
@@ -338,11 +342,11 @@
                 console.log( `No aplica el descuento del 20 % `)
             }  */
 
-        /*6.    Hacer un algoritmo que calcule el total a pagar por la compra de camisas. Si se compran
-        tres camisas o más se aplica un descuento del 20% sobre el total de la compra y si son
+        /** 
+         * todo 6.    Hacer un algoritmo que calcule el total a pagar por la compra de camisas. Si se compran tres camisas o más se aplica un descuento del 20% sobre el total de la compra y si son
         menos de tres camisas un descuento del 10%  */
 
-        var cantidad,precio, desc,compra,pagar, discount
+        /*var cantidad,precio, desc,compra,pagar, discount
 
         precio = (prompt("Ingresar precio"));
         cantidad = (prompt("Ingresar cantidad de camisas"));
@@ -360,10 +364,11 @@
             pagar = compra-desc;
             document.write("Aplica El descuento de "+ discount + " ");
             document.write("El total a pagar es: "+pagar);             
-        }
+        } */
 
 
-        // Ejercicio 30: Averiguar si una variable definida es de tipo de dato numérico.
+        /**
+         * todo Ejercicio 30: Averiguar si una variable definida es de tipo de dato numérico.
 
 /*         let x = 5.3;
         let y = Number('1.23');
