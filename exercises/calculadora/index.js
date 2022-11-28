@@ -16,9 +16,11 @@ multiplicar.addEventListener('click', ejecutarOperacion);
 division.addEventListener('click', ejecutarOperacion);
 calcular.addEventListener('click', ejecutarOperacion);
 
-const operacion = {
-                    valor1: null, valor2:null, operador: null
-    }
+const operacion =   {
+                    valor1: null, 
+                    valor2:null, 
+                    operador: null
+                }                
     let tempOperador = null
 
 function mostrarValores(valor) {
@@ -32,24 +34,47 @@ function ejecutarOperacion(evento) {
     const valor = input.value === '' ? 0 : parseInt(input.value);
     input.value = 0;
 
-    if(!ejecutarOperacion.)
+    if(!operacion.valor1) {
+        operacion.valor1 = valor ;
+        operacion.operador = evento.target.innerText
+        mostrarValores(`${operacion.valor1} ${operacion.operador} `)
+        return
+    }
+    if(!operacion.operador){
+        operacion.operador = evento.target.innerText
+        mostrarValores(`${operacion.valor1} ${operacion.operador} `)
+        return
+    }
+    operacion.valor2 = valor
+
+    if(evento.target.innerText !== '='){
+        tempOperador = evento.target.innerText;
+    }
+    calcularResultado()
+
 }
 
 function calcularResultado() {
     //Completar función:
     let total;
-    switch (operador) {
+    switch (operacion.operador) {
         case '+':
-            total = valor1 + valor2;
+            total = operacion.valor1 + operacion.valor2;
             break;
         case '*':
-            total = valor1 * valor2;
+            total = operacion.valor1 * operacion.valor2;
             break;
         case '-':
-            total = valor1 - valor2;
+            total = operacion.valor1 - operacion.valor2;
             break;
         case '/':
-            total = valor1 / valor2;
+            total = operacion.valor1 / operacion.valor2;
             break;
     }
+    mostrarValores(`${total} ${tempOperador ?? ''}`)
+
+    operacion.valor1 = total
+    operacion.valor2 = total
+    operacion.operador = tempOperador ?? null
+    tempOperador = null
 }
