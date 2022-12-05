@@ -152,9 +152,7 @@
         //  textoEnCadena("mundo");
         //  textoEnCadena("hola mundo mundo adios mundo mundo mundo mundo mundo", "mundo",);
 
-
 /* ------------------------------------------------------------------------------------- */
-
 
     /**
      * todo  7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), 
@@ -174,10 +172,8 @@
     // palindromo("daad");
     // palindromo("hola mundo") // no es palindromo
     // palindromo("salas")   // Si es palindromo 
-
     
 /* ------------------------------------------------------------------------------------- */
-
 
     /**
     * todo 8)  Programa una función que elimine cierto patrón de caracteres de un texto dado, 
@@ -195,14 +191,11 @@
             eliminarCaracteres();
     */
 
-
 /* ------------------------------------------------------------------------------------- */
-
 
     /**
      *todo 9)   Programa una función que obtenga un número aleatorio entre 501 y 600 
     */
-
     let max  = 600;
     let min = 501;
     function aleatorio(min, max){
@@ -358,14 +351,10 @@
             // numeroPrimo(200);
             // numeroPrimo(-45);
             // numeroPrimo(7);
-
-    // ** otra forma de resolverlo
-    
+    // ** otra forma de resolverlo    
         function primo(numero) {
-
             console.log("Has pasado el numero: " + numero);
             console.log("Inicio bucle desde 2 hasta " + (numero - 1));
-
             for (var i = 2; i < numero; i++) {
             console.log("Modulo entre " + numero + " y " + i + " = " + (numero % i));
                 if (numero % i === 0) {
@@ -386,15 +375,12 @@
         // primo(5);
         // primo(10);
 
-
 /* ------------------------------------------------------------------------------------- */                                
-
 
     /**
      * todo  13) Programa una función que determine si un número es par o impar, 
      **       pe. miFuncion(29) devolverá Impar 
      */
-
         const numeroParImpar = (numero = undefined) => {
             if(numero===undefined) return console.log("No ingresaste un número!"); 
             if(typeof numero!=="number") return console.error(`El valor "${numero}" ingresado, No es un número`);
@@ -403,7 +389,6 @@
             ? console.log(`El número ${numero}, es Par`)
             : console.log(`El número ${numero}, es Impar`)
         }
-
             // numeroParImpar();
             // numeroParImpar("23");
             // numeroParImpar(-19);
@@ -543,7 +528,7 @@
             :(typeof(cadena)!="string")
                     ?console.warn("Ingrese una cadena válida")
                     :console.info(`Vocales : ${cadena.match(new RegExp(/[aeiou]/,"gi")).length}, 
-            Consonantes : ${cadena.match(new RegExp(/[b-df-hj-np-tv-zñáéíóú]/,"gi")).length}`);
+                                Consonantes : ${cadena.match(new RegExp(/[b-df-hj-np-tv-zñáéíóú]/,"gi")).length}`);
 
             // contarCaracter("Hola Mundo12ñéáÑ");
             // contarCaracter("pablo");
@@ -668,9 +653,7 @@
         // arrayMinMax([1,4,5,99,-66]);
 
 
-
 /* ------------------------------------------------------------------------------------- */  
-
 
 
     /**
@@ -689,7 +672,7 @@
             }
             // formamos el objeto y ponemos una propiedad del objeto que se llama pares
             // par  = es aquel que divido entre dos y la operacion que en este caso se llama
-            // residuo(módulo) = 0 es PAR si es  1 = es IMPAR
+            // residuo(módulo) = 0 es PAR, si el residuo es  1 = es IMPAR
             return console.info({
                 pares:arr.filter(num => num %2 === 0),
                 impares:arr.filter(num => num %2 ===1)
@@ -702,10 +685,7 @@
         // separarParesImpares([2,4,"j"])
         // separarParesImpares([1,2,3,4,5,6,7,8,9,0])
 
-
-
 /* ------------------------------------------------------------------------------------- */  
-
     /**
      *todo  24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, 
      ** el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, 
@@ -729,6 +709,7 @@
                     asc: arr.map(el => el).sort(),
                     desc: arr.map(el => el).sort().reverse()
                 })
+                console.log();
             }   
             // ordenarArreglo();
             // ordenarArreglo("hola");
@@ -757,7 +738,7 @@
             // INDEXOF  buscar elementos  es comparar el valor contra la posición que estoy evaluando
             // vamos a ir comparando si hay algun elemento duplicado
             // filter genera otro arreglo, esta comparando el arreglo que esta recibiendo con el 
-            // arreglo origina contra los valores que va formando  el propio arreglo generado por filter
+            // arreglo original contra los valores que va formando  el propio arreglo generado por filter
             
             sinDuplicados:arr.filter((value,index,self) => self.indexOf(value)== index)
         }); */
@@ -805,11 +786,11 @@
                 )    
             }
         
-            // promedio();
-            // promedio({});
-            // promedio([])
-            // promedio([2, true]);
-            // promedio([9,8,7,6,5,4,3,2,1,0])
+            promedio();
+            promedio({});
+            promedio([])
+            promedio([2, true]);
+            promedio([9,8,7,6,5,4,3,2,1,0])
             
 
             
@@ -929,8 +910,8 @@
                             // y lo ejecutamos con el nombre de la clase
                             // console.info(genero, Pelicula.listaGeneros.includes(genero));
                             if(!Pelicula.listaGeneros.includes(genero)){
-                                 console.error(`Géneros(s) incorrectos "${generos.join(",")}"`);
-                                 Pelicula.generosAceptados
+                                console.error(`Géneros(s) incorrectos "${generos.join(",")}"`);
+                                Pelicula.generosAceptados
                             }
                         }
                     }

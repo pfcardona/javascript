@@ -47,6 +47,8 @@ function calcularAreaSquare(){
 }
 
 /* ========================Triangulo========================================== */
+
+/* Función del evento CLICK para el perímetro */
 function calculatePerimTriangle() {
     let side1 = document.getElementById('inputSide1');
     let side2 = document.getElementById('inputSide2');
@@ -59,6 +61,8 @@ function calculatePerimTriangle() {
     const result = `El perímetro del Triángulo es: ${perimTriangle(side1,side2,side3)} cm`;
     valueResult.innerText = result;
 }   
+
+/* Función del evento CLICK para Área */
 function calculateAreaTriangle() {
     let base = document.getElementById('inputBase')
     let altura = document.getElementById('inputHeight')

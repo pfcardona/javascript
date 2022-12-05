@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafíos Platzi fundamentos javascript</title>
+</head>
+<body>
+    <h5>Desafíos Platzi fundamentos Arrays javascript</h5>
+
+    <script>
+        /**
+         * todo: Multiplica todos los elementos por dos
+         * ? El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+          */
+        var numbers = [1, 5, 10, 15];
+        var doubles = numbers.map(x => x * 2)
+        // console.log(numbers);
+        // console.log(doubles);
+        // doubles is now [2, 10, 20, 30]
+        // numbers is still [1, 5, 10, 15]
+
+
+        var numbers = [1, 4, 9];
+        var roots = numbers.map(num => Math.sqrt(num))
+        // console.log(numbers);
+        // console.log(` La raiz cuadra  de ${numbers} es ${roots}`);
+        // roots is now [1, 2, 3]
+        // numbers is still [1, 4, 9]
+
+        function multiplyElements(array) {
+        return console.log(array.map(item => item * item))
+        }
+
+        // multiplyElements([1,4,5]) //
+
+        /**
+         * todo: Transforma un Array de objetos a un Array de strings
+         * ? 
+          */
+        function getNames(array) {
+            // Tu código aquí 👈
+            return console.log(array.map(el => el.name))
+        }
+
+        /* getNames([
+                    {
+                        name: 'Nicolas',
+                        lastName: 'Molina',
+                        age: 28
+                    },
+                    {
+                        name: 'Valentina',
+                        lastName: 'Molina',
+                        age: 19
+                    },
+                    {
+                        name: 'Zulema',
+                        lastName: 'Vicente',
+                        age: 21
+                    },
+                    ])
+        
+         */
+        
+
+        /**
+         * todo Tienes un array de objetos que representan datos de productos con los siguientes atributos:
+        /* name
+        price
+        stock
+        Tu reto es agregar y calcular una nueva propiedad llamada "taxes", los impuestos deben ser del 19% con base al precio base y debes tener en cuenta que como resultado se debe dejar un valor entero, sin decimales.
+        Por ejemplo si aplicamos el 19% de impuestos para un producto con precio de $1000 el resultado de los "taxes" será $190, o para un producto con precio de $656 el resultado de los "taxes" será $124.
+        Para solucionarlo vas a encontrar una función llamada addNewAttr que recibe un parámetro de entrada:
+        array: Un array de objetos.
+        Dentro del cuerpo de la función addNewAttr debes escribir tu solución. 
+        */
+
+        function addNewAttr(array) {
+            return array.map((item) => {
+                const copyItem = {...item}
+                copyItem.taxespablo = Math.trunc(copyItem.price * 0.19)
+                return console.log(copyItem)
+            });
+        }
+        addNewAttr([
+        {
+        name: "Product 1",
+        price: 1000,
+        stock: 10
+        },
+        {
+        name: "Product 2",
+        price: 2000,
+        stock: 20
+        }
+        ])
+
+
+    </script>
+
+</body>
+</html>
