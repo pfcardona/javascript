@@ -9,9 +9,9 @@
 <body>
     <h4>Exercises</h4>
     <script>
-        // Enlace ejercicios practicos  de programación con pseudocódigos y con diagrama de flujo 
+        // Enlace ejercicios practicos  de programación con pseudocódigos y con diagrama de flujo
         // https://drive.google.com/file/d/1SmhblW_SCrlUAWGcFK0ZMAnM9BMfrNdy/view?usp=sharing
-        
+
         /* Los primeros 6 ejercicios */
 
         /**
@@ -36,7 +36,7 @@
                     console.log("El area del circulo es:" + " " + area );
                 }else if (opcion == 3) {
                     lado = prompt("Ingrese Lado")
-                    area = lado * lado 
+                    area = lado * lado
                     console.log("El area del cuadro es:" + " " + area );
                 }
                 else {
@@ -44,10 +44,10 @@
                 }
  */
 
-        /** 
+        /**
          * todo 2.    Dada la calificación de un alumno mostrar en pantalla si es aprobado siempre y cuando  tenga el 80% de sus asistencias, en caso de tener menos del 80% de asistencias se
-                mostrará reprobado aún cuando su calificación sea aprobatoria.  
-        */                
+                mostrará reprobado aún cuando su calificación sea aprobatoria.
+        */
                 /* let as, cal, mensaje
                 const porAprobacion = 80
 
@@ -60,29 +60,29 @@
                     }else{
                         console.log("Estas Reprobado");
                     }
-                }else {                    
+                }else {
                     console.log("No Aprobado")
                 } */
 
 
         /**
          * todo 3.   Leer tres números y decir cuál de ellos es el que tiene el valor intermedio.*/
-                /*  let x,y,z 
+                /*  let x,y,z
                 x = prompt("Dame un número")
                 y = prompt("Dame otro número")
                 z = prompt("Dame otro número más")
 
                 if((y>x && y<z) || (y<x && y>z)) {
-                    console.log(`${y} Y es el valor intermedio `)    
+                    console.log(`${y} Y es el valor intermedio `)
                 }else if((x>y && x<z) || (x<y && x>z)) {
-                    console.log(`${x}  X es el valor intermedio `)    
+                    console.log(`${x}  X es el valor intermedio `)
                 }else{
-                    console.log(`${z}  z es el valor intermedio `) 
+                    console.log(`${z}  z es el valor intermedio `)
                 }  */
-                
+
         /**
-         * todo 4.    Leer tres números y decir cuál es el de valor mayor y el menor valor.  */        
-            /* let x,y,z 
+         * todo 4.    Leer tres números y decir cuál es el de valor mayor y el menor valor.  */
+            /* let x,y,z
                 x = prompt("Dame un número ")
                 y = prompt("Dame otro número")
                 z = prompt("Dame otro número más")
@@ -94,7 +94,7 @@
                 }else {
                     console.log(`El mayor es z ${z}`)
                 }
-                
+
                 if ((x<y && x<z)) {
                     console.log(`El menor es X ${x}`)
                 }else if ((y<x && y<z)) {
@@ -102,11 +102,11 @@
                 }else{
                     console.log(`El menor es Z ${z}`)
                 } */
-        
+
         /**
-         *todo  5.    Leer tres números y decir cuál es el de valor mayor, el de valor intermedio, y el de valor menor. 
-        /* 
-        let x,y,z 
+         *todo  5.    Leer tres números y decir cuál es el de valor mayor, el de valor intermedio, y el de valor menor.
+        /*
+        let x,y,z
 
             x = prompt("Dame un número ")
                 y = prompt("Dame otro número")
@@ -122,13 +122,12 @@
                 }
                 // intermedio
                 if((y>x && y<z) || (y<x && y>z)) {
-                    console.log(`${y} Y es el valor intermedio `)    
+                    console.log(`${y} Y es el valor intermedio `)
                 }else if((x>y && x<z) || (x<y && x>z)) {
-                    console.log(`${x}  X es el valor intermedio `)    
+                    console.log(`${x}  X es el valor intermedio `)
                 }else{
-                    console.log(`${z}  z es el valor intermedio `) 
-                } 
-                
+                    console.log(`${z}  z es el valor intermedio `)
+                }
                 // medio
                 if ((x<y && x<z)) {
                     console.log(`El menor es X ${x}`)
@@ -207,14 +206,14 @@
 
 
 
-    /* Los segundos  6 problemas */   
+    /* Los segundos  6 problemas */
 
 
         /**
          *todo 1.     A un trabajador le pagan según sus horas laboradas, si la cantidad de horas trabajadas es mayor a 40 horas, la tarifa se incrementa en un 50% para las horas extras. Calcular el 
-         * salario del trabajador dadas las horas trabajadas y la tarifa. 
+         * salario del trabajador dadas las horas trabajadas y la tarifa.
          * */
-        
+
             // variables
             /* let saldoTotal, horasTrabajadas, horasPagadas, sueldo, horasExtras, salarioTrabajador
             horasTrabajadas = prompt("Cuantas horas trabajas tiene")
@@ -224,7 +223,7 @@
             if(horasTrabajadas >=40) {
                 horasExtras = horasTrabajadas * (.50)
                     console.log(`Por tener mas de 40 horas su tarifa se incrementara en un 50% , es decir :  ${horasExtras} horas extras`)
-            
+
                 salarioTrabajador = parseInt(horasExtras) + parseInt(horasTrabajadas)
                     console.log(`horas trabajadas + las horas extras es  ${salarioTrabajador} horas en total`)
                 sueldo = horasPagadas * salarioTrabajador
@@ -233,11 +232,11 @@
                 sueldo = horasTrabajadas * horasPagadas
                 console.log (`el sueldo sin las horas extras ${sueldo}`)
             } */
-            
+
 
         /**
          *todo 2.    Dado un monto calcular el descuento considerando que por encima de 100 el descuento es el 10% y por debajo de 100 el descuento es el 2%.  
-         */   
+         */
 
             /* let monto, discount, montoTotal
 
@@ -253,7 +252,7 @@
                 montoTotal = ((monto -((monto * discount)/100)))
                 console.log( `El descuento es del ${discount} % osea ${tdiscount} del ${monto} y quedaria en: ${montoTotal}`)
             } */
-        
+
         /**
          *todo 3. En una tienda se ofrece un descuento fijo de 15% del monto de la compra de cierto tipo de producto. 
             Elabore un algoritmo que determine el monto del descuento y el monto a pagar por la compra de cierta cantidad de unidades del producto.
@@ -287,12 +286,12 @@
             case '8':
                 console.log('Obtuvo una C')
                 break
-            default: 
-            console.log('Reprobo')    
+            default:
+            console.log('Reprobo')
         } */
 
 
-        /** 
+        /**
          * todo 4.    Leer tres calificaciones de un alumno y determinar su promedio, si el promedio es 10,
         escribir en la pantalla tu promedio es A, si el promedio es B escribir tu promedio es B y si
         el promedio es 8 escribir C, de lo contrario si la calificación es menor a 8 escribir
@@ -322,8 +321,8 @@
             console.log(`el promedio fue ${promediot } Reprobo`)
                 break
             default:
-            console.log(`el promedio fue ${promediot } ERROR`)   
-        } 
+            console.log(`el promedio fue ${promediot } ERROR`)
+        }
          */
 
         /**
@@ -337,12 +336,11 @@
                 discountTotal = (monto * discount)/100
                 montoTotal = monto - discountTotal
                 console.log( `Como  el monto es mayor a ${monto } se aplicará el descuento del ${discount}% y se le hace un descuento de: ${discountTotal} y quedaría en: ${montoTotal}`)
-            }else {  
-                
+            }else {
                 console.log( `No aplica el descuento del 20 % `)
             }  */
 
-        /** 
+        /**
          * todo 6.    Hacer un algoritmo que calcule el total a pagar por la compra de camisas. Si se compran tres camisas o más se aplica un descuento del 20% sobre el total de la compra y si son
         menos de tres camisas un descuento del 10%  */
 
@@ -356,14 +354,14 @@
             desc = (compra * discount)/100;
             pagar = compra-desc;
             document.write("El descuento es: "+desc);
-            document.write("El total a pagar es: "+pagar); 
+            document.write("El total a pagar es: "+pagar);
         }else {
             compra = precio*cantidad;
             discount = 10
             desc = (compra * discount)/100;
             pagar = compra-desc;
             document.write("Aplica El descuento de "+ discount + " ");
-            document.write("El total a pagar es: "+pagar);             
+            document.write("El total a pagar es: "+pagar);
         } */
 
 

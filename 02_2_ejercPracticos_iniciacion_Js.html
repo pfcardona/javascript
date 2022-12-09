@@ -84,14 +84,14 @@
 /* _________________________________________________ */
 
         /**
-         * TODO 8.   Escribe un programa que pida un número y diga si es divisible por 2 
+         * TODO 8.   Escribe un programa que pida un número y diga si es divisible por 2
 
         var n1 = prompt("Escribe un número");
         if (n1 % 2 === 0) {
         document.write("Es divisible por 2");
         } else {
         document.write("No es divisible por 2");
-        } 
+        }
        */
  /* _________________________________________________ */
 
@@ -102,9 +102,9 @@
 
         function cuantasVecesAparece(cadena, caracter){
         var indices = [];
-        
+
         for(var i = 0; i < cadena.length; i++) {
-        if (cadena[i].toLowerCase() === caracter) 
+        if (cadena[i].toLowerCase() === caracter)
         indices.push(i);
         }
         return indices.length;
@@ -123,17 +123,17 @@
 
 //////////////_-----------------------------//////////////////////////
 
-        /** 
+        /**
          *TODO 10.- Escribe un programa que pida una frase y escriba las vocales que aparecen
          */
         var text = prompt("Escribe una frase");
         var nText = text.length;
         var i;
         for (i = 0; i < nText; i++) {
-            if (text.substr(i,1) === "a" 
-                || text.substr(i,1) === "e" 
-                || text.substr(i,1) === "i" 
-                || text.substr(i,1) === "o" 
+            if (text.substr(i,1) === "a"
+                || text.substr(i,1) === "e"
+                || text.substr(i,1) === "i"
+                || text.substr(i,1) === "o"
                 || text.substr(i,1) === "u") {
                 document.write(text.substr(i,1));
             }
@@ -143,7 +143,7 @@
 
 
         /**
-         * TODO  13.- Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o 7 
+         * TODO  13.- Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o 7
         * ? (sólo hay que comprobar si lo es por uno de los cuatro)
 
                 var n1 = prompt("Escribe un número");
@@ -151,7 +151,7 @@
                 document.write("Es divisible por 2, 3, 5 o 7");
                 } else {
                 document.write("No es divisible ni por 2, ni por 3, ni por 5, ni por 7");
-                } 
+                }
     */
 
 /* _________________________________________________ */
@@ -159,9 +159,9 @@
 
         /**
          *TODO 14.- Añadir al ejercicio anterior que nos diga por cual de los cuatro es divisible (hay que decir todos por los que es divisible)
-        */  
-        
-        /*  var n1 = prompt("Escribe un número"); 
+        */
+
+        /*  var n1 = prompt("Escribe un número");
 
         if (n1 % 2 === 0 || n1 % 3 === 0 || n1 % 5 === 0 || n1 % 7 === 0) {
         if (n1 % 2 === 0) {
@@ -182,19 +182,19 @@
 
         /* var text = prompt("Escribe un número");
         if (text % 3 === 0)
-        
+
         document.write("es divisible por 3 " );
 
         else if (text % 5 === 0)
-        
+
         document.write("es divisible por 5 " );
         else (text % 7 === 0)
-        
+
         document.write("es divisible por 7 " ); */
 /* _________________________________________________ */
         /**
          *TODO   15.- Escribir un programa que escriba en pantalla los divisores de un número dado
-         */ 
+         */
         /* var n1 = prompt("Escribe un número");
         var i;
         for (i=2; i < n1/2; i++) {
@@ -206,7 +206,7 @@
         /**
          * TODO 16.- Escribir un programa que escriba en pantalla los divisores comunes de dos números dados
         *
-         */ 
+         */
         /* var n1 = prompt("Escribe un número");
         var n2 = prompt("Escribe otro número");
         var menor;
@@ -226,9 +226,9 @@
         /**
          * TODO   17.- Escribir un programa que nos diga si un número dado es primo 
         (no es divisible por ninguno otro número que no sea él mismo o la unidad) */
-        
+
         // Solución 1
-            /* 
+            /*
             var n1 = prompt("Escribe un número");
             var i;
             var primer = true;
@@ -241,11 +241,11 @@
             document.write("El número es primo");
             } else {
             document.write("El número no es primo");
-            } 
+            }
        */
 
         // Solución 2
-        /* 
+        /*
             var n1 = prompt("Escribe un número");
             var i = 2;
             while (n1 % i !== 0 && i < n1 / 2 ) {
@@ -255,7 +255,7 @@
             document.write("El número es primo");
             } else {
             document.write("El número no es primo");
-            } 
+            }
         */
 
 /*------------------------------------------------------------------------------------------------------- */
@@ -265,10 +265,10 @@
         /**
          *TODO 1 Palíndromo
 
-            Crear un sistema que detecte si una palabra es palíndroma o no 
+            Crear un sistema que detecte si una palabra es palíndroma o no
             Para solucionar este problema el usuario tiene que ingresar por pantalla una palabra y el sistema verificas si es palíndromo o no.
             Una palabra palíndroma se lee de igual formo como de la derecha y de la izquierda.
-       */     
+       */
             const palindromo =(palabra) => {
                     // Ana oso luz azul
                     palabra = palabra.replace(' ','');
@@ -293,12 +293,12 @@
                     console.log("No es palíndromo")
                     document.write("La palabra "+ " " + palabra +  " " + "No es Palíndromo")
               } */
-        /** 
+        /**
          * todo Practica 1 - Dado el valor de venta de un producto, hallar el IVA (19%) y el precio de venta 
-         * 
+         *
         * /
-        
-       // Variables 
+
+       // Variables
         let vv = 0, iva = 0,pv = 0;
 
         // Entrada de datos
@@ -321,14 +321,13 @@
         // document.write(`Valor de Venta: ${vv}<br>
         //              IVA: ${iva} <br>
         //              Precio de venta: ${pv}`);
-
-        /**  
+        /**
          * todo Practica 02: Primalidad
             Crear un sistema que detecte si un numero es primo o no 
             Para solucionar este problema se requiere que el usuario ingrese un numero por teclado 
             y el sistema detecte si es primo o no.
             Un numero primo es aquel que se puede dividir solo dos veces por 1 y por sí misma.  */
-            
+
             /* const esPrimo = (numero) => {
             contador = 0;
             let numeros = [];
@@ -340,7 +339,7 @@
                     if(n === 1 || n === numero){
                         continue;
                     }
-                    
+
                     if(numero % n === 0){
                         contador ++;
                     }
@@ -350,19 +349,19 @@
             let numero = Number(prompt("Ingrese un número"));
             if(esPrimo(numero)) {
                 document.write('Es primo');
-            }else{                
+            }else{
                 document.write('No Es primo');
             } */
             // console.log(esPrimo(5))
             // console.log(esPrimo(7))
             // console.log(esPrimo(9))
        /*a.  Hallar cociente y residuo */
-              // Variables  
+              // Variables
                 // let numero1, numero2, cociente, residuo;
                 // Entrada de datos
                 // numero1= Number(prompt("Escribe un número")) ;
                 // numero2= Number(prompt("Escribe otro número"));
-                
+
               // Proceso
                 // cociente = numero1 /numero2;
                 // residuo = numero1 % numero2;
@@ -372,22 +371,22 @@
                 // document.write('Residuo:', residuo);
 
         /**
-         *todo   Practica 02:Descuento de Restaurante Parte 1 
+         *todo   Practica 02:Descuento de Restaurante Parte 1
             Enunciado: un restaurante ofrece un descuento del 10% para consumo de hasta  $100
-            y un descuento del 20 % para consumos mayores, para ambos casos se aplica un impuesto del 19%. 
-            a.Determinar el monto del descuento, 
-            b.El impuesto 
+            y un descuento del 20 % para consumos mayores, para ambos casos se aplica un impuesto del 19%.
+            a.Determinar el monto del descuento,
+            b.El impuesto
             c.El importe a pagar.
 
-            Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el 
+            Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el
             sistema verifica y calcula el monto del descuento, el impuesto y el importe a pagar.
 
             - Monto del descuento
             - Impuesto
-            - Importe a pagar       
+            - Importe a pagar
        */
-    /* 
-       // Entrada de datos 
+    /*
+       // Entrada de datos
             let consumo = Number(prompt('Ingrese el consumo'))
             let descuento, datoDescuento
        // Proceso
@@ -416,18 +415,18 @@
         /**
          *TODO Practica 03: Descuentos de un restaurante Parte 02
 
-            Enunciado: debido a los excelentes resultados, el restaurante decide ampliar sus ofertas de acuerdo a 
-            la siguiente escala de consumo, ver la tabla. 
+            Enunciado: debido a los excelentes resultados, el restaurante decide ampliar sus ofertas de acuerdo a
+            la siguiente escala de consumo, ver la tabla.
             Determinar el monto del descuento, el importe del impuesto y el importe a pagar.
             Consumo (S/.)       Descuento (%)
             Hasta 100               10
             Mayor a 100             20
             Mayor a 200             30
-            Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el sistema 
+            Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el sistema
             verifica y calcula el monto del descuento, el impuesto y el importe a pagar.
 
        */
-       /*     // Entrada de datos 
+       /*     // Entrada de datos
             let consumo = Number(prompt('Ingrese el consumo'))
             let descuento, datoDescuento
        // Proceso
@@ -461,13 +460,13 @@
         /**
          *TODO Practica 04: Guardar resultados de pares e impares
 
-        Crea 3 arrays 
-        a.un array que tendrá números de 1 a 9. 
-        b.El primer array se llamará pares 
-        c.y el segundo impar, ambos estarán vacíos. 
-        Después multiplica cada uno de los números de array con números por un número aleatorio entre 1 y 100, 
-        si el resultado es par guarda ese número en el array de pares y si es impar en el array  de impares. Muestra 
-        por consola: -la multiplicación que se produce junto con su resultado con el formato 2 x 3 = 6 y el array de pares e impares   
+        Crea 3 arrays
+        a.un array que tendrá números de 1 a 9.
+        b.El primer array se llamará pares
+        c.y el segundo impar, ambos estarán vacíos.
+        Después multiplica cada uno de los números de array con números por un número aleatorio entre 1 y 100,
+        si el resultado es par guarda ese número en el array de pares y si es impar en el array  de impares. Muestra
+        por consola: -la multiplicación que se produce junto con su resultado con el formato 2 x 3 = 6 y el array de pares e impares
     */
         let numeros = [1,2,3,4,5,6,7,8,9];
         let pares = [];
@@ -476,10 +475,10 @@
 
         for(let n of numeros) {
                 let numeroRandom =parseInt(Math.random()*100);
-                let resultado = n * numeroRandom; 
+                let resultado = n * numeroRandom;
                 if(resultado % 2 === 0){
                         //console.log(`${n} X ${numeroRandom} = ${resultado} Es Par` );
-                        pares.push(resultado) 
+                        pares.push(resultado)
                 }else {
                         //console.log(`${n} X ${numeroRandom} = ${resultado} Es Impar`);
                         impares.push(resultado)
@@ -489,11 +488,11 @@
             // console.log('ARRAY DE IMPARES: ', impares)
 
 
-/*--------------------------------------------------------------------------------------------------- */              
+/*--------------------------------------------------------------------------------------------------- */
 
         /**
-        *todo  Escribir un programa que muestre en pantalla los números del 1 al 100, sustituyendo los múltiplos de 3 por la palabra 
-        *? “fizz”, los múltiplos de 5 por “buzz” y los múltiplos de ambos, es decir, los múltiplos de 3 y 5 (o de 15), por la palabra “fizzbuzz”. 
+        *todo  Escribir un programa que muestre en pantalla los números del 1 al 100, sustituyendo los múltiplos de 3 por la palabra
+        *? “fizz”, los múltiplos de 5 por “buzz” y los múltiplos de ambos, es decir, los múltiplos de 3 y 5 (o de 15), por la palabra “fizzbuzz”.
         */
 
         function compararNúmeros(){
@@ -512,9 +511,9 @@
     /**
     * todo   Serie Fibonacci */
 
-        /*   Un número Fibonacci, usualmente con notación f(n), 
-        es la suma de los dos números fibonacci que le preceden. 
-        Esta sucesión empieza con f(0) = 0, f(1) = 1, f(2) = f(1) + f(0) 
+        /*   Un número Fibonacci, usualmente con notación f(n),
+        es la suma de los dos números fibonacci que le preceden.
+        Esta sucesión empieza con f(0) = 0, f(1) = 1, f(2) = f(1) + f(0)
         hasta f(x) = f(x-1) + f(x-2).*/
        // 0,1,1,2,3,5...
 
@@ -532,10 +531,10 @@
 
 /*-------------------------------------------------------------------- */
 
-    /** 
-     * TODO Cálculo Estación del Año con Estructuras de Control 
-     * ! (If /Else ) 
-     * ! con Switch       
+    /**
+     * TODO Cálculo Estación del Año con Estructuras de Control
+     * ! (If /Else )
+     * ! con Switch
      */
 
     /* let mes = 12;
@@ -560,7 +559,7 @@
 
     console.log(estacion); */
 
-    /** 
+    /**
      ** Cálculo Estación del Año con Switch
     */
 
@@ -581,9 +580,9 @@
                     estacion = 'Otoño';
                     break;
             default:
-            estacion = 'Valor incorrecto';       
+            estacion = 'Valor incorrecto';
     }
-    console.log(estacion); 
+    console.log(estacion);
     */
 
     /* Cálculo Hora del día  con sentencia de control (If/ else)
@@ -615,6 +614,5 @@
             console.log(mensaje); */
 
     </script>
-    
 </body>
 </html>

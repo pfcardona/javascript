@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Desafíos de programación JS linkedin</title>
-    
+
 </head>
 <body>
     <!-- link del curso en linkeid https://www.linkedin.com/learning/desafio-de-programacion-javascript-basico/busqueda-de-productos?autoplay=true&resume=false&u=124249513 -->
     <!-- Repositorio donde esta los ejercicios https://github.com/LinkedInLearning/desafio-programacion-JavaScript-esencial-2430507 -->
     <!-- https://developers.google.com/blockly  -->
-    
+
     <script>
     /**
-     * todo 1. Determina si una función es primo o no   
-     * 
+     * todo 1. Determina si una función es primo o no
+     *
     */
         function esPrimo (numero) {
             if(numero <= 1) {
@@ -39,16 +39,16 @@
         // console.log(esPrimo(29)); // true
 
 
-/*  ------------------------------------------------- */        
+/*  ------------------------------------------------- */
 
 
-    /**  
+    /**
      * TODO 2. Determinar si ambos arreglos son similares:
-     * 
-    */ 
+     *
+    */
 
         function sonSimilares(arregloA, arregloB) {
-            // diferencias entre == === !== 
+            // diferencias entre == === !==
             if (arregloA.length !== arregloB.length) {
             return false;
             }
@@ -60,7 +60,7 @@
             }
             return true;
         }
-        /* 
+        /*
             console.log(sonSimilares([1, 2], [1, 2, 3])); // false
             console.log(sonSimilares([1, 2, 3], [1, 2, 3])); // true
             console.log(sonSimilares([1, 2, 3], ['1','2','3'])); // false
@@ -69,9 +69,9 @@
 
 /* -------------------------------------------------------------- */
 
-    /**  
-     * TODO 3.  Generar un número aleatorio dentro de un rago de dos números:     
-            Math.floor ->redondea los numeros y quita los decimales   
+    /**
+     * TODO 3.  Generar un número aleatorio dentro de un rago de dos números:
+            Math.floor ->redondea los numeros y quita los decimales
     */
         function numeroAleatorio(numeroA, numeroB) {
             return Math.floor(Math.random() * (numeroA - numeroB) + numeroB);
@@ -84,9 +84,9 @@
 
 /* ------------------------------------------ */
 
-    /**  
-     * TODO 4. Crear array de productos que cada uno incluya 
-     *   información sobre id, nombreProducto, marca, fechaExpiración:   
+    /**
+     * TODO 4. Crear array de productos que cada uno incluya
+     *   información sobre id, nombreProducto, marca, fechaExpiración:
     */
         const listaProductos = [
             {
@@ -121,8 +121,8 @@
             },
         ]
 
-    /**  
-     * todo Crear dos funciones para buscar productos acorde a los parámetros:
+    /**
+     * TODO Crear dos funciones para buscar productos acorde a los parámetros:
      */
 
         function buscarProductosPorId(id) {
@@ -144,14 +144,13 @@
 
         // console.log(buscarProductosPorFecha('2022-04-30', '2022-04-15'));
 
-        
 
 /* ------------------------------------------------------------------------------------- */
 
 
     /**
-     * todo 6. Fila ordenada 
-     * 
+     * todo 6. Fila ordenada
+     *
     */
     //documentación https://www.freecodecamp.org/espanol/news/ordenar-arreglos-en-javascript-como-usar-el-metodo-sort/
 
@@ -160,9 +159,8 @@
         setInterval(agregarElemento, 2000, () => Math.floor(Math.random() * 100));
 
         function agregarElemento(numeroAleatorio) {
-        
+
             const prioridad = numeroAleatorio();
-            
             // Agregar el elemento prioridad al arreglo manteniendo el orden ascendente
 
             arreglo.push(prioridad);
@@ -181,13 +179,13 @@
             // console.log(arreglo);
         }
 
-    /**  
+    /**
      *  todo 7. El precio promedio
      ** Calcular el precio promedio de las casas por localidad
      ** La constante casas contiene la información de casas
     */
         // objetos de casas
-        const casas = [ 
+        const casas = [
         {
             id: 1,
             habitaciones: 4,
@@ -336,13 +334,13 @@
             precio: 20000
         }
     ]
-    
-        // creacion de un objeto para agregar los precios de las casas 
+
+        // creacion de un objeto para agregar los precios de las casas
         const acumulado = {}
-    
+
         // Que vamos a hacer => sumar los precios de las casas por localidad y al mismo tiempo contar cuantas casas yo tengo por localidad
         // creo un for of para un recorrido del arreglo de las casas
-    
+
         for (const casa of casas) {
             if(!acumulado[casa.localidad]) {
                 acumulado[casa.localidad] = { acumuladoPrecio:0, contador: 0};
@@ -350,15 +348,13 @@
             acumulado[casa.localidad].acumuladoPrecio += casa.precio;
             acumulado[casa.localidad].contador += 1;
         }
-
         //console.log(acumulado);
-
         // calcular el precio promedio
         // tengo que recorrer acumulado e ir dividiendo el precio acumulado por el número de casas
         // Object.keys -> me va a devolver un arreglo que va a contener la lista de key de un objeto
         // creamos un const llamada localidades va ser la lista de localidades
         //object.keys  devuelve un arreglo  que va contener la lista de key de un objeto es decir la localidad(Alajuela, cartago, Heredia, san jose)
-    
+
         const localidades = Object.keys(acumulado);
 
         for(const localidad of localidades) {
@@ -371,7 +367,7 @@
 
 /* ------------------------------------------------------------------------------------- */
 
-    /**   
+    /**
      * todo 8.   Orden Alfabético
     */
         const nombres = [
@@ -415,11 +411,11 @@
         // estos parámetros son los valores que se van a comparar para poder ordenar el arreglo
         */
         const ordenados = nombres.sort((a, b)=> {
-            
+
             // string
             const nombreA = a.split(' ')[0]; // dividir por el espacio en blanco que se encuentra entre el nombre y apellido,
-                                            // split retorna un arreglo entonces voy substraer el valor del arreglo en el indice "0"                                            
-            const nombreB = b.split(' ')[0];  
+                                            // split retorna un arreglo entonces voy substraer el valor del arreglo en el indice "0"
+            const nombreB = b.split(' ')[0];
 
             return nombreA < nombreB? -1 : nombreA > nombreB? 1 : 0;
         });
@@ -429,7 +425,7 @@
 /* ------------------------------------------------------------------------------------------------------- */
 
 
-    /**  
+    /**
      *  Todo: 9.a Escribir una clase para guardar el nombre, la fecha de expiración y el precio de venta de los productos.
         * * En JavaScript, las clases son plantillas de objetos que almacenan información y métodos que trabajan sobre dicha información. 
         * * Las clases están construidas sobre prototipos. Es por esta razón que se dice que las clases en JavaScript son simplemente una manera 
@@ -450,7 +446,7 @@
 
     // 9.b Escribir una función que tome una lista de productos y sume el total del costo
     // de los productos, excluyendo los productos expirados.
-    
+
     function carritocompra(productos){
         const hoy = new Date();
         const productosValidos = productos.filter((producto)=> producto._fechaVencimiento > hoy);
@@ -465,7 +461,7 @@
     ]);
 
     console.log(resultado);
-    
+
     </script>
 </body>
 </html>
