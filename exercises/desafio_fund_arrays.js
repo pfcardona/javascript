@@ -17,7 +17,6 @@ array: Un array de objetos.
 */
 /* Input:
 
-
 [
     {
     name: "Product 1",
