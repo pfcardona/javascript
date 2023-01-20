@@ -14,27 +14,22 @@ function calcularPrecioConDescuento() {
     // const discount = Number(inputDiscount.value)
     const coupon = inputCoupon.value
 
-   
-    
     if(!price || !coupon) {
         pResult.innerText = "LLenar el formulario"
         return;
     }
-    
     let discount;
-
     switch (coupon) {
         case 'JuanDC_es_Batman':
-          discount = 30;
-          break;
+        discount = 30;
+        break;
         case 'no_le_digas_a_nadie':
-          discount = 25;
-          break;
+        discount = 25;
+        break;
         default:
-          pResult.innerText = 'El cupón no es válido';
-          return;
-      }
-
+        pResult.innerText = 'El cupón no es válido';
+        return;
+    }
     /* if(coupon == 'Juan') {
         discount = 30
     }else if (coupon == 'no'){
@@ -48,9 +43,6 @@ function calcularPrecioConDescuento() {
         pResult.innerHTML ="NO permitido"
         return
     } */
-
-    
     const newPrice = (price * (100 - discount)) / 100
-    
     pResult.innerText = "El nuevo precio con descuento es " + newPrice;
 }

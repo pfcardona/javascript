@@ -8,7 +8,7 @@
 
     <body>
         <h5>JavaScript</h5>
-    <script>
+<script>
 
 /* ------------------------------------------------------------------------------------- */
 
@@ -39,7 +39,8 @@
 
     /**
      *  todo 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados,
-        *?   pe. miFunción("Hola Mundo", 4) devolverá "Hola" */
+        *?   pe. miFunción("Hola Mundo", 4) devolverá "Hola"
+    */
 
     const recortarTexto = (cadena ="",longitud = undefined) =>
     (!cadena)
@@ -59,7 +60,8 @@
 
     /**
      *todo  3)   Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter,
-     *?          pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] */
+     *?          pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] 
+     */
 
     const cadenaAArreglo = (cadena = "", separador = undefined) =>
     (!cadena)
@@ -79,7 +81,8 @@
     /**
      * todo 4)  Programa una función que repita un texto X veces,
      * ?        pe. miFuncion('Hola Mundo', 3)
-     * ?        devolverá Hola Mundo Hola Mundo Hola Mundo */
+     * ?        devolverá Hola Mundo Hola Mundo Hola Mundo
+     * */
 
     const repetirTexto = (texto = "", veces = undefined) => {
 
@@ -99,7 +102,8 @@
         repetirTexto("HOla Mundo", -2);
         repetirTexto("", 2);
         repetirTexto("HOla Mundo");
-        console.log("----------------------------------------") */
+        console.log("----------------------------------------")
+        */
 
 
 /* ------------------------------------------------------------------------------------- */
@@ -146,16 +150,17 @@
         }
         return console.info(`la palabra ${texto} se repite ${contador} veces`);
     }
-        //  textoEnCadena();
-        //  textoEnCadena("","mundo");
-        //  textoEnCadena("mundo");
-        //  textoEnCadena("hola mundo mundo adios mundo mundo mundo mundo mundo", "mundo",);
+        // textoEnCadena();
+        // textoEnCadena("","mundo");
+        // textoEnCadena("mundo");
+        // textoEnCadena("hola mundo mundo adios mundo mundo mundo mundo mundo", "mundo",);
 
 /* ------------------------------------------------------------------------------------- */
 
     /**
      * todo  7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), 
-     ** pe. mifuncion("Salas") devolverá true */
+     ** pe. mifuncion("Salas") devolverá true
+     */
     //javascript es camelcase sensitive distingue entre minuscula y mayus culas
     const palindromo =(palabra) => {
         if(!palabra) return console.warn("no ingresaste una palabra o frase dada");
@@ -215,7 +220,7 @@
 
 
     /**
-        *todo 10) Programa una función que reciba un número y evalúe si es CAPÍCUA o no (que se lee igual en un sentido que en otro), 
+        *todo 10) Programa una función que reciba un número y evalúe si es CAPÍCUA o no (que se lee igual en un sentido que en otro),
         ** pe. miFuncion(2002) devolverá true
     */
     const capicua = (numero = 0) => {
@@ -397,7 +402,8 @@
 
     /**
     *todo   14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa,
-    **  pe. miFuncion(0,"C") devolverá 32°F */
+    **  pe. miFuncion(0,"C") devolverá 32°F
+    */
         const convertirGrados = (grados = undefined, unidad = undefined) => {
 
             if(grados === undefined) return console.warn("No ingresaste grados a convertir");
@@ -412,7 +418,7 @@
             // (grados °F − 32) × 5/9 = 0 °C
             }   else if (unidad === "F")
                 return console.info(`${grados}°F = ${Math.round((grados-32)*(5/9))}°C `)
-
+        }
         // convertirGrados(100,"C");
         //  convertirGrados();
         //  convertirGrados("C");
@@ -429,26 +435,27 @@
 
     /**
     *todo  15)  Programa una función para convertir números de base binaria a decimal y viceversa,
-    **pe. miFuncion(100,2) devolverá 4 base 10 */
+    **pe. miFuncion(100,2) devolverá 4 base 10
+    */
 
         const convertirBinarioDecimal = (numero = undefined, base = undefined) => {
 
-        if(numero === undefined) return console.warn("No ingresaste grados a convertir");
+            if(numero === undefined) return console.warn("No ingresaste grados a convertir");
 
-        if(typeof numero !== "number") return console.error(`El valor "${numero}" ingresado, No es un número`);
+            if(typeof numero !== "number") return console.error(`El valor "${numero}" ingresado, No es un número`);
 
-        if(base === undefined) return console.warn("No ingresaste base  a convertir");
+            if(base === undefined) return console.warn("No ingresaste base  a convertir");
 
-        if(typeof base !== "number") return console.error(`El valor "${base}"ingresado, No es un número`);
+            if(typeof base !== "number") return console.error(`El valor "${base}"ingresado, No es un número`);
 
-        if(base === 2 ){
-            return console.info(`${numero} base ${base} = ${parseInt(numero,base)} base 10`);
-        } else if (base === 10) {
-            return console.info(`${numero} base ${base} = ${(numero.toString(base))} base 2`);
-        } else {
-            return console.error("El tipo de base a convertir NO es válido");
+            if(base === 2 ){
+                return console.info(`${numero} base ${base} = ${parseInt(numero,base)} base 10`);
+            } else if (base === 10) {
+                return console.info(`${numero} base ${base} = ${(numero.toString(base))} base 2`);
+            } else {
+                return console.error("El tipo de base a convertir NO es válido");
+            }
         }
-    }
         // convertirBinarioDecimal();
         // convertirBinarioDecimal("2");
         // convertirBinarioDecimal(100);
@@ -459,14 +466,12 @@
         // convertirBinarioDecimal(114,10);
         // convertirBinarioDecimal(114,3);
 
-
 /* ------------------------------------------------------------------------------------- */
-
-
 
     /**
      * todo  16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada,
-     **      pe. miFuncion(1000, 20) devolverá 800 */
+     **      pe. miFuncion(1000, 20) devolverá 800
+     */
 
         const aplicarDescuento =(monto = undefined, descuento = 0 ) => {
             if (monto === undefined) return console.log(`No ingresaste el monto`);
@@ -732,6 +737,7 @@
             // filter genera otro arreglo, esta comparando el arreglo que esta recibiendo con el
             // arreglo original contra los valores que va formando  el propio arreglo generado por filter
             sinDuplicados:arr.filter((value,index,self) => self.indexOf(value)== index)
+
         }); */
 
     // Otra solución
@@ -753,9 +759,9 @@
 
     /**
      *todo 26) Programa una función que dado un arreglo de números obtenga el promedio,
-     **       pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5 */
-
-            const promedio = (arr = undefined) => {
+     **       pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5
+     */
+            /* const promedio = (arr = undefined) => {
                 if(arr === undefined) return console.warn("No ingresaste un arreglo de números ");
                 if(!(arr instanceof Array)) return console.error(`El valor "${arr}" ingresado, NO es un arreglo`);
                 if(arr.length === 0) return console.error("El arreglo esta vacío");
@@ -775,8 +781,7 @@
                         }
                     })
                 )
-            }
-
+            } */
             // promedio();
             // promedio({});
             // promedio([])
@@ -785,9 +790,7 @@
 
 /* ------------------------------------------------------------------------------------- */
 
-
-    /**
-     *todo   27) Programa una clase llamada Pelicula.
+            /* 27) Programa una clase llamada Pelicula.
             La clase recibirá un objeto al momento de instanciarse con los siguientes datos: id de la película en IMDB,
             titulo, director, año de estreno, país o países de origen, géneros y calificación en
             IMBD (IMDb is the world's most popular and authoritative source for movie, TV and celebrity content.).
@@ -808,7 +811,8 @@
 
             * Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family,
                 Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
-            */
+
+        */
             // gettets y setters capitulo 25 https://www.youtube.com/watch?v=TEzu31q9MVA&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=26&t=146s
             /* class Pelicula {
                 constructor({id, titulo, director, estreno, pais, generos, calificacion}) {
@@ -918,7 +922,7 @@
                     "\nCalificación: "${this.calificacion}"\nnIMDB Id: "${this.id}"`)
                 }
             }
-                /* Pelicula.generosAceptados();
+                Pelicula.generosAceptados();
                 const peli = new Pelicula({
                 id:"tt1234567",
                 titulo:"Titulo de la Peli",
@@ -959,7 +963,7 @@
                 }
             ];
             misPelis.forEach(el => new Pelicula(el).fichaTecnica());
-            */
+                */
         </script>
     </body>
 </html>

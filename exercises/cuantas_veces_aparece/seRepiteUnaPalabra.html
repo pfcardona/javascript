@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>Javascript</h5>
+    <script>
+    /**
+             * todo 6)  Programa una función para contar el número de veces que se repite una palabra en un texto largo,
+             ** pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2
+            */
+            const textoEnCadena = (cadena ="", texto ="") => {
+                if(!cadena)return console.warn("No ingresaste el texto Largo");
+                if(!texto)return console.warn("No ingresaste la palabra a evaluar");
+
+                let i = 0;
+                contador = 0; // cuantas veces se repite una palabra
+                // indexOF si no encuentra el texto que quiero buscar, devuelve un -1,
+                // si lo encuentra envia posicion donde esta la expresión a buscar
+                // array.indexOf(searchElement[, fromIndex])
+                // while evalua nuestra expresión el indexof
+                while(i !== -1) {
+                    i = cadena.indexOf(texto,i);
+                    console.log(i);
+                    if(i !== -1) { // si i encontro coincidencia
+                    i++;
+                    contador++; //va contando el numero de veces que aparecio el texto!
+                    }
+                }
+                return console.info(`la palabra ${texto} se repite ${contador} veces`);
+            }
+                textoEnCadena();
+                textoEnCadena("","mundo");
+                textoEnCadena("mundo");
+                textoEnCadena("hola mundo mundo adios mundo mundo mundo mundo mundo", "mundo",);
+                textoEnCadena("ana lava la tina", "mundo",);
+
+    </script>
+</body>
+</html>

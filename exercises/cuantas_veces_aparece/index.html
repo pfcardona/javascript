@@ -24,7 +24,6 @@
 
         <div id="resultado1"></div>
         <div id="resultado"></div>
-    
     <script>
 
         function cuantasVecesAparece(cadena, caracter  ){
@@ -32,18 +31,16 @@
         if(!caracter) return console.error("No ingresaste el caracter");
         let indices = []
         for(var i = 0; i < cadena.length; i++) {
-        if (cadena[i].toLowerCase() === caracter) 
+        if (cadena[i].toLowerCase() === caracter)
         indices.push(i);
         caracterA = caracter
         }
         return indices.length;
         }
         // let coincidencias1 = cuantasVecesAparece("Cuantas 'A' aparecen en esta cadena.", "a");
-        let coincidencias1 = cuantasVecesAparece("casa", "a");
-        
+        let coincidencias1 = cuantasVecesAparece("casaaa", "a");
 
-        document.getElementById("resultado1").innerHTML = ` La letra  ${caracterA.toUpperCase()}  aparece ${coincidencias1} veces `;
-        
+        document.getElementById("resultado1").innerHTML = `Opción 1: La letra  ${caracterA.toUpperCase()}  aparece ${coincidencias1} veces `;
         console.log(coincidencias1);
 
         /**
@@ -53,12 +50,11 @@
         caracterB = "b"
         var indices = [];
         for(var i = 0; i < cadena.length; i++) {
-        if (cadena[i].toLowerCase() === caracterB) 
+        if (cadena[i].toLowerCase() === caracterB)
         indices.push(i);
         }
         document.getElementById("resultado").innerHTML = ` Opción 2: La cadena "${cadena}" contiene   "${caracterB.toUpperCase()}" ${indices.length} veces`;
 
     </script>
-        
 </body>
 </html>
