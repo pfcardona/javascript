@@ -60,7 +60,7 @@
 
     /**
      *todo  3)   Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter,
-     *?          pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] 
+     *?          pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal']
      */
 
     const cadenaAArreglo = (cadena = "", separador = undefined) =>
@@ -526,7 +526,7 @@
             :(typeof(cadena)!="string")
                 ?console.warn("Ingrese una cadena válida")
                 :console.info(`Vocales : ${cadena.match(new RegExp(/[aeiou]/,"gi")).length},
-                    Consonantes : ${cadena.match(new RegExp(/[b-df-hj-np-tv-zñáéíóú]/,"gi")).length}`);
+                                Consonantes : ${cadena.match(new RegExp(/[b-df-hj-np-tv-zñáéíóú]/,"gi")).length}`);
 
             // contarCaracter("Hola Mundo12ñéáÑ");
             // contarCaracter("pablo");
@@ -728,7 +728,7 @@
                 if(arr.length === 0) return console.error("El arreglo esta vacío");
                 if(arr.length === 1) return console.warn("El arreglo debe tener al menos 2 elementos");
 
-        /* return console.info({
+        return console.info({
             original:arr,
             // método filter => (method) Array<any>.filter((value: any, index: number, array: any[])
             // elemento en cuestion 2. posicion 3. self = al mismo arreglo
@@ -736,23 +736,24 @@
             // vamos a ir comparando si hay algun elemento duplicado
             // filter genera otro arreglo, esta comparando el arreglo que esta recibiendo con el
             // arreglo original contra los valores que va formando  el propio arreglo generado por filter
+
             sinDuplicados:arr.filter((value,index,self) => self.indexOf(value)== index)
 
-        }); */
+        });
 
     // Otra solución
 
-        return console.info({
+        /* return console.info({
             original:arr,
             sinDuplicados: [...new Set(arr)]
-        })
+        }) */
     }
 
-        // quitarDuplicados();
-        // quitarDuplicados({});
-        // quitarDuplicados([]);
-        // quitarDuplicados([2]);
-        // quitarDuplicados(["x", 10, "x", 2, "10", 10, true, true])
+        quitarDuplicados();
+        quitarDuplicados({});
+        quitarDuplicados([]);
+        quitarDuplicados([2]);
+        quitarDuplicados(["x", 10, "x", 2, "10", 10, true, true])
 
 /* ------------------------------------------------------------------------------------- */
 
