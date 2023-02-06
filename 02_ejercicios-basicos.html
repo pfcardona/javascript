@@ -701,7 +701,8 @@
                 return console.info({
                     //arr:arr, simplificar complete propety
                     arr,
-                    // metodo map , me genera otro arreglo, por cada elemento me devuelve ese elemento para generar otro nuevo elemento
+                    // metodo map , me genera otro arreglo, por cada elemento me devuelve ese elemento para generar 
+                    // otro nuevo elemento
                     // metodo sort nos ordena el arreglo
                     asc: arr.map(el => el).sort(),
                     desc: arr.map(el => el).sort().reverse()
@@ -731,7 +732,7 @@
         return console.info({
             original:arr,
             // método filter => (method) Array<any>.filter((value: any, index: number, array: any[])
-            // elemento en cuestion 2. posicion 3. self = al mismo arreglo
+            // 1.primer parámetro elemento en cuestion que voy a buscar 2. posicion del array, 3. self(nombre cualquiera) = el mismo arreglo
             // INDEXOF  buscar elementos  es comparar el valor contra la posición que estoy evaluando
             // vamos a ir comparando si hay algun elemento duplicado
             // filter genera otro arreglo, esta comparando el arreglo que esta recibiendo con el
