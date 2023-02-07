@@ -35,8 +35,9 @@ sinDuplicados: [...new Set(arr)]
 // quitarDuplicados([2]);
 // quitarDuplicados(["x", 10, "x", 2, "10", 10, true, true])
 
-
-// Ejercicio 1021: Eliminar los elementos duplicados de un arreglo usando la función reduce().
+/**
+ *TODO Ejercicio 1021: Eliminar los elementos duplicados de un arreglo usando la función reduce().
+ */
 
 let numeros = [5, 11, 7, 19, 23, 5, 5, 11, 11, 11, 7, 2, 3, 5];
 console.log(numeros);
@@ -46,10 +47,13 @@ console.log();
 
 let resultado = numeros.reduce((a, e) => {
     if (!a.find(d => d == e)) { // por cada iteracion implicita en el reduce preguntamos si el  elemento e se ecuentra en el arreglo a
-        a.push(e)
+        // preguntamos sobre si sobre a encuentra el elemento d (dato)
+        // si da undefined el elemento no lo encuentra , es el valor que retorna cuando el d dato no es igual a elemento del arreglo
+
+        a.push(e)  // cuando no se encuentre,
     }
-    return a;
-}, []);
+    return a; // en caso contrario omitimos el arreglo
+}, []); // inicio con array vacio
 
 console.log(resultado);
 console.log(resultado.length);
