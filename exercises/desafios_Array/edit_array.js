@@ -64,11 +64,8 @@ colores.forEach((color, indice, colores) => {
 // Ejercicio 372: Sustituir elementos de un arreglo sin modificar el arreglo original.
 
 let colores2 = ['Blanco', 'Negro', 'Rojo', 'Negro', 'Verde', 'Azul', 'Negro'];
-console.log(colores);
 
-let resultado = colores2.map((color, indice, colores) => {
-    return color == 'Negro' ? '##' : color;
-});
+let resultado = colores2.map(color => color == 'Negro' ? '##' : color)
 
 console.log(colores2);
 console.log(resultado);
