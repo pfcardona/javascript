@@ -1,7 +1,8 @@
 /* **********     Curso JavaScript: 82. DOM: Ejercicios Prácticos | Reloj Digital - #jonmircha     ********** */
+
 const d = document;
 
-function digitalClock(clock,btnPlay,btnStop) {
+export function digitalClock(clock,btnPlay,btnStop) {
     d.addEventListener("click", e =>{
         if(e.target.matches(btnPlay)) {
             setInterval(() => {
@@ -15,6 +16,7 @@ function digitalClock(clock,btnPlay,btnStop) {
         if(e.target.matches(btnStop)){
 
         }
-
     })
 }
+
+export function alarm() {}

@@ -17,10 +17,10 @@ division.addEventListener('click', ejecutarOperacion);
 calcular.addEventListener('click', ejecutarOperacion);
 
 const operacion =   {
-                    valor1: null, 
-                    valor2:null, 
+                    valor1: null,
+                    valor2:null,
                     operador: null
-                }                
+                }
     let tempOperador = null
 
 function mostrarValores(valor) {
