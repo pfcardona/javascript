@@ -10,7 +10,7 @@ const areaSquare = (side) => side * side;
 // console.log(perimSquare(4))
 // console.log(areaSquare(20))
 /**
- * área y perímetro de triangulo 
+ * área y perímetro de triangulo
  * ====================================================
 */
 const perimTriangle = ( side1, side2, side3) => side1 + side2 + side3;
@@ -22,8 +22,8 @@ const areaTriangle = (base, altura) => (base * altura) / 2;
  * ====================================================
 */
 const diamCircle = (radio) => radio * 2
-const perimCircle = (radio) => diamCircle(radio) * Math.PI 
-const areaCircle = (radio) => (radio * radio) * Math.PI 
+const perimCircle = (radio) => diamCircle(radio) * Math.PI
+const areaCircle = (radio) => (radio * radio) * Math.PI
 // console.log(perimCircle(4));
 // console.log(areaCircle(4));
 
@@ -53,14 +53,14 @@ function calculatePerimTriangle() {
     let side1 = document.getElementById('inputSide1');
     let side2 = document.getElementById('inputSide2');
     let side3 = document.getElementById('inputSide3');
-    
+
     side1 = Number(side1.value);
     side2 = Number(side2.value);
     side3 = Number(side3.value);
 
     const result = `El perímetro del Triángulo es: ${perimTriangle(side1,side2,side3)} cm`;
     valueResult.innerText = result;
-}   
+}
 
 /* Función del evento CLICK para Área */
 function calculateAreaTriangle() {

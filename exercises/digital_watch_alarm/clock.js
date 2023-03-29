@@ -37,7 +37,7 @@ function updateClock() {
 setInterval(updateClock, 1000);
  */
 
-/* 
+/*
 // Referencias a los elementos HTML necesarios
 const clockDisplay = document.querySelector('#clockDisplay');
 const startButton = document.querySelector('#startButton');
@@ -107,7 +107,7 @@ function startClock() {
   updateClock(); // Actualiza el reloj
   intervalId = setInterval(updateClock, 1000); // Actualiza el reloj cada segundo
   isRunning = true; // Indica que el reloj está corriendo
-  
+
   startButton.disabled = true; // Deshabilita el botón de inicio
   stopButton.disabled = false; // Habilita el botón de detener
 }
@@ -116,7 +116,7 @@ function startClock() {
 function stopClock() {
   clearInterval(intervalId); // Detiene la actualización del reloj
   isRunning = false; // Indica que el reloj está detenido
-  
+
   startButton.disabled = false; // Habilita el botón de inicio
   stopButton.disabled = true; // Deshabilita el botón de detener
 }
