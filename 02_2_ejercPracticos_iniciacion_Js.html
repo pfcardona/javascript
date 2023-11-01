@@ -198,8 +198,8 @@
         /* var n1 = prompt("Escribe un número");
         var i;
         for (i=2; i < n1/2; i++) {
-            if (n1 % i === 0) {
-            document.write(i,", ");
+                if (n1 % i === 0) {
+                document.write(i,", ");
         }
         } */
 /* _________________________________________________ */
@@ -218,7 +218,7 @@
         }
         for (i=2; i<=menor/2; i++) {
                 if (n1 % i === 0 && n2 % i === 0) {
-                    console.log(i, ", ");
+                console.log(i, ", ");
                 }
             }  */
  /* _________________________________________________ */
@@ -228,34 +228,34 @@
         (no es divisible por ninguno otro número que no sea él mismo o la unidad) */
 
         // Solución 1
-            /*
-            var n1 = prompt("Escribe un número");
-            var i;
-            var primer = true;
-            for (i=2; i < n1 / 2; i++) {
-            if (n1 % i === 0) {
-            primer = false;
-            }
-            }
-            if (primer) {
-            document.write("El número es primo");
-            } else {
-            document.write("El número no es primo");
-            }
+        /*
+        var n1 = prompt("Escribe un número");
+        var i;
+        var primer = true;
+        for (i=2; i < n1 / 2; i++) {
+        if (n1 % i === 0) {
+        primer = false;
+        }
+        }
+        if (primer) {
+        document.write("El número es primo");
+        } else {
+        document.write("El número no es primo");
+        }
        */
 
         // Solución 2
         /*
-            var n1 = prompt("Escribe un número");
-            var i = 2;
-            while (n1 % i !== 0 && i < n1 / 2 ) {
-            i++;
-            }
-            if (n1 % i !== 0) {
-            document.write("El número es primo");
-            } else {
-            document.write("El número no es primo");
-            }
+        var n1 = prompt("Escribe un número");
+        var i = 2;
+        while (n1 % i !== 0 && i < n1 / 2 ) {
+        i++;
+        }
+        if (n1 % i !== 0) {
+        document.write("El número es primo");
+        } else {
+        document.write("El número no es primo");
+        }
         */
 
 /*------------------------------------------------------------------------------------------------------- */
@@ -265,33 +265,32 @@
         /**
          *TODO 1 Palíndromo
 
-            Crear un sistema que detecte si una palabra es palíndroma o no
-            Para solucionar este problema el usuario tiene que ingresar por pantalla una palabra y el sistema verificas si es palíndromo o no.
-            Una palabra palíndroma se lee de igual formo como de la derecha y de la izquierda.
-       */
-            const palindromo =(palabra) => {
-                    // Ana oso luz azul
-                    palabra = palabra.replace(' ','');
-                    palabra = palabra.toLowerCase();
-                     // convertimos a una lista y luego a una cadena de caracter
-                    palabraAlReves = palabra.split('').reverse().join('');
-
-                    if( palabra === palabraAlReves) {
-                            return true;
-                    }else {
-                            return false;
-                    }
-            }
-              // console.log(palindromo('carro'));
-              // console.log(palindromo('Luz azul'));
-            /*  let palabra = prompt("Ingresa una Palabra");
-            let esPalindromo = palindromo(palabra);
-            if (esPalindromo ) {
-                    console.log("Es palindromo")
-                    document.write(`La palabra "${palabra}" es Palindromo`)
-            }else {
-                    console.log("No es palíndromo")
-                    document.write("La palabra "+ " " + palabra +  " " + "No es Palíndromo")
+        Crear un sistema que detecte si una palabra es palíndroma o no
+        Para solucionar este problema el usuario tiene que ingresar por pantalla una palabra y el sistema verificas si es palíndromo o no.
+        Una palabra palíndroma se lee de igual formo como de la derecha y de la izquierda.
+*/
+        const palindromo =(palabra) => {
+                // Ana oso luz azul
+                palabra = palabra.replace(' ','');
+                palabra = palabra.toLowerCase();
+                // convertimos a una lista y luego a una cadena de caracter
+                palabraAlReves = palabra.split('').reverse().join('');
+                if( palabra === palabraAlReves) {
+                        return true;
+                }else {
+                        return false;
+                }
+        }
+        // console.log(palindromo('carro'));
+        // console.log(palindromo('Luz azul'));
+        /*  let palabra = prompt("Ingresa una Palabra");
+        let esPalindromo = palindromo(palabra);
+        if (esPalindromo ) {
+        console.log("Es palindromo")
+                document.write(`La palabra "${palabra}" es Palindromo`)
+        }else {
+                console.log("No es palíndromo")
+                document.write("La palabra "+ " " + palabra +  " " + "No es Palíndromo")
               } */
         /**
          * todo Practica 1 - Dado el valor de venta de un producto, hallar el IVA (19%) y el precio de venta
@@ -323,33 +322,33 @@
         //              Precio de venta: ${pv}`);
         /**
          * todo Practica 02: Primalidad
-            Crear un sistema que detecte si un numero es primo o no
-            Para solucionar este problema se requiere que el usuario ingrese un numero por teclado
-            y el sistema detecte si es primo o no.
-            Un numero primo es aquel que se puede dividir solo dos veces por 1 y por sí misma.  */
+        Crear un sistema que detecte si un numero es primo o no
+        Para solucionar este problema se requiere que el usuario ingrese un numero por teclado
+        y el sistema detecte si es primo o no.
+        Un numero primo es aquel que se puede dividir solo dos veces por 1 y por sí misma.  */
 
-            /* const esPrimo = (numero) => {
-            contador = 0;
-            let numeros = [];
+        /* const esPrimo = (numero) => {
+        contador = 0;
+        let numeros = [];
 
-            for(let i=0; i<= numero; i++ ) {
-                numeros.push(i);
-            }
-                for (let n of numeros){
-                    if(n === 1 || n === numero){
-                        continue;
-                    }
-
-                    if(numero % n === 0){
-                        contador ++;
-                    }
+        for(let i=0; i<= numero; i++ ) {
+        numeros.push(i);
+        }
+        for (let n of numeros){
+                if(n === 1 || n === numero){
+                continue;
                 }
-                return contador === 0;
-            }
-            let numero = Number(prompt("Ingrese un número"));
-            if(esPrimo(numero)) {
+
+                if(numero % n === 0){
+                contador ++;
+                }
+        }
+        return contador === 0;
+        }
+        let numero = Number(prompt("Ingrese un número"));
+        if(esPrimo(numero)) {
                 document.write('Es primo');
-            }else{
+        }else{
                 document.write('No Es primo');
             } */
             // console.log(esPrimo(5))
@@ -372,31 +371,31 @@
 
         /**
          *todo   Practica 02:Descuento de Restaurante Parte 1
-            Enunciado: un restaurante ofrece un descuento del 10% para consumo de hasta  $100
-            y un descuento del 20 % para consumos mayores, para ambos casos se aplica un impuesto del 19%.
-            a.Determinar el monto del descuento,
-            b.El impuesto
-            c.El importe a pagar.
+        Enunciado: un restaurante ofrece un descuento del 10% para consumo de hasta  $100
+        y un descuento del 20 % para consumos mayores, para ambos casos se aplica un impuesto del 19%.
+        a.Determinar el monto del descuento,
+        b.El impuesto
+        c.El importe a pagar.
 
-            Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el
-            sistema verifica y calcula el monto del descuento, el impuesto y el importe a pagar.
+        Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el
+        sistema verifica y calcula el monto del descuento, el impuesto y el importe a pagar.
 
-            - Monto del descuento
-            - Impuesto
-            - Importe a pagar
+        - Monto del descuento
+        - Impuesto
+        - Importe a pagar
        */
-    /*
+        /*
        // Entrada de datos
-            let consumo = Number(prompt('Ingrese el consumo'))
-            let descuento, datoDescuento
+        let consumo = Number(prompt('Ingrese el consumo'))
+        let descuento, datoDescuento
        // Proceso
-            if(consumo <= 100) {
+        if(consumo <= 100) {
               // Descuento de 10 %
-            datoDescuento = '10%';
+        datoDescuento = '10%';
               descuento = consumo * 0.10;
         }else if (consumo > 100) {
             // Descuento de 10 %
-            datoDescuento = '20%';
+        datoDescuento = '20%';
             descuento = consumo * 0.20;
         }
         let montoDescuento = consumo - descuento;
@@ -405,42 +404,42 @@
         // Ouput
 
         document.write(`<pre>
-            Consumo       : ${consumo}
-            Descuento     : ${datoDescuento}
-            Monto con Descuento  : ${montoDescuento}
-            IVA           : ${impuesto}
-            Total a pagar : ${totalPagar}
+                Consumo       : ${consumo}
+                Descuento     : ${datoDescuento}
+                Monto con Descuento  : ${montoDescuento}
+                IVA           : ${impuesto}
+                Total a pagar : ${totalPagar}
         </pre>`) */
 
         /**
          *TODO Practica 03: Descuentos de un restaurante Parte 02
 
-            Enunciado: debido a los excelentes resultados, el restaurante decide ampliar sus ofertas de acuerdo a
-            la siguiente escala de consumo, ver la tabla.
-            Determinar el monto del descuento, el importe del impuesto y el importe a pagar.
-            Consumo (S/.)       Descuento (%)
-            Hasta 100               10
-            Mayor a 100             20
-            Mayor a 200             30
-            Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el sistema
-            verifica y calcula el monto del descuento, el impuesto y el importe a pagar.
+        Enunciado: debido a los excelentes resultados, el restaurante decide ampliar sus ofertas de acuerdo a
+        la siguiente escala de consumo, ver la tabla.
+        Determinar el monto del descuento, el importe del impuesto y el importe a pagar.
+        Consumo (S/.)       Descuento (%)
+        Hasta 100               10
+        Mayor a 100             20
+        Mayor a 200             30
+        Análisis: para la solución de este problema, se requiere que el usuario ingrese el consumo y el sistema
+        verifica y calcula el monto del descuento, el impuesto y el importe a pagar.
 
        */
        /*     // Entrada de datos
-            let consumo = Number(prompt('Ingrese el consumo'))
-            let descuento, datoDescuento
+        let consumo = Number(prompt('Ingrese el consumo'))
+        let descuento, datoDescuento
        // Proceso
-            if(consumo <= 100) {
+        if(consumo <= 100) {
             // Descuento de 10 %
-            datoDescuento = '10%';
+        datoDescuento = '10%';
             descuento = consumo * 0.10;
         }else if (consumo > 100 && consumo <=200) {
             // Descuento de 10 %
-            datoDescuento = '20%';
+        datoDescuento = '20%';
             descuento = consumo * 0.20;
         }else if (consumo > 200) {
             // descuento de 30 %
-            datoDescuento = '30%';
+                datoDescuento = '30%';
             descuento = consumo * 0.30;
         }
         let montoDescuento = consumo - descuento;
@@ -449,11 +448,11 @@
        // Ouput
 
         document.write(`<pre>
-            Consumo       : ${consumo}
-            Descuento     : ${descuento}      | ${datoDescuento}
-            Monto con Descuento  : ${montoDescuento}
-            IVA           : ${impuesto}       | 19%
-            Total a pagar : ${totalPagar}
+        Consumo       : ${consumo}
+        Descuento     : ${descuento}      | ${datoDescuento}
+        Monto con Descuento  : ${montoDescuento}
+        IVA           : ${impuesto}       | 19%
+        Total a pagar : ${totalPagar}
        </pre>`) */
        /* ------------------------------------------------- */
 
@@ -531,7 +530,7 @@
 
 /*-------------------------------------------------------------------- */
 
-    /**
+        /**
      * TODO Cálculo Estación del Año con Estructuras de Control
      * ! (If /Else )
      * ! con Switch
@@ -592,25 +591,24 @@ console.log(estacion);
 0am-6am - Durmiendo
     */
 
-            /* let horaDia = 23;
-            let mensaje;
+        /* let horaDia = 23;
+        let mensaje;
 
-            if( horaDia >= 6 && horaDia <= 11 ){
-                    mensaje = "Buenos días";
-            }
-            else if( horaDia >= 12 && horaDia <= 18 ){
-                    mensaje = "Buenas tardes";
-            }
-            else if( horaDia >= 19 && horaDia <= 24){
-                    mensaje = "Buenas noches";
-            }
-            else if( horaDia >= 0 && horaDia < 6){
-                    mensaje = "Durmiendo";
-            }
-            else{
-                    mensaje = "Valor incorrecto";
-            }
-
+        if( horaDia >= 6 && horaDia <= 11 ){
+                mensaje = "Buenos días";
+        }
+        else if( horaDia >= 12 && horaDia <= 18 ){
+                mensaje = "Buenas tardes";
+        }
+        else if( horaDia >= 19 && horaDia <= 24){
+                mensaje = "Buenas noches";
+        }
+        else if( horaDia >= 0 && horaDia < 6){
+                mensaje = "Durmiendo";
+        }
+        else{
+                mensaje = "Valor incorrecto";
+        }
             console.log(mensaje); */
 
         </script>

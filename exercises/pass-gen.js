@@ -1,9 +1,9 @@
 /**
  * todo Generador de Contraseñas | Ejercicio práctico JavaScript
- * ! 
- * ? 
- * * 
-*/ 
+ * !
+ * ?
+ * *
+*/
 
 const alph = "ABCDEFGHIJKLMNOPQRSTUVWYZabcdefghijqlmnopqrstuvwxyz0123456789!#$%&/()=?¡"
 

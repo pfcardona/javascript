@@ -5,7 +5,7 @@
 // El nombre reservado de function y parametros que recibira esa function 
 
 function miFuncion() { // function declaration Declarativas expresión 
-    return 3; 
+    return 3;
 }
 
 miFuncion(); // mandamos llamar la función
@@ -14,7 +14,7 @@ var miFuncion = function(a,b) {  // function Expression (también conocidas como
     return a + b;
 }
 
-miFuncion(); // mandamos llamar la variable como funcion
+miFuncion(4,5); // mandamos llamar la variable como funcion
 
 
 /* ============================= */
@@ -26,23 +26,23 @@ function saludarEstudiante(estudiante) {
 
 
 function suma(a,b) {  // está funcion recibe 2 parámetros, que se convierten en un placeholder de valores que se pueden utilizar dentro de la función.
-    var resultado = a + b; 
+    var resultado = a + b;
 }
 
-// Return, cómo regresamos un valor con una function. 
+// Return, cómo regresamos un valor con una function.
 
 
 
 function suma(a,b) {
-    var resultado =  a + b; 
+    var resultado =  a + b;
     return resultado;
 }
 
 function suma(a,b) {
-    return a + b; 
+    return a + b;
 }
 
-suma(20, 30); 
+suma(20, 30);
 
 
 
