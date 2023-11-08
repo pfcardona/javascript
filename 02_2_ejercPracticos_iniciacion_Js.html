@@ -126,7 +126,7 @@
         /**
          *TODO 10.- Escribe un programa que pida una frase y escriba las vocales que aparecen
          */
-        var text = prompt("Escribe una frase");
+        /* var text = prompt("Escribe una frase");
         var nText = text.length;
         var i;
         for (i = 0; i < nText; i++) {
@@ -137,7 +137,7 @@
                 || text.substr(i,1) === "u") {
                 document.write(text.substr(i,1));
                 }
-        }
+        } */
 
  /* _________________________________________________ */
 
@@ -155,7 +155,6 @@
     */
 
 /* _________________________________________________ */
-
 
         /**
          *TODO 14.- Añadir al ejercicio anterior que nos diga por cual de los cuatro es divisible (hay que decir todos por los que es divisible)
@@ -291,8 +290,67 @@
         }else {
                 console.log("No es palíndromo")
                 document.write("La palabra "+ " " + palabra +  " " + "No es Palíndromo")
-              } */
+        }
+              */
+
         /**
+         *todo Practica 02: Primalidad
+        ** Crear un sistema que detecte si un numero es primo o no
+        ** Para solucionar este problema se requiere que el usuario ingrese un numero por teclado
+        ** y el sistema detecte si es primo o no.
+        ** Un numero primo es aquel que se puede dividir solo dos veces por 1 y por sí misma.
+        ** Teniendo en cuenta que los números primos entre 1 y 100 son :
+        ** 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89 y 97.
+        */
+
+        const esPrimo = (numero) => {
+        contador = 0;
+        let numeros = [];
+
+        for(let i=0; i<= numero; i++ ) {
+        numeros.push(i);
+        }
+        for (let n of numeros){
+                if(n === 1 || n === numero){
+                continue;
+                }
+                if(numero % n === 0){
+                contador ++;
+                }
+        }
+        // si contador es = a cero, qioere decir que el número es primo ya que el contador no ha incrementado
+        return contador === 0;
+        }
+        /*
+        let numero = Number(prompt("Ingrese un número"));
+        if(esPrimo(numero)) {
+                document.write('Es primo');
+        }else{
+                document.write('No Es primo');
+            } */
+        //      console.log(esPrimo(5))
+        //      console.log(esPrimo(7))
+        //      console.log(esPrimo(9))
+
+            /*a.  Hallar cociente y residuo */
+              // Variables
+                // let numero1, numero2, cociente, residuo;
+                // Entrada de datos
+                // numero1= Number(prompt("Escribe un número")) ;
+                // numero2= Number(prompt("Escribe otro número"));
+
+              // Proceso
+                // cociente = numero1 /numero2;
+                // residuo = numero1 % numero2;
+
+              // Salida de datos
+                // document.write('Cociente:' + cociente + '<br>');
+                // document.write('Residuo:', residuo);
+
+        /**
+/*------------------------------------------------------------------------------------------------------- */
+        /**
+         *
          * todo Practica 1 - Dado el valor de venta de un producto, hallar el IVA (19%) y el precio de venta
          *
         * /
@@ -320,55 +378,6 @@
         // document.write(`Valor de Venta: ${vv}<br>
         //              IVA: ${iva} <br>
         //              Precio de venta: ${pv}`);
-        /**
-         * todo Practica 02: Primalidad
-        Crear un sistema que detecte si un numero es primo o no
-        Para solucionar este problema se requiere que el usuario ingrese un numero por teclado
-        y el sistema detecte si es primo o no.
-        Un numero primo es aquel que se puede dividir solo dos veces por 1 y por sí misma.  */
-
-        /* const esPrimo = (numero) => {
-        contador = 0;
-        let numeros = [];
-
-        for(let i=0; i<= numero; i++ ) {
-        numeros.push(i);
-        }
-        for (let n of numeros){
-                if(n === 1 || n === numero){
-                continue;
-                }
-
-                if(numero % n === 0){
-                contador ++;
-                }
-        }
-        return contador === 0;
-        }
-        let numero = Number(prompt("Ingrese un número"));
-        if(esPrimo(numero)) {
-                document.write('Es primo');
-        }else{
-                document.write('No Es primo');
-            } */
-            // console.log(esPrimo(5))
-            // console.log(esPrimo(7))
-            // console.log(esPrimo(9))
-       /*a.  Hallar cociente y residuo */
-              // Variables
-                // let numero1, numero2, cociente, residuo;
-                // Entrada de datos
-                // numero1= Number(prompt("Escribe un número")) ;
-                // numero2= Number(prompt("Escribe otro número"));
-
-              // Proceso
-                // cociente = numero1 /numero2;
-                // residuo = numero1 % numero2;
-
-              // Salida de datos
-                // document.write('Cociente:' + cociente + '<br>');
-                // document.write('Residuo:', residuo);
-
         /**
          *todo   Practica 02:Descuento de Restaurante Parte 1
         Enunciado: un restaurante ofrece un descuento del 10% para consumo de hasta  $100

@@ -1,4 +1,4 @@
-console.group('Cuadrado') 
+console.group('Cuadrado')
 
 const ladoCuadrado = 5;
 const perimetroCuadrado = ladoCuadrado * 4;
@@ -17,7 +17,7 @@ function calcularCuadrado(lado) {
   };
 }
 
-console.groupEnd('Cuadrado') 
+console.groupEnd('Cuadrado')
 
 // ------------------------- //
 
@@ -47,7 +47,7 @@ console.log({
   areaTriangulo,
 });
 
-console.groupEnd('Triangulo') 
+console.groupEnd('Triangulo')
 // ------------------------- //
 
 /* hallar perimetro del circulo (circunferencia) y Area del Circulo */
@@ -71,7 +71,7 @@ console.log({
 function calcularCirculo(radio) {
   const diametro = radio * 2;
   const radioAlCuadrado = Math.pow(radio, 2);
-  
+
   return {
     circunferencia: diametro * Math.PI,
     area: radioAlCuadrado * Math.PI,
