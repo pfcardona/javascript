@@ -3,34 +3,29 @@
         <meta charset="utf-8" />
         <title>Mi primera programada</title>
             <script>
-                let jugador = 0
-        let pc = 2
+        function aleatorio(min,max){
+            return Math.floor(Math.random()*(max - min + 1)+ min);
+        }
+        function eleccion(jugada){
+            let = resultado = ""
+            if(jugada == 1) {
+                resultado = "Piedra 🪨🪨"
+            } else if (jugada == 2) {
+                resultado = " Papel 🧻🧻🧻"
+            } else if (jugada == 3) {
+                resultado ="Tijera ✂️✂️"
+            } else {
+                resultado ="Mal elegido"
+            }
+            return resultado
+        }
+        let jugador = 0
+        let pc = aleatorio(1,3)
         jugador = prompt("elige: 1 para piedra, 2 para papel , 3 para tijera")
 
-
-        if(jugador == 1) {
-            alert("elegiste 🪨🪨")
-        } else if (jugador == 2) {
-            alert ("elegiste 🧻🧻🧻")
-        } else if (jugador == 3) {
-            alert ("elegiste ✂️✂️")
-        } else {
-            alert ("Elegiste perder")
-        }
-
-
-        if(pc == 1) {
-            alert("PC elige 🪨🪨")
-        } else if (pc == 2) {
-            alert ("PC elige 🧻🧻🧻")
-        } else if (pc == 3) {
-            alert (" PC elige ✂️✂️")
-        }
-
-
+        alert("Pc elige:" + eleccion(pc) )
+        alert("Tu eliges:" + eleccion(jugador))
         //COMBATE
-
-
         if(pc == jugador) {
                 alert("EMPATE")
         } else if(jugador == 1 && pc == 3) {
@@ -42,7 +37,9 @@
         }
         else {
             alert("Perdiste")
-        }
+        } */
+
+
 
             </script>
     </head>

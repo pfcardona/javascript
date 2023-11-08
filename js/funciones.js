@@ -1,10 +1,10 @@
 // Las funciones son procedimientos, un conjunto de sentencias o pasos que realizarán una tarea o cálculo con ciertos valores.
 
-// Tenemos dos tipo de funciones en js, function Declaration y function Expression 
+// Tenemos dos tipo de funciones en js, function Declaration y function Expression
 
-// El nombre reservado de function y parametros que recibira esa function 
+// El nombre reservado de function y parametros que recibira esa function
 
-function miFuncion() { // function declaration Declarativas expresión 
+function miFuncion() { // function declaration Declarativas expresión
     return 3;
 }
 
@@ -14,7 +14,7 @@ var miFuncion = function(a,b) {  // function Expression (también conocidas como
     return a + b;
 }
 
-miFuncion(4,5); // mandamos llamar la variable como funcion
+miFuncion(); // mandamos llamar la variable como funcion
 
 
 /* ============================= */
