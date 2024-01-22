@@ -6,6 +6,8 @@ let primerResultado = null
 let segundoResultado = null
 let movimientos = 0
 let aciertos = 0
+
+
 // Apuntando a documento html
 let mostrarMovimientos = document.getElementById('movimientos')
 let mostrarAciertos = document.getElementById('aciertos')
@@ -41,29 +43,32 @@ function destapar(id){
 
         // Incrementar movimientos
         movimientos++
-        mostrarMovimientos.innerHTML = `Movimiento ${movimientos}`
-    }
+        mostrarMovimientos.innerHTML = `Movimientos ${movimientos}`
+
     if(primerResultado == segundoResultado){
+
         //Encerar contador tarjetas destapadas
         tarjetasDestapadas = 0
 
        // aumentar aciertos
-        aciertos ++
+        aciertos++
         mostrarAciertos.innerhtml = `Aciertos: ${aciertos}`
 
-        if(aciertos == 8){
+        /* //if(aciertos == 8){
         mostrarAciertos.innerHTML = `Aciertos: ${aciertos} 🤯`
         mostrarMovimientos.innerHTML = `Movimientos: ${movimientos} 😁`
+        } */
 
-        }else{
+    }else{
             // mostrar momentaneamente valores y volver a tapar
                 setTimeout(()=>{
-                tarjeta1.innerHTML = ''
-                tarjeta2.innerHTML = ''
+                tarjeta1.innerHTML = ' '
+                tarjeta2.innerHTML = ' '
                 tarjeta1.disabled = false
-                tarjeta2.disabled = false
+                tarjeta2.disabled = false;
                 tarjetasDestapadas = 0
-            },2000)
+            },2000);
         }
     }
 }
+
