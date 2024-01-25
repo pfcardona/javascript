@@ -110,7 +110,7 @@
     }${seconds}`;
     }
 
-/* 
+/*
     // Declaración de variables
 let pomodoroTime = 1; // Duración del tiempo de trabajo (en minutos)
 let shortBreakTime = 1; // Duración del tiempo de descanso corto (en minutos)
