@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tab Gallery</title>
+<style>
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Elimina el desplazamiento horizontal */
+    position: relative; /* Ajuste para posición absoluta de los botones */
+  }
+  #header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    
+  }
+  #header button {
+    background-color: #33333352;
+   
+    display: block;
+    margin-bottom: 0px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  #gallery {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 998; /* Asegura que esté detrás de los botones */
+    text-align: center;
+    overflow: hidden; /* Evita el desbordamiento de la imagen */
+  }
+  #gallery img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho */
+    height: 100%; /* Hace que la imagen ocupe todo el alto */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*object-fit: cover;  Ajusta la imagen al contenedor sin distorsionar */
+  }
+
+  .exterior_painting1 {
+          background: #9a9d8a;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+          transition: transform .5s;
+        }
+        .exterior_painting2 {
+          background: #dfe687;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+          transition: transform .5s;
+        }
+        .exterior_painting3 {
+          background: #d07f3d;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+          transition: transform .5s;
+        }
+        .exterior_painting4 {
+          background: #e5c487;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+          transition: transform .5s;
+        }
+    .exterior_painting1:hover {
+        transform: scale(1.3);
+    }
+    .exterior_painting2:hover {
+        transform: scale(1.3);
+    }
+    .exterior_painting3:hover {
+        transform: scale(1.3);
+    }
+    .exterior_painting4:hover {
+        transform: scale(1.3);
+    }
+
+</style>
+</head>
+<body>
+
+<div id="header">
+  <button onclick="showImage(1)"><div class="exterior_painting1"></div></button>
+  <button onclick="showImage(2)"><div class="exterior_painting2"></div></button>
+  <button onclick="showImage(3)"><div class="exterior_painting3"></div></button>
+  <button onclick="showImage(4)"><div class="exterior_painting4"></div></button>
+</div>
+
+<div id="gallery" style="display:block;">
+  <img id="galleryImage" src="https://bluebrushpainters.com/wp-content/uploads/2024/03/house-front-gray-1.jpg" alt="Imagen">
+</div>
+
+<script>
+  function showImage(index) {
+    var images = [
+      "https://bluebrushpainters.com/wp-content/uploads/2024/03/house-front-gray-1.jpg",
+      "https://bluebrushpainters.com/wp-content/uploads/2024/03/house-front-green-2.jpg",
+      "https://bluebrushpainters.com/wp-content/uploads/2024/03/house_front_yellow.jpg",
+      "https://bluebrushpainters.com/wp-content/uploads/2024/03/house_front_pink.jpg",
+
+    ];
+
+    var img = document.getElementById("galleryImage");
+    img.src = images[index - 1];
+  }
+</script>
+
+</body>
+</html>

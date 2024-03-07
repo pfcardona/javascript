@@ -44,7 +44,7 @@
 
     /*  Antes de explicar como funciona el modelo de JavaScript es importante entender algunos conceptos:
 
-    peraciones de CPU y Operaciones de I / O.
+    Operaciones de CPU y Operaciones de I / O.
     Operaciones Concurrentes y Paralelas.
     Procesamiento Single thread y Multi thread.
     OOperaciones Bloqueantes y No Bloqueantes.
@@ -139,7 +139,7 @@
 
     /* **********     Curso JavaScript: 47. Promesas - #jonmircha     ********** */
 
-    /*     function cuadradoPromise(value) {
+         function cuadradoPromise(value) {
           if (typeof value !== "number") {
             return Promise.reject(`Error, el valor " ${value} " ingresado no es un número`);
           }
@@ -167,7 +167,7 @@
           })
           .then(obj => {
             console.log(`Promise: ${obj.value}, ${obj.result}`);
-            return cuadradoPromise(3);
+            return cuadradoPromise("3");
           })
           .then(obj => {
             console.log(`Promise: ${obj.value}, ${obj.result}`);
@@ -181,7 +181,8 @@
             console.log(`Promise: ${obj.value}, ${obj.result}`);
             console.log('Fin Promise');
           })
-          .catch(err => console.error(err)); */
+          .catch(err => console.error(err)); 
+
 
 
 

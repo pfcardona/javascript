@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .exterior_painting1 {
+          background: #dfe687;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+        }
+        .exterior_painting2 {
+          background: #e5c487;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+        }
+        .exterior_painting3 {
+          background: #9a9d8a;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+        }
+        .exterior_painting4 {
+          background: #d07f3d;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+        }
+
+    /* Style the tab buttons */
+    .tablink {
+      background-color: #555;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 25%;
+    }
+
+    /* Change background color of buttons on hover */
+    .tablink:hover {
+      background-color: #777;
+    }
+
+    /* Set default styles for tab content */
+    .tabcontent {
+      color: white;
+      display: none;
+      padding: 50px;
+      text-align: center;
+    }
+
+    /* Style each tab content individually */
+    #Exterior1 {background-image:url("https://bluebrushpainters.com/wp-content/uploads/2024/02/house-back-gray2-1.jpg")};
+    #Exterior2 {background-image:url("https://bluebrushpainters.com/wp-content/uploads/2024/02/house-back-green-1.jpg")};
+    #Exterior3 {background-image:url("https://bluebrushpainters.com/wp-content/uploads/2024/02/house-back-pink-1.jpg")};
+    #Exterior4 {background-image:url("https://bluebrushpainters.com/wp-content/uploads/2024/02/house-back-yellow-1.jpg");}
+        </style>
+    <!-- #dfe687
+         #e5c487
+         #9a9d8a
+         #d07f3d
+    -->
+    
+</head>
+<body>
+    <div id="Exterior" class="tabcontent">
+        <h1>Exterior</h1>
+       
+      </div>
+      
+      <div id="Exterior2" class="tabcontent">
+        <h1>Exterior2</h1>
+       
+      </div>
+      
+      <div id="Exterior3" class="tabcontent">
+        <h1>Exterior3</h1>
+      </div>
+      <div id="Exterior4" class="tabcontent">
+        <h1>Exterior4</h1>
+      </div>
+      
+      <button class="tablink" onclick="openCity('Exterior1', this, 'green')"><div class="exterior_painting1"></div></button>
+      <button class="tablink" onclick="openCity('Exterior2', this, 'blue')"><div class="exterior_painting2"></div></button>
+      <button class="tablink" onclick="openCity('Exterior3', this, 'orange')"><div class="exterior_painting3"></div></button>
+      <button class="tablink" onclick="openCity('Exterior4', this, 'red')"><div class="exterior_painting4"></div></button>
+
+        <script>
+          function openCity(cityName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(cityName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+        </script>
+  </body>
+</html>

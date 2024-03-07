@@ -40,3 +40,4 @@
     bombDetector(arr1)
 
     // bombDetector(arr2)
+

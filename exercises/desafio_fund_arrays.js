@@ -56,14 +56,22 @@ array = [
     name: "Product 2",
     price: 2000,
     stock: 20
+    },
+    {
+    name: "Product 3",
+    price: 656,
+    stock: 30
     }
 ]
 
 function addNewAttr(array) {
-
+ // Utilizamos el método map para crear un nuevo array con la propiedad "taxes" calculada
     return array.map((item) => {
+        // Agregamos la nueva propiedad "taxes" al objeto a través del operador de propagación
         const copyItem = { ...item };
+        // Calculamos los impuestos (19% del precio base)
         copyItem.taxes = Math.trunc(copyItem.price * 0.19)
+        copyItem.pablo =  copyItem.taxes + 1
         console.log(copyItem);
     });
     }
