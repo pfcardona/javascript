@@ -133,7 +133,7 @@
         /**
          * todo Retorna solo palabras de 4 letras y más
         /*
-        
+
         /* Tienes un array de strings que contienen diferentes palabras, tu reto es retornar un array solo con las que cumplan con la condición de tener 4 o más letras.
 
         Para solucionarlo vas a encontrar una función llamada filterByLength que recibe un parámetro de entrada:
@@ -150,6 +150,67 @@
 
         Input: ['rosa', 'gol', 'pez', 'día', 'gafas']
         Output: [ 'rosa', 'gafas' ]  */
+
+        function filterByLength(array) {
+        //return console.log(array.filter(item => item.length>3))
+
+        }
+        filterByLength(['amor', 'sol', 'piedra', 'día'])
+
+//-------------------------------------------------------------------------------------
+    
+    /* Filtra las compras que cumplan con las condiciones */
+    /* Tienes un array de objetos que representan ordenes de compra con los siguientes atributos:
+
+    customerName: string
+    total: number
+    delivered: boolean
+    Tu reto es filtrar todas las órdenes de compra que cumplan con la condición de tener un total mayor o igual a 100 y además que el estado delivered sea "true".
+
+    Para solucionarlo vas a encontrar una función llamada filterOrders que recibe un parámetro de entrada:
+
+    array: Un array de objetos
+    Dentro del cuerpo de la función filterOrders debes escribir tu solución.
+
+    Ejemplo:
+
+    Input:
+    [
+    {
+        customerName: "Nicolas",
+        total: 100,
+        delivered: true,
+    },
+    {
+        customerName: "Zulema",
+        total: 120,
+        delivered: false,
+    },
+    {
+        customerName: "Santiago",
+        total: 300,
+        delivered: true,
+    }
+    ]
+
+    Output:
+    [
+    {
+        customerName: "Nicolas",
+        total: 100,
+        delivered: true,
+    },
+    {
+        customerName: "Santiago",
+        total: 300,
+        delivered: true,
+    }
+    ] */
+
+    function filterOrders(arrays) {
+        filter = arrays.map((item) => item.total )
+}
+
     </script>
 </body>
 </html>

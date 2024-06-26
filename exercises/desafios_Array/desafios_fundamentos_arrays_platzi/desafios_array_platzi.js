@@ -25,9 +25,9 @@ function multiplyElements(array) {
  function addNewAttr(array) {
     return array.map((item) => {
         const copyItem = {...item}
-        console.log(copyItem)
+        //console.log(copyItem)
         copyItem.taxespablo = Math.trunc(copyItem.price * 0.19)
-        return console.log(copyItem)
+        // return console.log(copyItem)
     });
 }
 addNewAttr([
@@ -42,3 +42,32 @@ price: 2000,
 stock: 20
 }
 ])
+
+//-------------------------------------------------------------//
+
+function filterOrders(arrays) {
+    filtro = arrays.filter((item) => 
+        item?.total >=100 && item?.delivered)
+
+    return console.log(filtro);
+    
+}
+filterOrders(
+    [
+        {
+          customerName: "Nicolas",
+          total: 100,
+          delivered: true,
+        },
+        {
+          customerName: "Zulema",
+          total: 120,
+          delivered: false,
+        },
+        {
+          customerName: "Santiago",
+          total: 300,
+          delivered: true,
+        }
+      ]
+)
