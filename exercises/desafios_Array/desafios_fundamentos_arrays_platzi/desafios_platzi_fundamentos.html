@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,14 +10,30 @@
     <h5>Desafíos Platzi fundamentos Arrays javascript</h5>
 
     <script>
+        /* Tienes un array de números, tu reto es retornar los números de ese array multiplicados por dos.
+
+            Para solucionarlo vas a encontrar una función llamada multiplyElements que recibe un parámetro de entrada:
+
+            array: Un array de números
+            Dentro del cuerpo de la función multiplyElements debes escribir tu solución.
+
+            Ejemplo 1:
+
+            Input: [2, 4, 5, 6, 8]
+            Output: [4, 8, 10, 12, 16]
+
+            Ejemplo 2:
+
+            Input: [1, 1, -2, -3]
+            Output: [2, 2, -4, -6] */
         /**
          * todo: Multiplica todos los elementos por dos
          * ? El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
           */
         var numbers = [1, 5, 10, 15];
         var doubles = numbers.map(x => x * 2)
-        // console.log(numbers);
-        // console.log(doubles);
+         console.log(numbers);
+         console.log(doubles);
         // doubles is now [2, 10, 20, 30]
         // numbers is still [1, 5, 10, 15]
 
@@ -33,39 +49,57 @@
         return console.log(array.map(item => item * item))
         }
 
-        // multiplyElements([1,4,5]) //
-
+        multiplyElements([1,4,5]) //
+// ---------------------------------
         /**
          * todo: Transforma un Array de objetos a un Array de strings
          * ? 
           */
+
+        /*  Tienes un array de objetos que representan datos de personas con los siguientes atributos:
+
+        name: string
+        lastName: string
+        age: number
+        Tu reto es retornar un array de strings con solo los nombres, para solucionarlo vas a encontrar una función 
+        llamada getNames que recibe un parámetro de entrada:
+
+        array: Un array de objetos.
+        Dentro del cuerpo de la función getNames debes escribir tu solución.
+
+        Ejemplo:
+
+        Input:
+        [
+        {
+            name: 'Nicolas',
+            lastName: 'Molina',
+            age: 28
+        },
+        {
+            name: 'Valentina',
+            lastName: 'Molina',
+            age: 19
+        },
+        {
+            name: 'Zulema',
+            lastName: 'Vicente',
+            age: 21
+        },
+        ]
+
+        Output:
+        ['Nicolas', 'Valentina', 'Zulema']
+        */
         function getNames(array) {
             // Tu código aquí 👈
             return console.log(array.map(el => el.name))
         }
-
-        /* getNames([
-                    {
-                        name: 'Nicolas',
-                        lastName: 'Molina',
-                        age: 28
-                    },
-                    {
-                        name: 'Valentina',
-                        lastName: 'Molina',
-                        age: 19
-                    },
-                    {
-                        name: 'Zulema',
-                        lastName: 'Vicente',
-                        age: 21
-                    },
-                    ])
-         */
-
+//--------------------
         /**
          * todo Tienes un array de objetos que representan datos de productos con los siguientes atributos:
-        /* name
+        /* 
+        name
         price
         stock
         Tu reto es agregar y calcular una nueva propiedad llamada "taxes", los impuestos deben ser del 19% con base al precio base y debes tener en cuenta que como resultado se debe dejar un valor entero, sin decimales.
@@ -79,7 +113,7 @@
             return array.map((item) => {
                 const copyItem = {...item}
                 copyItem.taxespablo = Math.trunc(copyItem.price * 0.19)
-                return console.log(copyItem)
+              //  return console.log(copyItem)
             });
         }
         addNewAttr([
@@ -94,6 +128,28 @@
         stock: 20
         }
         ])
+
+//---------------------------------------
+        /**
+         * todo Retorna solo palabras de 4 letras y más
+        /*
+        
+        /* Tienes un array de strings que contienen diferentes palabras, tu reto es retornar un array solo con las que cumplan con la condición de tener 4 o más letras.
+
+        Para solucionarlo vas a encontrar una función llamada filterByLength que recibe un parámetro de entrada:
+
+        array: Un array de strigs con palabras
+        Dentro del cuerpo de la función filterByLength debes escribir tu solución.
+
+        Ejemplo 1:
+
+        Input: ['amor', 'sol', 'piedra', 'día']
+        Output: [ 'amor', 'piedra' ]
+
+        Ejemplo 2:
+
+        Input: ['rosa', 'gol', 'pez', 'día', 'gafas']
+        Output: [ 'rosa', 'gafas' ]  */
     </script>
 </body>
 </html>
