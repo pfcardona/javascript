@@ -1,0 +1,73 @@
+body, html {
+            margin: 0;
+            padding: 0;
+            font-family:'Montserrat',sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .kitchen-image {
+            width: 100%;
+            height: auto;
+        }
+        .hotspot {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #a1d951;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            color: white;
+            animation: pulse 2s infinite;
+            border: 1.2px solid #4c2e20;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .hotspot-content {
+            position: absolute;
+            background-color: white;
+           
+            border-radius: 10px;
+            z-index: 10;
+            max-width: 200px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .hotspot:hover .hotspot-content {
+            opacity: 1;
+            visibility: visible;
+        }
+        .hotspot-content h5 {
+            margin-top: 0;
+            color: #fff;
+            font-optical-sizing: auto;
+            font-weight: 800;
+            font-style: normal;
+            background-color: #8f756c;
+            border: 2px solid #4c2e20;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .hotspot-content p {
+            
+            font-size: 8px;
+            font-weight: 500;
+            color: #4c2e20;
+            padding: 8px;
+            background-color:  #dbfbff;
+            border: 2px solid #fff;
+            box-shadow: 0 4px 6px #201e1c ;
+        }

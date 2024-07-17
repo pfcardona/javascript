@@ -49,7 +49,7 @@ function filterOrders(arrays) {
     filtro = arrays.filter((item) => 
         item?.total >=100 && item?.delivered)
 
-    return console.log(filtro);
+    //return console.log(filtro);
     
 }
 filterOrders(
@@ -71,3 +71,41 @@ filterOrders(
         }
       ]
 )
+
+//-----------------------------------------------------------------------//
+
+function checkInString(text,term) {
+  search = text.toUpperCase().includes(term.toUpperCase()) ? 'true' : 'false' 
+  return console.log(search)
+}
+
+checkInString("Ana lava la tina", "ana")
+
+//------------------------
+
+function calcTotal(orders) {
+  let result = orders
+       .map((item) => item.total)
+         .reduce((count,item)=> count + item, 0)
+         
+         return console.log("el resultado es "+ result) 
+ }
+
+ calcTotal ([
+ {
+   customerName: "Nicolas",
+   total: 120,
+   delivered: true,
+ },
+ {
+   customerName: "Zulema",
+   total: 140,
+   delivered: false,
+ },
+ {
+   customerName: "Santiago",
+   total: 20,
+   delivered: false,
+ }
+])
+

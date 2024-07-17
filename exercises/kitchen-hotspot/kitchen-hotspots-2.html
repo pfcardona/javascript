@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocina Creativa Interactiva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .kitchen-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Estilos para los hotspots */
+        .hotspot {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: vibrate 0.3s linear infinite; 
+            /* animation: pulse 2s infinite; */
+            z-index: 0;
+            
+        }
+        .hotspot img {
+            width: 100%;
+            height: 100%;
+        }
+        /* @keyframes vibrate {
+            0% { transform: translate(0); }
+            25% { transform: translate(2px, 2px); }
+            50% { transform: translate(0); }
+            75% { transform: translate(-2px, -2px); }
+            100% { transform: translate(0); }
+        } */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Estilos para el contenido de los hotspots */
+        .hotspot-content {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            margin-left: 10px;
+            width: 200px;
+            opacity: 0;
+            background-color: transparent;
+            z-index: 10;
+            visibility: hidden;
+            transition: opacity 0.6s ease, visibility 0.5s ease;
+        
+        }
+        .hotspot:hover .hotspot-content {
+            visibility: visible;
+            opacity: 1;
+        }
+        .hotspot-content h5 {
+            margin: 0;
+            padding: 5px 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 12px;
+            background-color: #8f756c;
+            border: 2px solid #4c2e20;
+            color: white;
+            cursor: pointer;           
+            border-radius: 25px;
+            text-align: center;
+            
+        }
+        .hotspot-content p {
+            margin: 0 13px;
+            padding: 10px;
+            background-color: #dbfbff;
+            border: 2px solid #fff;
+            border-radius: 0 0 10px 10px;
+            color: #4c2e20;
+            font-size: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./img/cocina_luker.svg" alt="Cocina Creativa" class="kitchen-image">
+        <div id="hotspots"></div>
+    </div>
+
+    <script>
+        // Definición de los hotspots
+        const hotspots = [
+            { id: 'formatos', top: '22%', left: '10%', title: 'Aquí sirven los formatos', description: 'Encuentra aquí formatos para documentar tus proyectos' },
+            { id: 'oportunidades', top: '15%', right: '30%', title: 'Destapa una oportunidad', description: 'Encuentra aquí técnicas y oportunidades para la generación de ideas' },
+            { id: 'utensilios', top: '40%', left: '25%', title: 'Utensilios creativos', description: 'Encuentra aquí herramientas y técnicas de ideación útiles para pensar de forma creativa' },
+            { id: 'recetas', top: '65%', left: '15%', title: 'Lee una receta', description: 'Encuentra aquí documentos vitales para generar ideas de alto impacto' },
+            { id: 'comentarios', top: '65%', left: '50%', title: 'Hornea un comentario', description: 'Queremos saber lo que se te ocurre y lo que piensas, deja tu comentario' },
+            { id: 'ideas', top: '50%', right: '20%', title: 'Deja una idea adherida', description: 'Deja escrita tu idea en nuestra nevera' },
+            { id: 'ingredientes', top: '80%', left: '10%', title: 'Ingredientes innovadores', description: 'Prueba y testea los ingredientes, haz prototipos de tu idea y acércate a hacerla realidad' },
+        ];
+
+        
+        const iconUrl = './img/boton_verde.svg';
+
+        // Función para crear los hotspots
+        function createHotspots() {
+            const hotspotsContainer = document.getElementById('hotspots');
+            
+            hotspots.forEach(hotspot => {
+                const hotspotElement = document.createElement('div');
+                hotspotElement.className = 'hotspot';
+                hotspotElement.style.top = hotspot.top;
+                hotspotElement.style.left = hotspot.left;
+                hotspotElement.style.right = hotspot.right;
+
+                // Crear el elemento de imagen para el ícono SVG
+                const iconImg = document.createElement('img');
+                iconImg.src = iconUrl;
+                iconImg.alt = 'Hotspot Icon';
+                hotspotElement.appendChild(iconImg);
+
+                const content = document.createElement('div');
+                content.className = 'hotspot-content';
+                content.innerHTML = `
+                    <h5>${hotspot.title}</h5>
+                    <p>${hotspot.description}</p>
+                `;
+
+                hotspotElement.appendChild(content);
+                hotspotsContainer.appendChild(hotspotElement);
+            });
+        }
+
+        // Llamar a la función para crear los hotspots
+        createHotspots();
+    </script>
+</body>
+</html>

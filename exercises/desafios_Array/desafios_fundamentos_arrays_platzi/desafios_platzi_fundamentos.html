@@ -10,6 +10,8 @@
     <h5>Desafíos Platzi fundamentos Arrays javascript</h5>
 
     <script>
+      /* https://jshero.platzi.com/langs/js/paths/arrays */
+
         /* Tienes un array de números, tu reto es retornar los números de ese array multiplicados por dos.
 
             Para solucionarlo vas a encontrar una función llamada multiplyElements que recibe un parámetro de entrada:
@@ -32,8 +34,8 @@
           */
         var numbers = [1, 5, 10, 15];
         var doubles = numbers.map(x => x * 2)
-         console.log(numbers);
-         console.log(doubles);
+         //console.log(numbers);
+         //console.log(doubles);
         // doubles is now [2, 10, 20, 30]
         // numbers is still [1, 5, 10, 15]
 
@@ -46,13 +48,13 @@
         // numbers is still [1, 4, 9]
 
         function multiplyElements(array) {
-        return console.log(array.map(item => item * item))
+        //return console.log(array.map(item => item * item))
         }
 
         multiplyElements([1,4,5]) //
 // ---------------------------------
         /**
-         * todo: Transforma un Array de objetos a un Array de strings
+         * 2 todo: Transforma un Array de objetos a un Array de strings
          * ? 
           */
 
@@ -97,7 +99,7 @@
         }
 //--------------------
         /**
-         * todo Tienes un array de objetos que representan datos de productos con los siguientes atributos:
+         * 3. todo Calcula y agrega una nueva propiedad en un array -Tienes un array de objetos que representan datos de productos con los siguientes atributos:
         /* 
         name
         price
@@ -131,7 +133,7 @@
 
 //---------------------------------------
         /**
-         * todo Retorna solo palabras de 4 letras y más
+         *4. todo Retorna solo palabras de 4 letras y más
         /*
 
         /* Tienes un array de strings que contienen diferentes palabras, tu reto es retornar un array solo con las que cumplan con la condición de tener 4 o más letras.
@@ -208,8 +210,226 @@
     ] */
 
     function filterOrders(arrays) {
-        filter = arrays.map((item) => item.total )
+    filtro = arrays.filter((item) => 
+        item?.total >=100 && item?.delivered)
+
+    //return console.log(filtro);
+    
+    }
+    filterOrders(
+    [
+        {
+          customerName: "Nicolas",
+          total: 100,
+          delivered: true,
+        },
+        {
+          customerName: "Zulema",
+          total: 120,
+          delivered: false,
+        },
+        {
+          customerName: "Santiago",
+          total: 300,
+          delivered: true,
+        }
+      ]
+    )
+//-------------------------------------------------------------------------------------
+
+/* Busca dentro de un string y descubre si ¿Tiene la clave? */
+
+/* Tu reto en este desafío es buscar si ese string tiene un término de búsqueda dado, por ejemplo verificar 
+si dentro de la frase "Ana lava la tina" está el término "ana" y si lo tiene retornar un true de lo contrario 
+retornar un false, debes tener en cuenta que debe encontrar coincidencias, así el término de búsqueda sea mayúscula o minúscula.
+
+Para solucionarlo vas a encontrar una función llamada checkInString que recibe dos parámetros de entrada:
+
+text: Un string
+term: Un string con el término a buscar
+Dentro del cuerpo de la función checkInString debes escribir tu solución.
+
+Ejemplo 1:
+
+Input: "Ana lava la tina", "ana"
+Output: true
+
+Ejemplo 2:
+
+Input: "Santiago", "tiago"
+Output: true
+
+Ejemplo 3:
+
+Input: "Nicolas", "ana"
+Output: false */
+    function checkInString(text,term) {
+    search = text.toUpperCase().includes(term.toUpperCase()) ? 'true' : 'false' 
+    // return console.log(search)
+    }
+
+    checkInString("Ana lava la tina", "ana")
+
+//----------------------------------------------------------------------
+
+
+/* #7 Crea un buscador que retorne palabras de acuerdo parámetro de búsqueda */
+
+/* Tu reto es retornar un array solo con las palabras que cumplan con la condición de tener un término de búsqueda dado.
+
+Para solucionarlo vas a encontrar una función llamada filterByTerm que recibe los siguientes parámetros de entrada:
+
+array: Un array de strigs con palabras
+term: Un string con el término a buscar
+Dentro del cuerpo de la función filterByTerm debes escribir tu solución. */
+
+/* Ejemplo 1:
+
+Input:
+array: ["ana", "santi", "nico", "anastasia"]
+term: "ana"
+
+Ouput:
+["ana", "anastasia"]
+
+Ejemplo 2:
+
+Input:
+array: ["ana", "santi", "nico", "anastasia"]
+term: "xyz"
+
+Output:
+[] */
+
+ function filterbyTerm(array, term) {
+         return console.log( array.filter((word) => {
+            return word
+                .toLowerCase()
+                .includes(term.toLowerCase())
+        }))
+ } 
+ filterbyTerm(["ana", "santi", "nico", "anastasia"],"a")
+ 
+
+//-----------------------------------------
+/* 8  Calcula la suma total de los elementos
+
+Tienes un array de números y tu reto es retornar la suma de todos los valores en él.
+
+Para solucionarlo vas a encontrar una función llamada calcSum que recibe un parámetro de entrada:
+
+numbers: Un array de números
+Dentro del cuerpo de la función calcSum debes escribir tu solución.
+
+Ejemplo 1:
+
+Input: [1, 1, 1]
+Ouput: 3
+
+Ejemplo 2:
+
+Input: [2, 4, 8]
+Output: [2, 4, 8]
+
+Ejemplo 3:
+
+Input: []
+Output: 0 */
+initialValue = 0
+function calcSum(numbers) {
+  const sumWithInitial = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue,)
+  //console.log(sumWithInitial)
 }
+
+calcSum([3,4,6,7])
+
+
+//-----------------------------------------
+/* Calcular la suma de todas las compras entre objetos */
+/* Tienes un array de objetos que representan órdenes de compra con los siguientes atributos:
+
+customerName: string
+total: number
+delivered: boolean
+Tu reto es retornar la suma total de todas las órdenes de compra, para solucionarlo vas a encontrar una función llamada calcTotal que recibe un parámetro de entrada:
+
+orders: Un array con las órdenes de compra
+Dentro del cuerpo de la función calcTotal debes escribir tu solución.
+
+Ejemplo:
+
+Input:
+[
+  {
+    customerName: "Nicolas",
+    total: 100,
+    delivered: true,
+  },
+  {
+    customerName: "Zulema",
+    total: 120,
+    delivered: false,
+  },
+  {
+    customerName: "Santiago",
+    total: 20,
+    delivered: false,
+  }
+]
+
+Ouput:
+240 */
+  function calcTotal(orders) {
+   let result = orders
+        .map((item) => item.total)
+          .reduce((count,item)=> count + item, 0)
+          
+          return console.log(result) 
+  }
+
+  calcTotal ([
+  {
+    customerName: "Nicolas",
+    total: 120,
+    delivered: true,
+  },
+  {
+    customerName: "Zulema",
+    total: 120,
+    delivered: false,
+  },
+  {
+    customerName: "Santiago",
+    total: 20,
+    delivered: false,
+  }
+])
+
+
+//--------------------------------------------//
+/*
+
+u reto es retornar true si dentro de array de números al menos uno es un número par, 
+para solucionarlo vas a encontrar una función llamada checkArray que recibe un parámetro de entrada:
+
+numbers: Un array de números
+Dentro del cuerpo de la función checkArray debes escribir tu solución.
+
+Ejemplo 1:
+
+Input: [1, 3, 5, 7, 10, 11]
+Output: true
+
+Ejemplo 2:
+
+Input: [1, 3, 5]
+Output: false
+
+Ejemplo 3:
+
+Input: []
+Output: false 
+ */
 
     </script>
 </body>
